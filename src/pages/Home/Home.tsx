@@ -2,6 +2,7 @@ import Logo from "../../assets/images/Home Page/logo.png";
 import GDBImage from "../../assets/images/Home Page/GDB-desktop-main-LD.png";
 import ChervronRight from "../../assets/images/Home Page/Chevron right.svg";
 import closeBTN from "../../assets/images/Home Page/closeBTN.svg";
+import leftArrow from "../../assets/images/Home Page/left-arrow.svg";
 import { useState } from "react";
 import cn from "classnames";
 import "./sytle.css";
@@ -60,29 +61,43 @@ const Home = () => {
 };
 
 export default Home;
+type SecurityPolicyModalProps = {
+  showModal: boolean;
+  toggleModal: () => void;
+};
 
-const SecurityPolicyModal = ({ showModal, toggleModal }: any) => {
+const SecurityPolicyModal = ({
+  showModal,
+  toggleModal,
+}: SecurityPolicyModalProps) => {
   return (
     <>
       <div
-        className={cn("absolute inset-0 bg-black z-20 h-screen w-screen", {
+        className={cn("absolute inset-0 bg-black z-20 h-screen w-screen  ", {
           hidden: showModal,
         })}
       >
         <span
-          className="absolute top-10 right-10 cursor-pointer z-10"
+          className=" hidden md:block absolute top-10 right-10 cursor-pointer z-10 "
           onClick={toggleModal}
         >
           <img src={closeBTN} alt="close button" />
         </span>
-        <div className="fixed inset-0  flex items-center justify-center ">
-          <div className="py-[52px] px-[46px] h-[485px] w-[730px] bg-blinkDashboard text-white">
-            <h1 className="text-4xl font-bold mb-4">Security Policy</h1>
-            <h3 className="text-xl  mb-4">
-              Malesuada pulvinar elementum, ultrices mi
+        <div className="fixed inset-0 flex items-center justify-center mx-3 max-sm:mx-0">
+          <div className="py-[52px] px-[46px] md:h-[485px] md:w-[730px]  text-white w-screen  h-screen md:bg-blinkDashboard ">
+            <div className="flex align-baseline">
+              <span className="mr-5 md:hidden" onClick={toggleModal}>
+                <img className="" src={leftArrow} alt="left Arrow" />
+              </span>
+              <h1 className="text-2xl md:text-4xl font-bold mb-4">
+                Security Policy
+              </h1>
+            </div>
+            <h3 className="text-lg md:text-xl  mb-4">
+              Malesuada Pulvinar Elementum, Ultrices Mi
             </h3>
-            <p className="overflow-y-scroll pr-5 text-base h-[280px] scrollbar-style">
-              Adipiscing mauris lectus enim nullam. Scelerisque congue proin
+            <p className="overflow-y-scroll pr-5 text-base md:h-[280px] scrollbar-style h-[500px]  ">
+              adipiscing mauris lectus enim nullam. Scelerisque congue proin
               cursus eget. Dui ornare vitae, netus sed ultricies. Integer
               imperdiet nunc eget duis diam risus. Lobortis tincidunt nunc,
               lobortis non. Ut tempor, dui in imperdiet netus nisl nibh pulvinar
@@ -99,6 +114,25 @@ const SecurityPolicyModal = ({ showModal, toggleModal }: any) => {
               tristique. Adipiscing pharetra tincidunt varius nulla vestibulum
               odio mauris vitae. Aliquam ac turpis aliquam vestibulum lacinia
               leo vestibulum eget libero. Pharetra, sagittis ut egestas erat
+              cursus libero, vulputate magna et. Purus auctor at dictumst leo
+              erat mi nascetur feugiat. Fringilla interdum massa neque pretium
+              luctus id feugiat cras nibh. Turpis lectus ornare sed faucibus
+              aliquam sit amet. Nunc sagittis vitae hendrerit massa pellentesque
+              felis. Nunc vel sagittis purus amet nec velit netus. Lacus ornare
+              elit senectus cursus. Tristique a volutpat laoreet amet morbi arcu
+              metus, ultrices. Non turpis massa enim massa justo massa est.
+              Posuere at pretium nunc pharetra dui. Scelerisque felis gravida
+              eleifend hac turpis sem nibh id et. cursus libero, vulputate magna
+              et. Purus auctor at dictumst leo erat mi nascetur feugiat.
+              Fringilla interdum massa neque pretium luctus id feugiat cras
+              nibh. Turpis lectus ornare sed faucibus aliquam sit amet. Nunc
+              sagittis vitae hendrerit massa pellentesque felis. Nunc vel
+              sagittis purus amet nec velit netus. Lacus ornare elit senectus
+              cursus. Tristique a volutpat laoreet amet morbi arcu metus,
+              ultrices. Non turpis massa enim massa justo massa est. Posuere at
+              pretium nunc pharetra dui. Scelerisque felis gravida eleifend hac
+              turpis sem nibh id et. Posuere at pretium nunc pharetra dui.
+              Scelerisque felis gravida eleifend hac turpis sem nibh id et.
               cursus libero, vulputate magna et. Purus auctor at dictumst leo
               erat mi nascetur feugiat. Fringilla interdum massa neque pretium
               luctus id feugiat cras nibh. Turpis lectus ornare sed faucibus

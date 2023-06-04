@@ -1,7 +1,7 @@
 import { useRoutes } from "react-router-dom";
 import Home from "./pages/Home";
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
-import EventPage from "./pages/EventPage";
+import Event from "./pages/Event";
 
 const App = () => {
   useDocumentTitle();
@@ -13,7 +13,7 @@ const App = () => {
     },
     {
       path: "/event",
-      element: <EventPage />,
+      element: <Event />,
       name: "EventName",
     },
   ];
