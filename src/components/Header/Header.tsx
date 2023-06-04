@@ -4,7 +4,7 @@ import SignOutIcon from "../../assets/images/signOut-icon.svg";
 
 const Header = () => {
   return (
-    <header className=" flex justify-around items-center bg-black  ">
+    <header className=" flex justify-around items-center bg-black min-width[767px] ">
       <div className="w-[50%]">
         <img className="w-[300px]" src={Logo} alt="BLink Logo" />
       </div>

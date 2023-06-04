@@ -4,8 +4,8 @@ const EventPage = () => {
   return (
     <>
       <Header />
-      <div className="bg-black">
-        <div className="  flex flex-col justify-center items-center  text-white ">
+      <div className="bg-black min-width[767px]">
+        <div className=" container mx-auto px-5  flex flex-col justify-center items-center  text-white ">
           <div className="mt-7">
             <div className="flex">
               <img src={LeftArrow} alt="Left_Arrow" />
@@ -21,8 +21,6 @@ const EventPage = () => {
               </p>
             </div>
           </div>
-
-          <div className="bg-blinkDashboard"></div>
         </div>
       </div>
     </>
