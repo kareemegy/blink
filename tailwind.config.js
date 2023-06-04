@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
       },
+      colors: {
+        blinkDashboard: "#1E1E1E",
+      },
     },
   },
   plugins: [],
