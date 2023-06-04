@@ -1,9 +1,12 @@
-
+import Header from "../../components/Header/Header";
 
 const EventPage = () => {
   return (
-    <div>EventPage</div>
-  )
-}
+    <>
+        <Header />
 
-export default EventPage
+    </>
+  );
+};
+
+export default EventPage;

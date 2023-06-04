@@ -1,4 +1,4 @@
-import Logo from "../../assets/images/Home Page/logo.png";
+import Logo from "../../assets/images/logo.png";
 import GDBImage from "../../assets/images/Home Page/GDB-desktop-main-LD.png";
 import ChervronRight from "../../assets/images/Home Page/Chevron right.svg";
 import closeBTN from "../../assets/images/Home Page/closeBTN.svg";
@@ -6,10 +6,15 @@ import leftArrow from "../../assets/images/Home Page/left-arrow.svg";
 import { useState } from "react";
 import cn from "classnames";
 import "./sytle.css";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
   const [showModal, setShowModal] = useState(true);
+  const navigate = useNavigate();
   const toggleModal = () => {
     setShowModal(!showModal);
+  };
+  const handleContinue = () => {
+    navigate("/event");
   };
   return (
     <>
@@ -37,7 +42,10 @@ const Home = () => {
             >
               Read our security policy.
             </p>
-            <button className="flex justify-center max-w-[550px] items-center mt-5 font-bold text-lg md:text-2xl bg-white text-gray-800 px-7 py-5 rounded-sm ">
+            <button
+              onClick={handleContinue}
+              className="flex justify-center max-w-[550px] items-center mt-5 font-bold text-lg md:text-2xl bg-white text-gray-800 px-7 py-5 rounded-sm "
+            >
               Continue{" "}
               <span className="pl-4">
                 <img
@@ -96,7 +104,7 @@ const SecurityPolicyModal = ({
             <h3 className="text-lg md:text-xl  mb-4">
               Malesuada Pulvinar Elementum, Ultrices Mi
             </h3>
-            <p className="overflow-y-scroll pr-5 text-base md:h-[280px] scrollbar-style h-[500px]  ">
+            <p className="overflow-y-scroll pr-5 text-base md:h-[280px] scrollbar-style h-[500px]">
               adipiscing mauris lectus enim nullam. Scelerisque congue proin
               cursus eget. Dui ornare vitae, netus sed ultricies. Integer
               imperdiet nunc eget duis diam risus. Lobortis tincidunt nunc,
