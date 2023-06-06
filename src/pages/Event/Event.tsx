@@ -11,6 +11,7 @@ import SkyBox from "../../assets/images/skybox.svg";
 import View from "../../assets/images/view.svg";
 import ChevronRight from "../../assets/images/Home Page/Chevron right.svg";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 const EventPage = () => {
   const navigate = useNavigate();
   const handleGoBack = () => {
@@ -181,6 +182,7 @@ const EventPage = () => {
                 </button>
               </div>
             </div>
+              <Footer/>
           </div>
         </div>
       </div>

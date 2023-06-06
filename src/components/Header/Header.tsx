@@ -1,11 +1,16 @@
 import Logo from "../../assets/images/logo.png";
 import Bill from "../../assets/images/bill.svg";
 import SignOutIcon from "../../assets/images/signOut-icon.svg";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const handleGoHome = () => {
+    navigate("/");
+  };
   return (
     <header className="mx-auto flex justify-around items-center bg-black  ">
-      <div className="w-[50%]">
+      <div className="w-[50%] cursor-pointer" onClick={handleGoHome}>
         <img className="w-[300px]" src={Logo} alt="BLink Logo" />
       </div>
       <div className="flex items-center py-3 mr-5">
