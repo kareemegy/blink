@@ -51,7 +51,7 @@ const EventPage = () => {
             </div>
           </div>
 
-          <div className="mt-7 bg-blinkDashboard rounded-md w-full md:max-w-[830px]  mx-5 p-10">
+          <div className="mt-7 bg-blinkDashboard  w-full  md:max-w-[830px]  mx-5 p-10">
             <div>
               <h1 className="text-2xl font-bold mb-3">Trip Details</h1>
               <p className="text-gray-400 max-w-[400px]">
