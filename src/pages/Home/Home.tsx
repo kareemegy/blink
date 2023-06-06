@@ -8,8 +8,8 @@ import cn from "classnames";
 import "./sytle.css";
 import { useNavigate } from "react-router-dom";
 const Home = () => {
-  const [showModal, setShowModal] = useState(true);
   const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(true);
   const toggleModal = () => {
     setShowModal(!showModal);
   };
