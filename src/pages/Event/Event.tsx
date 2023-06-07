@@ -24,6 +24,9 @@ const EventPage = () => {
   const handleGoBack = () => {
     navigate(-1);
   };
+  const handleContinue = () => {
+    navigate("/info");
+  };
 
   return (
     <>
@@ -34,8 +37,8 @@ const EventPage = () => {
           { hidden: !showModal }
         )}
       >
-        <div className="container mx-auto flex flex-col  items-center">
-          <div className="mt-7 mx-5">
+        <div className="container mx-auto mb-6 flex flex-col  items-center">
+          <div className="mt-7 mx-5 ">
             <div className="ml-3 flex cursor-pointer" onClick={handleGoBack}>
               <img src={LeftArrow} alt="Left_Arrow" />
               <h1 className="ml-3 text-base md:text-3xl">[Event Name]</h1>
@@ -44,7 +47,7 @@ const EventPage = () => {
               <p className="text-sm md:text-base text-gray-400">
                 We cordially invite you to [Event Name] in [Location].
               </p>
-              <p className="text-sm md:text-base mt-4 text-gray-400">
+              <p className="text-sm md:text-base mt-1 text-gray-400">
                 Please review the details of your date and confirm your
                 availability below.
               </p>
@@ -191,7 +194,10 @@ const EventPage = () => {
               >
                 Reject. I'm not available at this time
               </button>
-              <button className="flex items-center font-bold justify-center w-full mb-3 md:mb-0 text-sm text-black bg-white py-[18px] px-[15px] md:w-[50%]">
+              <button
+                onClick={handleContinue}
+                className="flex items-center font-bold justify-center w-full mb-3 md:mb-0 text-sm text-black bg-white py-[18px] px-[15px] md:w-[50%]"
+              >
                 Confirm trip and continue
                 <img src={ChevronRight} alt="ChevronRight" />
               </button>
@@ -246,15 +252,15 @@ const RejectModal = ({ showModal, toggleModal }: SecurityPolicyModalProps) => {
             </h3>
             <textarea
               ref={textAreaRef}
-              className="bg-blinkDashboard border-2 border-gray-600 outline-none w-full p-4"
+              className="bg-blinkDashboard border-2 border-gray-600 outline-none w-full p-4 resize-none"
               placeholder="Type detials"
               name="reject-detials"
               cols={30}
               rows={10}
             />
-          <button className="w-full mb-3 font-bold text-lg md:text-xl md:mb-0 mr-3  py-[18px] px-[15px] border-2 mt-3 bg-white text-blinkDashboard ">
-            Send Your Feedback
-          </button>
+            <button className="w-full mb-3 font-bold text-lg md:text-xl md:mb-0 mr-3  py-[18px] px-[15px] border-2 mt-3 bg-white text-blinkDashboard ">
+              Send Your Feedback
+            </button>
           </div>
         </div>
       </div>

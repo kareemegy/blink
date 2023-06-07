@@ -3,7 +3,7 @@ export const getPageRouteName = (pathname: string): string => {
   const pageRouteMap: Record<string, string> = {
     "/": "Home",
     "/event": "Event Name",
-    "/personal-info": "Personal Info",
+    "/info": "info",
     "/food-choices": "Food Choices",
     "/preferences": "Preferences",
     "/confirm-trip": "Confirm Trip",
