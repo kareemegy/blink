@@ -10,7 +10,10 @@ const Header = () => {
   return (
     <div className=" bg-black ">
       <header className="container mx-auto grid grid-cols-2  items-center pt-5 ">
-        <div className="cursor-pointer ml-3 " onClick={handleGoHome}>
+        <div
+          className="cursor-pointer ml-3 pl-[20px] md:pl-0 "
+          onClick={handleGoHome}
+        >
           <img
             className=" w-[100px] md:w-[150px] "
             src={Frame}

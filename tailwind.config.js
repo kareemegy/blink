@@ -8,6 +8,7 @@ export default {
       },
       colors: {
         blinkDashboard: "#1E1E1E",
+        gray300: "#989898",
       },
     },
   },
