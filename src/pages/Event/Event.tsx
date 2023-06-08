@@ -15,9 +15,13 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import cn from "classnames";
 import { useEffect, useRef, useState } from "react";
+import PageHeader from "../../components/PageHeader/PageHeader";
 const EventPage = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(true);
+  const title = "Event Name";
+  const subtitle = `We cordially invite you to [Event Name] in [Location]. Please read our Security Policy for further information`;
+
   const toggleModal = () => {
     setShowModal(!showModal);
   };
@@ -38,21 +42,7 @@ const EventPage = () => {
         )}
       >
         <div className="container mx-auto mb-6 flex flex-col  items-center">
-          <div className="mt-7 mx-5 ">
-            <div className="ml-3 flex cursor-pointer" onClick={handleGoBack}>
-              <img src={LeftArrow} alt="Left_Arrow" />
-              <h1 className="ml-3 text-base md:text-3xl">[Event Name]</h1>
-            </div>
-            <div className="ml-7 my-3">
-              <p className="text-sm md:text-base text-gray-400">
-                We cordially invite you to [Event Name] in [Location].
-              </p>
-              <p className="text-sm md:text-base mt-1 text-gray-400">
-                Please review the details of your date and confirm your
-                availability below.
-              </p>
-            </div>
-          </div>
+          <PageHeader title={title} subtitle={subtitle} />
 
           <div className="mt-7 bg-blinkDashboard  w-full  md:max-w-[830px]  mx-5 p-10">
             <div>
