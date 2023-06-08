@@ -51,11 +51,11 @@ const Info = () => {
             </label>
             <div className="flex justify-between flex-wrap mt-4">
               <input
-                className="hidden md:block  md:w-[60%] lg:max-w-[65%] h-[50px] bg-blinkbg border p-3"
+                className="hidden md:block md:w-[55%] lg:w-[70%] lg:max-w-[65%] h-[50px] bg-blinkbg border p-3"
                 type="text"
                 placeholder="passport.jpge"
               />
-              <button className="flex justify-center items-center w-full h-[50px]  md:max-w-[30%]  text-white  font-bold border-2 px-[10px] py-[5px] md:text-sm ">
+              <button className="flex justify-center items-center w-full h-[50px] md:w-[40%]  lg:max-w-[30%]  text-white  font-bold border-2 px-[10px] py-[5px] md:text-sm ">
                 <span>Browse photos</span>
                 <img className="p-3" src={Upload} alt="user photo" />
               </button>
