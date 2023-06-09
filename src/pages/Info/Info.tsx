@@ -1,7 +1,12 @@
 import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader/PageHeader";
+import PageHeader from "../../components/PageHeader";
 import Icon from "../../assets/images/icon.svg";
 import Upload from "../../assets/images/upload.svg";
+import SelectLabel from "../../components/SelectLabel";
+import SelectOptions from "../../components/SelectOptions";
+import FullInput from "../../components/FullInput";
+import Input from "../../components/Input/Input";
+import SmallSelect from "../../components/SmallSelect/SmalLSelect";
 const Info = () => {
   const title = "Personal Info";
   const subtitle = `To provide you with the most comfortable experience,  we ask you to
@@ -46,19 +51,137 @@ const Info = () => {
             <h1 className="text-xl text-gray200 font-bold">
               Passport Photo<span className="text-error font-normal">*</span>
             </h1>
-            <label className="text-sm underline mt-2">
+            <label htmlFor="passport" className="text-sm underline mt-2">
               Upload Passport (your data will be extracted automatically)
             </label>
             <div className="flex justify-between flex-wrap mt-4">
-              <input
-                className="hidden md:block md:w-[55%] lg:w-[70%] lg:max-w-[65%] h-[50px] bg-blinkbg border p-3"
-                type="text"
-                placeholder="passport.jpge"
-              />
+              <FullInput id="passport" placeholder="passport.jpge" />
               <button className="flex justify-center items-center w-full h-[50px] md:w-[40%]  lg:max-w-[30%]  text-white  font-bold border-2 px-[10px] py-[5px] md:text-sm ">
                 <span>Browse photos</span>
                 <img className="p-3" src={Upload} alt="user photo" />
               </button>
+            </div>
+          </div>
+          <div className="mt-10 mb-5">
+            <h1 className="text-2xl my-10">Identification Info</h1>
+            <div className="mt-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <SelectLabel title="ID Type" />
+                  <SelectOptions
+                    title="ID Type"
+                    id="ID Type"
+                    placeHolder="Select..."
+                    options={["option1", "option2", "option3"]}
+                  />
+                </div>
+
+                <div>
+                  <SelectLabel title="Nationality" />
+                  <SelectOptions
+                    title="Nationality"
+                    id="nationality"
+                    placeHolder="Select..."
+                    options={["option1", "option2", "option3"]}
+                  />
+                </div>
+                <div>
+                  <SelectLabel title="Passport Type" />
+                  <SelectOptions
+                    title="Passport Type"
+                    id="Passport Type"
+                    placeHolder="Select..."
+                    options={["option1", "option2", "option3"]}
+                  />
+                </div>
+                <div>
+                  <SelectLabel title="Passport Number" />
+                  <Input
+                    type="number"
+                    id="passportNumber"
+                    placeholder="000000000"
+                  />
+                </div>
+                <div>
+                  <SelectLabel title="Issuing Authority" />
+                  <Input type="text" id="issuingAuthority" placeholder="QT.." />
+                </div>
+                <div>
+                  <SelectLabel title="Expiration Date" />
+                  <SelectOptions
+                    title="Expiration Date"
+                    id="expirationDate"
+                    placeHolder="YYYY - MM - DD"
+                    options={["option1", "option2", "option3"]}
+                  />
+                </div>
+              </div>
+            </div>
+            <h1 className="text-2xl my-10">Personal Info</h1>
+            <div className="mt-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* <div>
+                  <SelectLabel title="First Name" />
+                  <Input type="text" id="firstName" placeholder="John" />
+                </div> */}
+                <div>
+                  <div>
+                    <SelectLabel title="First Name" />
+                  </div>
+                  <Input type="text" id="First Name" placeholder="000000000" />
+                </div>
+                <div>
+                  <SelectLabel title="Last Name" />
+                  <Input type="text" id="lastName" placeholder="Doe" />
+                </div>
+                <div>
+                  <SelectLabel title="Gender" />
+                  <SelectOptions
+                    title="Gender"
+                    id="gender"
+                    placeHolder="Select..."
+                    options={["option1", "option2", "option3"]}
+                  />
+                </div>
+                <div>
+                  <SelectLabel title="Date of Birth" />
+                  <SelectOptions
+                    title="DOB"
+                    id="DOB"
+                    placeHolder="YYYY - MM - DD"
+                    options={["option1", "option2", "option3"]}
+                  />
+                </div>
+              </div>
+            </div>
+            <h1 className="text-2xl my-10">Contact Info</h1>
+            <div className="mt-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div>
+                  <SelectLabel title="Email" />
+                  <Input
+                    type="email"
+                    id="Email"
+                    placeholder="jhondoe@company.com"
+                  />
+                </div>
+                <div>
+                  <SelectLabel title="Contact No." />
+                  <SmallSelect
+                    title="Contact No."
+                    id="Contact No."
+                    options={["option1", "option2", "option3"]}
+                  />
+                </div>
+                <div>
+                  <SelectLabel title="Email" />
+                  <Input
+                    type="email"
+                    id="Email"
+                    placeholder="jhondoe@company.com"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
