@@ -8,16 +8,22 @@ import FullInput from "../../components/FullInput";
 import Input from "../../components/Input/Input";
 import SmallSelect from "../../components/SmallSelect";
 import Footer from "../../components/Footer/Footer";
+import ChervronRight from "../../assets/images/Home Page/Chevron right.svg";
+import { useNavigate } from "react-router-dom";
 const Info = () => {
   const title = "Personal Info";
   const subtitle = `To provide you with the most comfortable experience,  we ask you to
     kindly fill out your companion’s info in the form. Please read our Security Policy for further information`;
+  const navigate = useNavigate();
+  const nextPage = () => {
+    navigate("/info-Check");
+  };
   return (
     <div className="bg-black">
       <Header />
-      <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5">
+      <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 xl:max-w-[1280px] ">
         <PageHeader title={title} subtitle={subtitle} />
-        <div className=" bg-blinkbg p-5 md:px-[52px] md:py-[60px] w-[100%] md:w-[70%] md:ml-7 text-white ">
+        <div className=" bg-blinkbg p-5 md:px-[52px] md:py-[60px] w-[100%] md:w-[70%] md:ml-7 text-white  ">
           <h1 className="text-xl font-bold">Documents</h1>
           <div className="flex items-center mt-3">
             <input
@@ -229,11 +235,21 @@ const Info = () => {
               </div>
             </div>
           </div>
-          <button className="w-full mb-3 font-bold text-lg md:text-xl md:mb-0 mr-3  py-[18px] px-[15px] border-2 mt-3 bg-white text-blinkDashboard ">
-            Save
+          <button
+            onClick={nextPage}
+            className="flex justify-center w-full  my-20   font-bold text-lg md:text-xl   py-[18px] px-[15px] border-2  bg-white text-blinkDashboard "
+          >
+            <span>Save</span>
+            <span className="pl-4">
+              <img
+                className="text-sm"
+                src={ChervronRight}
+                alt="Chevron right"
+              />
+            </span>
           </button>
         </div>
-          <Footer />
+        <Footer />
       </div>
     </div>
   );
