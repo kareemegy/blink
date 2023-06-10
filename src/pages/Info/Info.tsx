@@ -6,13 +6,14 @@ import SelectLabel from "../../components/SelectLabel";
 import SelectOptions from "../../components/SelectOptions";
 import FullInput from "../../components/FullInput";
 import Input from "../../components/Input/Input";
-import SmallSelect from "../../components/SmallSelect/SmalLSelect";
+import SmallSelect from "../../components/SmallSelect";
+import Footer from "../../components/Footer/Footer";
 const Info = () => {
   const title = "Personal Info";
   const subtitle = `To provide you with the most comfortable experience,  we ask you to
     kindly fill out your companion’s info in the form. Please read our Security Policy for further information`;
   return (
-    <div className="bg-black h-[9000px]">
+    <div className="bg-black">
       <Header />
       <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5">
         <PageHeader title={title} subtitle={subtitle} />
@@ -63,7 +64,7 @@ const Info = () => {
             </div>
           </div>
           <div className="mt-10 mb-5">
-            <h1 className="text-2xl my-10">Identification Info</h1>
+            <h1 className="text-2xl mt-10 mb-8">Identification Info</h1>
             <div className="mt-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
@@ -97,7 +98,7 @@ const Info = () => {
                 <div>
                   <SelectLabel title="Passport Number" />
                   <Input
-                    type="number"
+                    type="text"
                     id="passportNumber"
                     placeholder="000000000"
                   />
@@ -117,21 +118,19 @@ const Info = () => {
                 </div>
               </div>
             </div>
-            <h1 className="text-2xl my-10">Personal Info</h1>
+            <h1 className="text-2xl mt-10 mb-8">Personal Info</h1>
             <div className="mt-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* <div>
-                  <SelectLabel title="First Name" />
-                  <Input type="text" id="firstName" placeholder="John" />
-                </div> */}
                 <div>
                   <div>
                     <SelectLabel title="First Name" />
                   </div>
-                  <Input type="text" id="First Name" placeholder="000000000" />
+                  <Input type="text" id="First Name" placeholder="John" />
                 </div>
                 <div>
-                  <SelectLabel title="Last Name" />
+                  <div>
+                    <SelectLabel title="Last Name" />
+                  </div>
                   <Input type="text" id="lastName" placeholder="Doe" />
                 </div>
                 <div>
@@ -154,11 +153,14 @@ const Info = () => {
                 </div>
               </div>
             </div>
-            <h1 className="text-2xl my-10">Contact Info</h1>
+            <h1 className="text-2xl mt-10 mb-8">Contact Info</h1>
             <div className="mt-8">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
-                  <SelectLabel title="Email" />
+                  <div>
+                    {" "}
+                    <SelectLabel title="Email" />
+                  </div>
                   <Input
                     type="email"
                     id="Email"
@@ -166,25 +168,72 @@ const Info = () => {
                   />
                 </div>
                 <div>
-                  <SelectLabel title="Contact No." />
-                  <SmallSelect
-                    title="Contact No."
-                    id="Contact No."
-                    options={["option1", "option2", "option3"]}
-                  />
+                  <div className="flex items-center   ">
+                    <div>
+                      <SelectLabel title="Contact" className="text-sm" />
+                      <div>
+                        <SmallSelect
+                          options={["option1", "option2", "option3"]}
+                          className="self-center relative"
+                          left={true}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="self-end w-full ml-4 ">
+                      <Input
+                        className="xl:w-[300px]"
+                        type="text"
+                        id="No"
+                        placeholder="000 0000 000"
+                      />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
                 <div>
-                  <SelectLabel title="Email" />
+                  <div>
+                    {" "}
+                    <SelectLabel title="Email" />
+                  </div>
                   <Input
                     type="email"
                     id="Email"
                     placeholder="jhondoe@company.com"
                   />
+                </div>
+                <div>
+                  <div className="flex items-center   ">
+                    <div>
+                      <SelectLabel title="Contact" className="text-sm" />
+                      <div>
+                        <SmallSelect
+                          options={["option1", "option2", "option3"]}
+                          className="self-center relative"
+                          left={true}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="self-end w-full ml-4 ">
+                      <Input
+                        className="xl:w-[300px]"
+                        type="text"
+                        id="No"
+                        placeholder="000 0000 000"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <button className="w-full mb-3 font-bold text-lg md:text-xl md:mb-0 mr-3  py-[18px] px-[15px] border-2 mt-3 bg-white text-blinkDashboard ">
+            Save
+          </button>
         </div>
+          <Footer />
       </div>
     </div>
   );

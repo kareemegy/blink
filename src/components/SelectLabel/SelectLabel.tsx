@@ -1,9 +1,12 @@
+import cn from "classnames";
+
 type SelectLabelProps = {
-    title: string;
+  title: string;
+  className?: string;
 };
-const SelectLabel = ({ title }:SelectLabelProps ) => {
+const SelectLabel = ({ title, className }: SelectLabelProps) => {
   return (
-    <label className="text-gray200 font-bold" htmlFor={title}>
+    <label className={cn("text-gray200 font-bold", className)} htmlFor={title}>
       {title}
       <span className="text-error font-normal">*</span>
     </label>
