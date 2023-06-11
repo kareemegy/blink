@@ -16,9 +16,10 @@ import Footer from "../../components/Footer/Footer";
 import cn from "classnames";
 import { useEffect, useRef, useState } from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
+import Modal from "../../components/Modal/Modal";
 const EventPage = () => {
   const navigate = useNavigate();
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const title = "Event Name";
   const subtitle = `We cordially invite you to [Event Name] in [Location]. Please read our Security Policy for further information`;
 
@@ -34,8 +35,8 @@ const EventPage = () => {
       <Header />
       <div
         className={cn(
-          " bg-black  flex flex-col justify-center items-center  text-white ",
-          { hidden: !showModal }
+          " bg-black  flex flex-col justify-center items-center  text-white  ",
+          { hidden: showModal }
         )}
       >
         <div className="container mx-auto mb-6 flex flex-col  items-center">
@@ -200,57 +201,95 @@ const EventPage = () => {
 
 export default EventPage;
 
-type SecurityPolicyModalProps = {
+type RejectModalProps = {
   showModal: boolean;
   toggleModal: () => void;
 };
 
-const RejectModal = ({ showModal, toggleModal }: SecurityPolicyModalProps) => {
+const RejectModal = ({ showModal, toggleModal }: RejectModalProps) => {
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
+
   useEffect(() => {
     textAreaRef.current?.focus();
   }, [showModal]);
+
+  const handleSendFeedback = () => {
+    console.log(textAreaRef.current?.value);
+  };
+
   return (
-    <>
-      <div
-        className={cn("absolute inset-0 bg-black z-20 h-screen w-screen  ", {
-          hidden: showModal,
-        })}
+    <Modal
+      showModal={showModal}
+      toggleModal={toggleModal}
+      headerText="We’re sorry to hear that!"
+    >
+      <h3 className="text-lg md:text-xl  mb-4 ml-9 md:ml-0">
+        Let us how we can make it work for you. Share your availability and you
+        feedback with the organizers.
+      </h3>
+      <textarea
+        ref={textAreaRef}
+        className="bg-blinkDashboard border-2 border-gray-600 outline-none w-full p-4 resize-none"
+        placeholder="Type detials"
+        name="reject-detials"
+        cols={30}
+        rows={10}
+      />
+      <button
+        className="w-full mb-3 font-bold text-lg md:text-xl md:mb-0 mr-3  py-[18px] px-[15px] border-2 mt-3 bg-white text-blinkDashboard "
+        onClick={handleSendFeedback}
       >
-        <span
-          className=" hidden md:block absolute top-10 right-10 cursor-pointer z-10 "
-          onClick={toggleModal}
-        >
-          <img src={CloseBTN} alt="close button" />
-        </span>
-        <div className=" fixed inset-0 flex items-center justify-center mx-3 max-sm:mx-0">
-          <div className="py-[52px] px-[46px] md:h-[570px] md:w-[730px]  text-white w-screen  h-screen md:bg-blinkDashboard ">
-            <div className="flex align-baseline">
-              <span className="mr-5 md:hidden" onClick={toggleModal}>
-                <img className="" src={LeftArrow} alt="left Arrow" />
-              </span>
-              <h1 className="text-2xl md:text-4xl font-bold mb-4">
-                We’re sorry to hear that!
-              </h1>
-            </div>
-            <h3 className="text-lg md:text-xl  mb-4 ml-9 md:ml-0">
-              Let us how we can make it work for you. Share your availability
-              and you feedback with the organizers.
-            </h3>
-            <textarea
-              ref={textAreaRef}
-              className="bg-blinkDashboard border-2 border-gray-600 outline-none w-full p-4 resize-none"
-              placeholder="Type detials"
-              name="reject-detials"
-              cols={30}
-              rows={10}
-            />
-            <button className="w-full mb-3 font-bold text-lg md:text-xl md:mb-0 mr-3  py-[18px] px-[15px] border-2 mt-3 bg-white text-blinkDashboard ">
-              Send Your Feedback
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
+        Send Your Feedback
+      </button>
+    </Modal>
   );
 };
+// const RejectModal = ({ showModal, toggleModal }: SecurityPolicyModalProps) => {
+//   const textAreaRef = useRef<HTMLTextAreaElement>(null);
+//   useEffect(() => {
+//     textAreaRef.current?.focus();
+//   }, [showModal]);
+//   return (
+//     <>
+//       <div
+//         className={cn("absolute inset-0 bg-black z-20 h-screen w-screen  ", {
+//           hidden: showModal,
+//         })}
+//       >
+//         <span
+//           className=" hidden md:block absolute top-10 right-10 cursor-pointer z-10 "
+//           onClick={toggleModal}
+//         >
+//           <img src={CloseBTN} alt="close button" />
+//         </span>
+//         <div className=" fixed inset-0 flex items-center justify-center mx-3 max-sm:mx-0">
+//           <div className="py-[52px] px-[46px] md:h-[570px] md:w-[730px]  text-white w-screen  h-screen md:bg-blinkDashboard ">
+//             <div className="flex align-baseline">
+//               <span className="mr-5 md:hidden" onClick={toggleModal}>
+//                 <img className="" src={LeftArrow} alt="left Arrow" />
+//               </span>
+//               <h1 className="text-2xl md:text-4xl font-bold mb-4">
+//                 We’re sorry to hear that!
+//               </h1>
+//             </div>
+//             <h3 className="text-lg md:text-xl  mb-4 ml-9 md:ml- 0">
+//               Let us how we can make it work for you. Share your availability
+//               and you feedback with the organizers.
+//             </h3>
+//             <textarea
+//               ref={textAreaRef}
+//               className="bg-blinkDashboard border-2 border-gray-600 outline-none w-full p-4 resize-none"
+//               placeholder="Type detials"
+//               name="reject-detials"
+//               cols={30}
+//               rows={10}
+//             />
+//             <button className="w-full mb-3 font-bold text-lg md:text-xl md:mb-0 mr-3  py-[18px] px-[15px] border-2 mt-3 bg-white text-blinkDashboard ">
+//               Send Your Feedback
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
