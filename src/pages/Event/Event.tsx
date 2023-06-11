@@ -25,9 +25,6 @@ const EventPage = () => {
   const toggleModal = () => {
     setShowModal(!showModal);
   };
-  const handleGoBack = () => {
-    navigate(-1);
-  };
   const handleContinue = () => {
     navigate("/info");
   };

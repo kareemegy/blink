@@ -4,7 +4,7 @@ export const getPageRouteName = (pathname: string): string => {
     "/": "Home",
     "/event": "Event Name",
     "/info": "info",
-    "/food-choices": "Food Choices",
+    "/info-check": "Info Check",
     "/preferences": "Preferences",
     "/confirm-trip": "Confirm Trip",
   };

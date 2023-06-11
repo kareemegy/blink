@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
 import Event from "./pages/Event";
 import Info from "./pages/Info/Info";
+import InfoCheck from "./pages/InfoCheck/InfoCheck";
 
 const App = () => {
   useDocumentTitle();
@@ -22,6 +23,12 @@ const App = () => {
       element: <Info />,
       name: "Info",
     },
+    {
+      path: "/info-check",
+      element: <InfoCheck />,
+      name: "Info Check",
+    },
+
   ];
   const routing = useRoutes(routes);
   return routing;

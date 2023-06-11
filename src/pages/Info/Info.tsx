@@ -16,7 +16,7 @@ const Info = () => {
     kindly fill out your companion’s info in the form. Please read our Security Policy for further information`;
   const navigate = useNavigate();
   const nextPage = () => {
-    navigate("/info-Check");
+    navigate("/info-check");
   };
   return (
     <div className="bg-black">
