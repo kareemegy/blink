@@ -28,25 +28,10 @@ const Home = () => {
               Hey [Mr. Bond],
             </h1>
             <div className="hidden md:block">
-              <p className="text-Gray200 md:text-Gray300 text-sm md:text-base leading-6 mt-4">
-                We cordially invite you to [Event Name] in [Location].
-              </p>
-              <p className="text-Gray200 md:text-Gray300 text-sm md:text-base leading-6 mt-4 ">
-                Please RSVP and register to confirm your attendance.
-              </p>
-              <p
-                className=" mt-4 text-sm md:text-base underline cursor-pointer"
-                onClick={toggleModal}
-              >
-                Read our security policy.
-              </p>
+              <EventMessage toggleModal={toggleModal} />
             </div>
             <div className="md:hidden">
-              <p className="text-sm text-Gray200">
-                Welcome to bl:nk Doha Retreat 2022, we kindly ask you to
-                register and follow the steps below to finish sigining up to our
-                service
-              </p>
+              <MobileMessage />
             </div>
             <Button
               title="Continue"
@@ -55,11 +40,44 @@ const Home = () => {
               nextPage="event"
               className="py-[18px] px-[138px] my-10"
             />
-          <CopyRight className="text-start" />
+            <CopyRight className="text-start" />
           </div>
         </div>
       </div>
       <SecurityPolicyModal showModal={showModal} toggleModal={toggleModal} />
+    </>
+  );
+};
+interface EventMessage {
+  toggleModal: () => void;
+}
+
+const EventMessage = ({ toggleModal }: EventMessage) => {
+  return (
+    <>
+      <p className="text-Gray200 md:text-Gray300 text-sm md:text-base leading-6 mt-4">
+        We cordially invite you to [Event Name] in [Location].
+      </p>
+      <p className="text-Gray200 md:text-Gray300 text-sm md:text-base leading-6 mt-4 ">
+        Please RSVP and register to confirm your attendance.
+      </p>
+      <p
+        className=" mt-4 text-sm md:text-base underline cursor-pointer"
+        onClick={toggleModal}
+      >
+        Read our security policy.
+      </p>
+    </>
+  );
+};
+
+const MobileMessage = () => {
+  return (
+    <>
+      <p className="text-sm text-Gray200">
+        Welcome to bl:nk Doha Retreat 2022, we kindly ask you to register and
+        follow the steps below to finish sigining up to our service
+      </p>
     </>
   );
 };
