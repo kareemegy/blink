@@ -7,7 +7,7 @@ import SelectOptions from "../../components/SelectOptions";
 import FullInput from "../../components/FullInput";
 import Input from "../../components/Input/Input";
 import SmallSelect from "../../components/SmallSelect";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer";
 import ChervronRight from "../../assets/images/Home Page/Chevron right.svg";
 import { useNavigate } from "react-router-dom";
 const Info = () => {
@@ -23,7 +23,7 @@ const Info = () => {
       <Header />
       <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 xl:max-w-[1280px] ">
         <PageHeader title={title} subtitle={subtitle} />
-        <div className=" bg-blinkbg p-5 md:px-[52px] md:py-[60px] w-[100%] md:w-[70%] md:ml-7 text-white  ">
+        <div className=" bg-blinkbg p-5 md:px-[52px] md:py-[60px] w-[100%] md:w-[70%] md:ml-7 text-white">
           <h1 className="text-xl font-bold">Documents</h1>
           <div className="flex items-center mt-3">
             <input

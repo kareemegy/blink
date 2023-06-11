@@ -1,4 +1,4 @@
-import Header from "../../components/Header/Header";
+import Header from "../../components/Header";
 import Calendar from "../../assets/images/calendar.svg";
 import Profile from "../../assets/images/profile.svg";
 import Plane from "../../assets/images/plane.svg";
@@ -10,12 +10,12 @@ import SkyBox from "../../assets/images/skybox.svg";
 import View from "../../assets/images/view.svg";
 import ChevronRight from "../../assets/images/Home Page/Chevron right.svg";
 import { useNavigate } from "react-router-dom";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer";
 import cn from "classnames";
 import { useEffect, useRef, useState } from "react";
-import PageHeader from "../../components/PageHeader/PageHeader";
-import Modal from "../../components/Modal/Modal";
-import Button from "../../components/Button/Button";
+import PageHeader from "../../components/PageHeader";
+import Modal from "../../components/Modal";
+import Button from "../../components/Button";
 const EventPage = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
@@ -34,11 +34,11 @@ const EventPage = () => {
       <Header />
       <div
         className={cn(
-          " bg-black  flex flex-col justify-center items-center text-white ",
+          " bg-black flex flex-col justify-center items-center text-white",
           { hidden: showModal }
         )}
       >
-        <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 ">
+        <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5">
           <PageHeader title={title} subtitle={subtitle} />
           <div className=" mt-7 bg-EventBg w-full  md:max-w-[830px]  mx-5 p-10">
             <TripDetails />
