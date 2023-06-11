@@ -11,39 +11,38 @@ const Home = () => {
   const toggleModal = () => {
     setShowModal(!showModal);
   };
+
   return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 h-screen grid-rows-1 ">
-        <div
-          className="flex justify-center items-center bg-cover bg-center "
-          style={{ backgroundImage: `url("${GDBImage}")` }}
-        >
-          <img className="hidden sm:block" src={Logo} alt="Blink_Logo" />
-        </div>
-        <div className="flex flex-col items-center  bg-black text-white md:bg-none w-full md:mx-auto">
-          <div className="flex flex-col justify-center mx-5 px-6 md:px-0 pb-3 h-[90%] w-full md:w-[350px]">
-            <h1 className="font-bold text-2xl md:text-4xl  leading-10 mb-3">
-              Hey [Mr. Bond],
-            </h1>
-            <div className="hidden md:block">
-              <EventMessage toggleModal={toggleModal} />
-            </div>
-            <div className="md:hidden">
-              <MobileMessage />
-            </div>
-            <Button
-              title="Continue"
-              icon={ChervronRight}
-              style="white"
-              nextPage="event"
-              className="py-[18px] px-[138px] my-10"
-            />
-            <CopyRight className="text-start" />
+    <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
+      <div
+        className="flex justify-center items-center bg-cover bg-center "
+        style={{ backgroundImage: `url("${GDBImage}")` }}
+      >
+        <img className="hidden sm:block" src={Logo} alt="Blink_Logo" />
+      </div>
+      <div className="flex flex-col items-center  bg-black text-white md:bg-none w-full md:mx-auto">
+        <div className="flex flex-col justify-center mx-5 px-6 md:px-0 pb-3 h-[90%] w-full md:w-[350px]">
+          <h1 className="font-bold text-2xl md:text-4xl  leading-10 mb-3">
+            Hey [Mr. Bond],
+          </h1>
+          <div className="hidden md:block">
+            <EventMessage toggleModal={toggleModal} />
           </div>
+          <div className="md:hidden">
+            <MobileMessage />
+          </div>
+          <Button
+            title="Continue"
+            icon={ChervronRight}
+            style="white"
+            nextPage="event"
+            className="py-[18px] px-[138px] my-10"
+          />
         </div>
+        <CopyRight className="self-start ml-6 md:self-center md:mt-auto" />
       </div>
       <SecurityPolicyModal showModal={showModal} toggleModal={toggleModal} />
-    </>
+    </div>
   );
 };
 interface EventMessage {
