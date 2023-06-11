@@ -241,7 +241,7 @@ const RejectModal = ({ showModal, toggleModal }: RejectModalProps) => {
       showModal={showModal}
       toggleModal={toggleModal}
       headerText="We’re sorry to hear that!"
-      className="w-[430px]"
+      className="md:w-[530px]"
     >
       <h3 className=" mb-4 ml-9 md:ml-0 text-DarkestWhite">
         Let us how we can make it work for you. Share your availability and you
