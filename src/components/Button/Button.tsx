@@ -7,7 +7,7 @@ interface ButtonProps {
   className?: string;
   nextPage: string;
 }
-const Button = ({ ...props }) => {
+const Button = ({ ...props }: ButtonProps) => {
   const { title, icon, style, className, nextPage } = props;
   const navigate = useNavigate();
   const next = (pageName: string) => {

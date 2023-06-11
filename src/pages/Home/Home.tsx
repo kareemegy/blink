@@ -7,6 +7,7 @@ import { useState } from "react";
 import cn from "classnames";
 import "./sytle.css";
 import Button from "../../components/Button/Button";
+import CopyRight from "../../components/CopyRight/CopyRight";
 const Home = () => {
   const [showModal, setShowModal] = useState(true);
   const toggleModal = () => {
@@ -46,11 +47,7 @@ const Home = () => {
               className="py-[18px] px-[138px]"
             />
           </div>
-          <div>
-            <p className="mt-1 text-xs md:text-base ">
-              Copyright © 2023 bl:nk™. All Rights Reserved.
-            </p>
-          </div>
+          <CopyRight />
         </div>
       </div>
       <SecurityPolicyModal showModal={showModal} toggleModal={toggleModal} />
