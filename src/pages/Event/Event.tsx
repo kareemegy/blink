@@ -50,9 +50,10 @@ const EventPage = () => {
             <hr className="my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
             <Benefits />
             <hr className="my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
-            <div className="max-sm:flex-col md:flex  p-1">
+
+            <div className="flex-col xl:flex xl:flex-row  p-1 ">
               <Button
-                className="w-full text-base  lg:text-lg mb-10 md:mb-0 mr-10"
+                className="w-full text-base lg:text-lg mb-10 xl:mb-0 mr-10"
                 title="Reject. I'm not available at this time"
                 style="outline"
                 handleClicked={toggleModal}
