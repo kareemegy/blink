@@ -34,13 +34,13 @@ const EventPage = () => {
       <Header />
       <div
         className={cn(
-          " bg-black  flex flex-col justify-center items-center text-white  ",
+          " bg-black  flex flex-col justify-center items-center text-white ",
           { hidden: showModal }
         )}
       >
-        <div className="container mx-auto mb-6 flex flex-col  items-center ">
+        <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 ">
           <PageHeader title={title} subtitle={subtitle} />
-          <div className="mt-7 bg-EventBg w-full  md:max-w-[830px]  mx-5 p-10">
+          <div className=" mt-7 bg-EventBg w-full  md:max-w-[830px]  mx-5 p-10">
             <TripDetails />
             <hr className="my-10 border-b-1  max-w-3xl border-black" />
             <TripDates />
@@ -51,7 +51,7 @@ const EventPage = () => {
             <hr className="my-10 border-b-1  max-w-3xl border-black" />
             <div className="max-sm:flex-col md:flex  p-1">
               <Button
-                className="w-full text-base  lg:text-lg mb-10 md:mb-0  mr-10 "
+                className="w-full text-base  lg:text-lg mb-10 md:mb-0 mr-10"
                 title="Reject. I'm not available at this time"
                 style="outline"
                 handleClicked={toggleModal}
@@ -77,7 +77,7 @@ const TripDetails = () => {
   return (
     <div>
       <h1 className="text-2xl font-bold mb-3">Trip Details</h1>
-      <p className="text-gray-400 max-w-[400px]">
+      <p className="text-Gray300 max-w-[400px]">
         Details about the trip, benefits, flight, accommodation and matches
         you’re invited to attend.
       </p>
@@ -96,7 +96,6 @@ const TripDates = () => {
             src={Calendar}
             alt=" calendar"
           />
-
           <p className=" max-w-[400px]"> Nov/20/2022 - Nov/25/2022</p>
         </div>
       </div>
