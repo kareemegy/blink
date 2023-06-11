@@ -19,7 +19,7 @@ import Button from "../../components/Button/Button";
 const EventPage = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
-  const title = "Event Name";
+  const title = "[Event Name]";
   const subtitle = `We cordially invite you to [Event Name] in [Location]. Please read our Security Policy for further information`;
 
   const toggleModal = () => {
@@ -34,14 +34,13 @@ const EventPage = () => {
       <Header />
       <div
         className={cn(
-          " bg-black  flex flex-col justify-center items-center  text-white  ",
+          " bg-black  flex flex-col justify-center items-center text-white  ",
           { hidden: showModal }
         )}
       >
-        <div className="container mx-auto mb-6 flex flex-col  items-center">
+        <div className="container mx-auto mb-6 flex flex-col  items-center ">
           <PageHeader title={title} subtitle={subtitle} />
-
-          <div className="mt-7 bg-blinkDashboard  w-full  md:max-w-[830px]  mx-5 p-10">
+          <div className="mt-7 bg-EventBg w-full  md:max-w-[830px]  mx-5 p-10">
             <TripDetails />
             <hr className="my-10 border-b-1  max-w-3xl border-black" />
             <TripDates />
@@ -98,10 +97,7 @@ const TripDates = () => {
             alt=" calendar"
           />
 
-          <p className="text-gray-400 max-w-[400px]">
-            {" "}
-            Nov/20/2022 - Nov/25/2022
-          </p>
+          <p className=" max-w-[400px]"> Nov/20/2022 - Nov/25/2022</p>
         </div>
       </div>
     </div>
@@ -125,7 +121,7 @@ const Companions = () => {
               src={Profile}
               alt=" profile_icon"
             />
-            <div className="mr-1">
+            <div className="mr-1 ">
               <span className="text-gray-400">{i + 1}st </span>
               <p>Companion</p>
             </div>
@@ -137,83 +133,53 @@ const Companions = () => {
 };
 
 const Benefits = () => {
+  const benefitsList = [
+    {
+      icon: Plane,
+      text: "Business Class Flight",
+    },
+    {
+      icon: Bed,
+      text: "Private Residence",
+    },
+    {
+      icon: Car,
+      text: "Dedicated Car",
+    },
+    {
+      icon: Food,
+      text: "Formal Dinners",
+    },
+    {
+      icon: Planed,
+      text: "Planned Itinerary",
+    },
+    {
+      icon: SkyBox,
+      text: "Skybox Tickets",
+    },
+    {
+      icon: View,
+      text: "Exclusive Events",
+    },
+  ];
   return (
     <>
-      <h1 className="text-xl font-bold mb-3">Benefits</h1>
+      <h1 className="text-xl font-bold mb-3 ">Benefits</h1>
       <div>
         <div className="flex flex-wrap">
-          <div className="flex mr-5 p-1 ">
-            <img
-              className="mr-1 w-[24px] h-[24px]"
-              src={Plane}
-              alt=" profile_icon"
-            />
-            <div className="mr-1">
-              <p className="text-gray-400">Business Class Flight </p>
+          {benefitsList.map((benefit, index) => (
+            <div className="flex mr-5 p-1" key={index}>
+              <img
+                className="mr-1 w-[24px] h-[24px]"
+                src={benefit.icon}
+                alt=" profile_icon"
+              />
+              <div className="mr-1">
+                <p>{benefit.text}</p>
+              </div>
             </div>
-          </div>
-          <div className="flex mr-5 p-1 ">
-            <img
-              className="mr-1 w-[24px] h-[24px]"
-              src={Bed}
-              alt=" profile_icon"
-            />
-            <div className="mr-1">
-              <p className="text-gray-400">Private Residence </p>
-            </div>
-          </div>
-          <div className="flex mr-5 p-1 ">
-            <img
-              className="mr-1 w-[24px] h-[24px]"
-              src={Car}
-              alt=" profile_icon"
-            />
-            <div className="mr-1">
-              <p className="text-gray-400">Dedicated Car</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-wrap">
-        <div className="flex mr-5 p-1 ">
-          <img
-            className="mr-1 w-[24px] h-[24px]"
-            src={Food}
-            alt=" profile_icon"
-          />
-          <div className="mr-1">
-            <p className="text-gray-400">Formal Dinners </p>
-          </div>
-        </div>
-        <div className="flex mr-5 p-1 ">
-          <img
-            className="mr-1 w-[24px] h-[24px]"
-            src={Planed}
-            alt=" profile_icon"
-          />
-          <div className="mr-1">
-            <p className="text-gray-400">Planned Itinerary </p>
-          </div>
-        </div>
-        <div className="flex mr-5 p-1 ">
-          <img
-            className="mr-1 w-[24px] h-[24px]"
-            src={SkyBox}
-            alt=" profile_icon"
-          />
-          <div className="mr-1">
-            <p className="text-gray-400">Skybox Tickets</p>
-          </div>
-        </div>
-        <div className="flex mr-5 p-1 ">
-          <img
-            className="mr-1 w-[24px] h-[24px]"
-            src={View}
-            alt=" profile_icon"
-          />
-          <div className="mr-1">
-            <p className="text-gray-400">Exclusive Events </p>
-          </div>
+          ))}
         </div>
       </div>
     </>
