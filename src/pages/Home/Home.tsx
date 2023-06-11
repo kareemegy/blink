@@ -39,7 +39,7 @@ const Home = () => {
             className="py-[18px] px-[138px] my-10"
           />
         </div>
-        <CopyRight className="self-start ml-6 md:self-center md:mt-auto" />
+        <CopyRight className="self-start ml-6 md:self-center md:mt-auto md:mb-10" />
       </div>
       <SecurityPolicyModal showModal={showModal} toggleModal={toggleModal} />
     </div>
@@ -94,55 +94,37 @@ const SecurityPolicyModal = ({
       showModal={showModal}
       toggleModal={toggleModal}
       headerText="Security Policy"
-      leftIcon={leftArrow}
+      icon={leftArrow}
+      className="md:h-[490px]"
     >
-      <h3 className="text-lg md:text-xl  mb-4">
+      <h3 className="text-lg  md:text-xl  mb-4">
         Malesuada Pulvinar Elementum, Ultrices Mi
       </h3>
-      <p className="overflow-y-scroll pr-5 text-base md:h-[280px] scrollbar-style h-[500px]">
-        adipiscing mauris lectus enim nullam. Scelerisque congue proin // cursus
-        eget. Dui ornare vitae, netus sed ultricies. Integer // imperdiet nunc
-        eget duis diam risus. Lobortis tincidunt nunc, // lobortis non. Ut
-        tempor, dui in imperdiet netus nisl nibh pulvinar // curabitur. Amet
-        augue in vitae ut ultrices eu. Ut malesuada // facilisis arcu id. Dictum
-        vestibulum, at ut arcu, erat. Ipsum // libero, massa vitae egestas
-        volutpat, lacus at mauris. Mauris urna // proin posuere purus sed
-        feugiat massa. Purus turpis malesuada // volutpat eget scelerisque odio
-        at blandit cras. Senectus // ullamcorper nibh quis metus, dolor vitae,
-        nunc, felis. A diam dis // sed vitae commodo. Tortor, nec commodo, sit
-        sed donec. Ullamcorper // sit integer amet egestas ac, risus tortor.
-        Aliquam, sed enim // ligula odio felis venenatis. Sapien quis vulputate
-        id iaculis // viverra. Risus maecenas neque sagittis habitasse vitae in
-        // tristique. Adipiscing pharetra tincidunt varius nulla vestibulum //
-        odio mauris vitae. Aliquam ac turpis aliquam vestibulum lacinia // leo
-        vestibulum eget libero. Pharetra, sagittis ut egestas erat // cursus
-        libero, vulputate magna et. Purus auctor at dictumst leo // erat mi
-        nascetur feugiat. Fringilla interdum massa neque pretium // luctus id
-        feugiat cras nibh. Turpis lectus ornare sed faucibus // aliquam sit
-        amet. Nunc sagittis vitae hendrerit massa pellentesque // felis. Nunc
-        vel sagittis purus amet nec velit netus. Lacus ornare // elit senectus
-        cursus. Tristique a volutpat laoreet amet morbi arcu // metus, ultrices.
-        Non turpis massa enim massa justo massa est. // Posuere at pretium nunc
-        pharetra dui. Scelerisque felis gravida // eleifend hac turpis sem nibh
-        id et. cursus libero, vulputate magna // et. Purus auctor at dictumst
-        leo erat mi nascetur feugiat. // Fringilla interdum massa neque pretium
-        luctus id feugiat cras // nibh. Turpis lectus ornare sed faucibus
-        aliquam sit amet. Nunc // sagittis vitae hendrerit massa pellentesque
-        felis. Nunc vel // sagittis purus amet nec velit netus. Lacus ornare
-        elit senectus // cursus. Tristique a volutpat laoreet amet morbi arcu
-        metus, // ultrices. Non turpis massa enim massa justo massa est. Posuere
-        at // pretium nunc pharetra dui. Scelerisque felis gravida eleifend hac
-        // turpis sem nibh id et. Posuere at pretium nunc pharetra dui. //
-        Scelerisque felis gravida eleifend hac turpis sem nibh id et. // cursus
-        libero, vulputate magna et. Purus auctor at dictumst leo // erat mi
-        nascetur feugiat. Fringilla interdum massa neque pretium // luctus id
-        feugiat cras nibh. Turpis lectus ornare sed faucibus // aliquam sit
-        amet. Nunc sagittis vitae hendrerit massa pellentesque // felis. Nunc
-        vel sagittis purus amet nec velit netus. Lacus ornare // elit senectus
-        cursus. Tristique a volutpat laoreet amet morbi arcu // metus, ultrices.
-        Non turpis massa enim massa justo massa est. // Posuere at pretium nunc
-        pharetra dui. Scelerisque felis gravida // eleifend hac turpis sem nibh
-        id et.
+      <p className="overflow-y-scroll pr-5 text-sm text-GraySecondary md:h-[280px] scrollbar-style h-[500px]">
+        Adipiscing mauris lectus enim nullam. Scelerisque congue proin cursus
+        eget. Dui ornare vitae, netus sed ultricies. Integer imperdiet nunc eget
+        duis diam risus. Lobortis tincidunt nunc, lobortis non. Ut tempor, dui
+        in imperdiet netus nisl nibh pulvinar curabitur. Amet augue in vitae ut
+        ultrices eu. Ut malesuada facilisis arcu id. Dictum vestibulum, at ut
+        arcu, erat. Ipsum libero, massa vitae egestas volutpat, lacus at mauris.
+        Mauris urna proin posuere purus sed feugiat massa. Purus turpis
+        malesuada volutpat eget scelerisque odio at blandit cras. Senectus
+        ullamcorper nibh quis metus, dolor vitae, nunc, felis. A diam dis sed
+        vitae commodo. Tortor, nec commodo, sit sed donec. Ullamcorper sit
+        integer amet egestas ac, risus tortor. Aliquam, sed enim ligula odio
+        felis venenatis. Sapien quis vulputate id iaculis viverra. Risus
+        maecenas neque sagittis habitasse vitae in tristique. Adipiscing
+        pharetra tincidunt varius nulla vestibulum odio mauris vitae. Aliquam ac
+        turpis aliquam vestibulum lacinia leo vestibulum eget libero. Pharetra,
+        sagittis ut egestas erat cursus libero, vulputate magna et. Purus auctor
+        at dictumst leo erat mi nascetur feugiat. Fringilla interdum massa neque
+        pretium luctus id feugiat cras nibh. Turpis lectus ornare sed faucibus
+        aliquam sit amet. Nunc sagittis vitae hendrerit massa pellentesque
+        felis. Nunc vel sagittis purus amet nec velit netus. Lacus ornare elit
+        senectus cursus. Tristique a volutpat laoreet amet morbi arcu metus,
+        ultrices. Non turpis massa enim massa justo massa est. Posuere at
+        pretium nunc pharetra dui. Scelerisque felis gravida eleifend hac turpis
+        sem nibh id et.
       </p>
     </Modal>
   );

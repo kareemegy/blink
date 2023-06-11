@@ -7,7 +7,7 @@ type ModalProps = {
   toggleModal: () => void;
   headerText: string;
   children: React.ReactNode;
-  leftIcon?: string;
+  icon?: string;
   className?: string;
 };
 
@@ -16,7 +16,7 @@ const Modal = ({
   toggleModal,
   headerText,
   children,
-  leftIcon,
+  icon,
   className,
 }: ModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
@@ -60,9 +60,9 @@ const Modal = ({
             )}
           >
             <div className="flex align-baseline">
-              {leftIcon && (
+              {icon && (
                 <span className="mr-5 md:hidden" onClick={toggleModal}>
-                  <img className="" src={leftIcon} alt="left Icon" />
+                  <img className="" src={icon} alt="left Icon" />
                 </span>
               )}
               <h1 className="text-2xl md:text-4xl font-bold mb-4">
