@@ -6,15 +6,11 @@ import leftArrow from "../../assets/images/Home Page/left-arrow.svg";
 import { useState } from "react";
 import cn from "classnames";
 import "./sytle.css";
-import { useNavigate } from "react-router-dom";
+import Button from "../../components/Button/Button";
 const Home = () => {
-  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(true);
   const toggleModal = () => {
     setShowModal(!showModal);
-  };
-  const handleContinue = () => {
-    navigate("/event");
   };
   return (
     <>
@@ -42,19 +38,13 @@ const Home = () => {
             >
               Read our security policy.
             </p>
-            <button
-              onClick={handleContinue}
-              className="flex justify-center max-w-[550px] items-center mt-5 font-bold text-lg md:text-2xl bg-white text-gray-800 px-7 py-5 rounded-sm "
-            >
-              Continue{" "}
-              <span className="pl-4">
-                <img
-                  className="text-sm"
-                  src={ChervronRight}
-                  alt="Chevron right"
-                />
-              </span>
-            </button>
+            <Button
+              title="Continue"
+              icon={ChervronRight}
+              style="white"
+              nextPage="event"
+              className="py-[18px] px-[138px]"
+            />
           </div>
           <div>
             <p className="mt-1 text-xs md:text-base ">

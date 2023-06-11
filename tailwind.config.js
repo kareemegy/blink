@@ -7,6 +7,8 @@ export default {
         sans: ["Roboto", "sans-serif"],
       },
       colors: {
+        Gray1000: "#1A1A1A",
+        Gray50: "#535353",
         blinkDashboard: "#1E1E1E",
         blinkbg: "#252525",
         gray200: "#BABABA",
