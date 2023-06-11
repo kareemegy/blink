@@ -5,19 +5,16 @@ interface ButtonProps {
   icon?: string;
   style?: "white" | "outline";
   className?: string;
-  nextPage: string;
+  handleClicked?: () => void;
 }
 const Button = ({ ...props }: ButtonProps) => {
-  const { title, icon, style, className, nextPage } = props;
-  const navigate = useNavigate();
-  const next = (pageName: string) => {
-    navigate(`/${pageName}`);
-  };
+  const { title, icon, style, className, handleClicked } = props;
+
   return (
     <button
-      onClick={() => next(nextPage)}
+      onClick={handleClicked}
       className={cn(
-        "flex justify-center items-center  font-bold md:text-lg  px-[30px] py-[13px] rounded-sm ",
+        "flex justify-center items-center  font-bold px-[30px] py-[13px] rounded-sm ",
         className,
         { "bg-white text-Gray1000": style === "white" },
         { "bg-gray-Gray50 text-white border": style === "outline" }

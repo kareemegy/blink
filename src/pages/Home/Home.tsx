@@ -6,12 +6,16 @@ import { useState } from "react";
 import Button from "../../components/Button/Button";
 import CopyRight from "../../components/CopyRight/CopyRight";
 import Modal from "../../components/Modal/Modal";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
   const toggleModal = () => {
     setShowModal(!showModal);
   };
-
+  const nextPage = () => {
+    navigate("/event");
+  };
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
       <div
@@ -35,7 +39,7 @@ const Home = () => {
             title="Continue"
             icon={ChervronRight}
             style="white"
-            nextPage="event"
+            handleClicked={nextPage}
             className="py-[18px] px-[138px] my-10"
           />
         </div>

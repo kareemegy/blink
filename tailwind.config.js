@@ -11,6 +11,7 @@ export default {
         Gray50: "#535353",
         Gray300: "#989898",
         Gray200: "#BABABA",
+        DarkestWhite:"#9A9A9A",
         GraySecondary:"#C9C9C9",
         blinkDashboard: "#1E1E1E",
         blinkbg: "#252525",
