@@ -16,6 +16,7 @@ import { useEffect, useRef, useState } from "react";
 import PageHeader from "../../components/PageHeader";
 import Modal from "../../components/Modal";
 import Button from "../../components/Button";
+
 const EventPage = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
@@ -38,17 +39,17 @@ const EventPage = () => {
           { hidden: showModal }
         )}
       >
-        <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5">
+        <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 xl:max-w-[1280px]">
           <PageHeader title={title} subtitle={subtitle} />
-          <div className=" mt-7 bg-EventBg w-full  md:max-w-[830px]  mx-5 p-10">
+          <div className=" mt-7 bg-Gray900 md:bg-EventBg p-5 md:px-[52px] md:py-[60px] w-[100%] md:w-[70%] md:ml-7">
             <TripDetails />
-            <hr className="my-10 border-b-1  max-w-3xl border-black" />
+            <hr className="my-10 border-b-1  max-w-3xl border-Gray50  md:border-Primary700" />
             <TripDates />
-            <hr className="my-10 border-b-1  max-w-3xl border-black" />
+            <hr className="my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
             <Companions />
-            <hr className="my-10 border-b-1  max-w-3xl border-black" />
+            <hr className="my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
             <Benefits />
-            <hr className="my-10 border-b-1  max-w-3xl border-black" />
+            <hr className="my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
             <div className="max-sm:flex-col md:flex  p-1">
               <Button
                 className="w-full text-base  lg:text-lg mb-10 md:mb-0 mr-10"
@@ -208,7 +209,7 @@ const RejectModal = ({ showModal, toggleModal }: RejectModalProps) => {
       headerText="We’re sorry to hear that!"
       className="md:w-[530px]"
     >
-      <h3 className=" mb-4 ml-9 md:ml-0 text-DarkestWhite">
+      <h3 className=" mb-4  text-DarkestWhite">
         Let us how we can make it work for you. Share your availability and you
         feedback with the organizers.
       </h3>
