@@ -9,10 +9,10 @@ export default {
       colors: {
         Gray1000: "#1A1A1A",
         Gray50: "#535353",
+        Gray300: "#989898",
+        Gray200: "#BABABA",
         blinkDashboard: "#1E1E1E",
         blinkbg: "#252525",
-        gray200: "#BABABA",
-        gray300: "#989898",
         gray400: "#2e2e2e",
         gray500: "#535353",
         bdwhite: "#757575",

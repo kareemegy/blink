@@ -23,31 +23,40 @@ const Home = () => {
           <img className="hidden sm:block" src={Logo} alt="Blink_Logo" />
         </div>
         <div className="flex flex-col items-center  bg-black text-white md:bg-none w-full md:mx-auto">
-          <div className="flex flex-col justify-center mx-5 px-6 md:px-0 pb-3 h-[90%]">
-            <h1 className="font-bold text-2xl md:text-4xl leading-10">
+          <div className="flex flex-col justify-center mx-5 px-6 md:px-0 pb-3 h-[90%] w-full md:w-[350px]">
+            <h1 className="font-bold text-2xl md:text-4xl  leading-10 mb-3">
               Hey [Mr. Bond],
             </h1>
-            <p className="text-gray-400 text-lg md:text-2xl leading-6 mt-4">
-              We cordially invite you to [Event Name] in [Location].
-            </p>
-            <p className="text-gray-400 text-lg md:text-2xl leading-6 mt-4 ">
-              Please RSVP and register to confirm your attendance.
-            </p>
-            <p
-              className=" mt-4  text-lg md:text-2xl underline cursor-pointer"
-              onClick={toggleModal}
-            >
-              Read our security policy.
-            </p>
+            <div className="hidden md:block">
+              <p className="text-Gray200 md:text-Gray300 text-sm md:text-base leading-6 mt-4">
+                We cordially invite you to [Event Name] in [Location].
+              </p>
+              <p className="text-Gray200 md:text-Gray300 text-sm md:text-base leading-6 mt-4 ">
+                Please RSVP and register to confirm your attendance.
+              </p>
+              <p
+                className=" mt-4 text-sm md:text-base underline cursor-pointer"
+                onClick={toggleModal}
+              >
+                Read our security policy.
+              </p>
+            </div>
+            <div className="md:hidden">
+              <p className="text-sm text-Gray200">
+                Welcome to bl:nk Doha Retreat 2022, we kindly ask you to
+                register and follow the steps below to finish sigining up to our
+                service
+              </p>
+            </div>
             <Button
               title="Continue"
               icon={ChervronRight}
               style="white"
               nextPage="event"
-              className="py-[18px] px-[138px]"
+              className="py-[18px] px-[138px] my-10"
             />
+          <CopyRight className="text-start" />
           </div>
-          <CopyRight />
         </div>
       </div>
       <SecurityPolicyModal showModal={showModal} toggleModal={toggleModal} />

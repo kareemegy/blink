@@ -1,10 +1,12 @@
-const CopyRight = () => {
+interface CopyRightProps {
+  className?: string;
+}
+
+const CopyRight = ({ className }: CopyRightProps) => {
   return (
-    <div>
-      <p className="mt-1 text-xs md:text-base ">
-        Copyright © 2023 bl:nk™. All Rights Reserved.
-      </p>
-    </div>
+    <p className={`mt-1 text-xs md:text-base ${className}`}>
+      Copyright © 2023 bl:nk™. All Rights Reserved.
+    </p>
   );
 };
 

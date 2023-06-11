@@ -17,7 +17,7 @@ const Button = ({ ...props }: ButtonProps) => {
     <button
       onClick={() => next(nextPage)}
       className={cn(
-        "flex justify-center items-center mt-5 font-bold md:text-lg  px-[30px] py-[13px] rounded-sm ",
+        "flex justify-center items-center  font-bold md:text-lg  px-[30px] py-[13px] rounded-sm ",
         className,
         { "bg-white text-Gray1000": style === "white" },
         { "bg-gray-Gray50 text-white border": style === "outline" }
