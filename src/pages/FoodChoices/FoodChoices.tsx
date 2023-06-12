@@ -20,12 +20,7 @@ const FoodChoices = () => {
           <h1 className="font-bold text-2xl md:text-4xl  leading-10 mb-3">
             Food Choices
           </h1>
-          <div className="hidden md:block">
-            <EventMessage />
-          </div>
-          <div className="md:hidden">
-            <MobileMessage />
-          </div>
+          <EventMessage />
           <Button
             title="Skip, I have no preference"
             style="outline"
@@ -46,24 +41,12 @@ const FoodChoices = () => {
   );
 };
 
-
 const EventMessage = () => {
   return (
     <>
       <p className="text-Gray200 md:text-Gray300 text-sm md:text-base leading-6 mt-4 mb-10">
         At this upcoming event, food will be likely served. Please take a few
         seconds to let us know if you have any food preferences or allergies
-      </p>
-    </>
-  );
-};
-
-const MobileMessage = () => {
-  return (
-    <>
-      <p className="text-sm text-Gray200">
-        Welcome to bl:nk Doha Retreat 2022, we kindly ask you to register and
-        follow the steps below to finish sigining up to our service
       </p>
     </>
   );
