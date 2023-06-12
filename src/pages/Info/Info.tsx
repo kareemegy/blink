@@ -71,7 +71,8 @@ const PortraitSection = () => {
   return (
     <div className="mt-10 md:grid md:grid-cols-3 md:justify-items-start">
       <h1 className="text-xl text-gray200 font-bold col-span-1 ">
-        Portrait<span className="text-error font-normal">*</span>
+       <span className="text-Gray200">Portrait</span>
+        <span className="text-error font-normal">*</span>
       </h1>
       <div className="flex flex-col items-center  col-span-2">
         <img
@@ -79,10 +80,7 @@ const PortraitSection = () => {
           src={Icon}
           alt="user photo"
         />
-        <button className="flex justify-center items-center w-full md:max-w-[250px]  text-white  font-bold border-2 px-[10px] py-[5px] ">
-          <span>Browse photos</span>
-          <img className="p-3" src={Upload} alt="user photo" />
-        </button>
+        <Button title="Browse photos" icon={Upload} style="outline"  />
       </div>
     </div>
   );
