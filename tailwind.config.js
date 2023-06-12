@@ -14,6 +14,7 @@ export default {
         Gray900:"#252525",
         DarkestWhite:"#9A9A9A",
         GraySecondary:"#C9C9C9",
+        Lightest:"#4C4C4C",
         EventBg:"#2E2E2E",
         Primary700:"#1A1A1A66",
         blinkDashboard: "#1E1E1E",

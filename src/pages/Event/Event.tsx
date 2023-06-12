@@ -36,7 +36,7 @@ const EventPage = () => {
       <Header />
       <Wrapper showModal={showModal}>
         <PageHeader title={title} subtitle={subtitle} />
-        <div className="flex flex-col  w-full px-5 md:px-14 py-10  bg-Gray900 md:bg-EventBg md:max-w-[838px]  ">
+        <div className="flex flex-col  w-full px-5 md:px-14 py-10  bg-Gray900 md:bg-EventBg md:max-w-[838px]">
           <TripDetails />
           <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50  md:border-Primary700" />
           <TripDates />
