@@ -5,8 +5,7 @@ export const getPageRouteName = (pathname: string): string => {
     "/event": "Event Name",
     "/info": "info",
     "/info-check": "Info Check",
-    "/preferences": "Preferences",
-    "/confirm-trip": "Confirm Trip",
+    "/food-choices": "Food Choices",
   };
   const routeName = pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
   const pageRouteName = pageRouteMap[routeName];

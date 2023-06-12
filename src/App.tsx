@@ -4,6 +4,7 @@ import { useDocumentTitle } from "./hooks/useDocumentTitle";
 import Event from "./pages/Event";
 import Info from "./pages/Info/Info";
 import InfoCheck from "./pages/InfoCheck/InfoCheck";
+import FoodChoices from "./pages/FoodChoices/FoodChoices";
 
 const App = () => {
   useDocumentTitle();
@@ -28,7 +29,11 @@ const App = () => {
       element: <InfoCheck />,
       name: "Info Check",
     },
-
+    {
+      path: "/food-choices",
+      element: <FoodChoices />,
+      name: "Food Choices",
+    },
   ];
   const routing = useRoutes(routes);
   return routing;
