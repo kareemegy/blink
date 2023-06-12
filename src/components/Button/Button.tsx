@@ -4,16 +4,18 @@ interface ButtonProps {
   icon?: string;
   style?: "white" | "outline";
   className?: string;
+  isDisabled?: boolean;
   handleClicked?: () => void;
 }
 const Button = ({ ...props }: ButtonProps) => {
-  const { title, icon, style, className, handleClicked } = props;
+  const { title, icon, style, className, handleClicked, isDisabled } = props;
 
   return (
     <button
       onClick={handleClicked}
+      disabled={isDisabled}
       className={cn(
-        "flex justify-center items-center  font-bold px-[30px] py-[13px] rounded-sm ",
+        "flex justify-center items-center  font-bold px-[30px] py-[13px] rounded-sm disabled:opacity-50 disabled:cursor-not-allowed ",
         className,
         { "bg-white text-Gray1000": style === "white" },
         { "bg-gray-Gray50 text-white border": style === "outline" }
