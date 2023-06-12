@@ -45,16 +45,16 @@ const Info = () => {
             <IdentificationInfoSection />
             <PersonalInfoSection />
             <ContactInfoSection />
-          </div>
 
-          <Button
-            handleClicked={nextPage}
-            title="Save"
-            style="white"
-            className="w-full text-lg mt-10 mb-5"
-            icon={ChervronRight}
-          />
-          <p>
+          </div>
+            <Button
+              handleClicked={nextPage}
+              title="Save"
+              style="white"
+              className="w-full text-lg mt-10 mb-5"
+              icon={ChervronRight}
+            />
+          <p className="text-Gray300">
             *Due to high demand, requested arrival & departure dates are subject
             to change based on availability
           </p>
@@ -234,12 +234,7 @@ const ContactInfoSection = () => {
               </div>
 
               <div className="self-end w-full ml-4 ">
-                <Input
-                  className="xl:w-[300px]"
-                  type="text"
-                  id="No"
-                  placeholder="000 0000 000"
-                />
+                <Input type="text" id="No" placeholder="000 0000 000" />
               </div>
             </div>
           </div>
@@ -266,12 +261,7 @@ const ContactInfoSection = () => {
               </div>
 
               <div className="self-end w-full ml-4 ">
-                <Input
-                  className="xl:w-[300px]"
-                  type="text"
-                  id="No"
-                  placeholder="000 0000 000"
-                />
+                <Input type="text" id="No" placeholder="000 0000 000" />
               </div>
             </div>
           </div>
