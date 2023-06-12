@@ -3,6 +3,7 @@ import Button from "../../components/Button/Button";
 import CopyRight from "../../components/CopyRight/CopyRight";
 import { useNavigate } from "react-router-dom";
 import FoodBG from "../../assets/images/food-choices.png";
+import Bar from "../../assets/images/bar.svg";
 const FoodChoices = () => {
   const navigate = useNavigate();
 
@@ -21,6 +22,7 @@ const FoodChoices = () => {
             Food Choices
           </h1>
           <EventMessage />
+          <img className="md:hidden" src={Bar} alt="progress bar" />
           <Button
             title="Skip, I have no preference"
             style="outline"
