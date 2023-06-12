@@ -6,7 +6,12 @@ import Protrait from "../../assets/images/Protrait.png";
 import Passport from "../../assets/images/Passport.png";
 import Button from "../../components/Button";
 import ChevronRight from "../../assets/images/Home Page/Chevron right.svg";
+import { useNavigate } from "react-router-dom";
 const InfoCheck = () => {
+  const navigate = useNavigate();
+  const nextPage = () => {
+    navigate("/food-choices");
+  };
   return (
     <>
       <Header />
@@ -34,6 +39,7 @@ const InfoCheck = () => {
               style="white"
               icon={ChevronRight}
               className="w-full"
+              handleClicked={nextPage}
             />
           </div>
         </BoxWrapper>
