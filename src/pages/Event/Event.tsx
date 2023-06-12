@@ -46,19 +46,18 @@ const EventPage = () => {
             <Benefits />
             <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
 
-            <div className="flex-col xl:flex xl:flex-row  p-1 ">
+            <div className="flex-col justify-center items-center gap-10 xl:flex xl:flex-row  p-1 ">
               <Button
-                className="w-full text-base lg:text-lg mb-10 xl:mb-0 mr-10 whitespace-nowrap"
+                className="w-full   lg:text-lg mb-10 xl:mb-0  whitespace-nowrap"
                 title="Reject. I'm not available at this time"
                 style="outline"
                 handleClicked={toggleModal}
               />
               <Button
-                className="w-full text-base lg:text-lg whitespace-nowrap "
-                title="Confirm trip and continue"
-                handleClicked={nextPage}
-                icon={ChevronRight}
+                className="w-full  lg:text-lg  xl:mb-0  whitespace-nowrap"
+                title="Reject. I'm not available at this time"
                 style="white"
+                handleClicked={toggleModal}
               />
             </div>
             <ConfirmationMessage />
