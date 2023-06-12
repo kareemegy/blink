@@ -23,7 +23,7 @@ const Info = () => {
     <div className="bg-black">
       <Header />
       <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 xl:max-w-[1280px] ">
-        <PageHeader title={title} subtitle={subtitle} className="w-[70%]" />
+        <PageHeader title={title} subtitle={subtitle} className="md:w-[70%]" />
         <div className=" bg-blinkbg p-5 md:px-[52px] md:py-[60px] w-[100%] md:w-[70%] md:ml-7 text-white">
           <h1 className="text-xl font-bold">Documents</h1>
           <div className="flex items-center mt-3">
@@ -45,15 +45,14 @@ const Info = () => {
             <IdentificationInfoSection />
             <PersonalInfoSection />
             <ContactInfoSection />
-
           </div>
-            <Button
-              handleClicked={nextPage}
-              title="Save"
-              style="white"
-              className="w-full text-lg mt-10 mb-5"
-              icon={ChervronRight}
-            />
+          <Button
+            handleClicked={nextPage}
+            title="Save"
+            style="white"
+            className="w-full text-lg mt-10 mb-5"
+            icon={ChervronRight}
+          />
           <p className="text-Gray300">
             *Due to high demand, requested arrival & departure dates are subject
             to change based on availability
@@ -71,7 +70,7 @@ const PortraitSection = () => {
   return (
     <div className="mt-10 md:grid md:grid-cols-3 md:justify-items-start">
       <h1 className="text-xl text-gray200 font-bold col-span-1 ">
-       <span className="text-Gray200">Portrait</span>
+        <span className="text-Gray200">Portrait</span>
         <span className="text-error font-normal">*</span>
       </h1>
       <div className="flex flex-col items-center  col-span-2">
@@ -80,7 +79,7 @@ const PortraitSection = () => {
           src={Icon}
           alt="user photo"
         />
-        <Button title="Browse photos" icon={Upload} style="outline"  />
+        <Button title="Browse photos" icon={Upload} style="outline" />
       </div>
     </div>
   );
@@ -90,7 +89,8 @@ const PassportPhotoSection = () => {
   return (
     <div className="mt-10">
       <h1 className="text-xl text-gray200 font-bold">
-        Passport Photo<span className="text-error font-normal">*</span>
+        <span className="text-Gray200">Passport Photo</span>
+        <span className="text-error font-normal">*</span>
       </h1>
       <label htmlFor="passport" className="text-sm underline mt-2">
         Upload Passport (your data will be extracted automatically)
@@ -109,9 +109,9 @@ const PassportPhotoSection = () => {
 const IdentificationInfoSection = () => {
   return (
     <>
-      <h1 className="text-2xl mt-10 mb-8">Identification Info</h1>
+      <h1 className="text-2xl mt-10 mb-8 font-bold">Identification Info</h1>
       <div className="mt-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-Gray200">
           <div>
             <SelectLabel title="ID Type" />
             <SelectOptions
@@ -166,9 +166,9 @@ const IdentificationInfoSection = () => {
 const PersonalInfoSection = () => {
   return (
     <>
-      <h1 className="text-2xl mt-10 mb-8">Personal Info</h1>
+      <h1 className="text-2xl mt-10 mb-8 font-bold">Personal Info</h1>
       <div className="mt-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-Gray200">
           <div>
             <div>
               <SelectLabel title="First Name" />
@@ -208,9 +208,9 @@ const PersonalInfoSection = () => {
 const ContactInfoSection = () => {
   return (
     <>
-      <h1 className="text-2xl mt-10 mb-8">Contact Info</h1>
+      <h1 className="text-2xl mt-10 mb-8 font-bold">Contact Info</h1>
       <div className="mt-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-Gray200">
           <div>
             <div>
               {" "}
@@ -231,19 +231,19 @@ const ContactInfoSection = () => {
                 </div>
               </div>
 
-              <div className="self-end w-full ml-4 ">
+              <div className="self-end w-full ml-4  ">
                 <Input type="text" id="No" placeholder="000 0000 000" />
               </div>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10 text-Gray200">
           <div>
             <div>
               {" "}
-              <SelectLabel title="Email" />
+              <SelectLabel title="Label" />
             </div>
-            <Input type="email" id="Email" placeholder="jhondoe@company.com" />
+            <Input type="email" id="Email" placeholder="Placeholder" />
           </div>
           <div>
             <div className="flex items-center   ">
@@ -259,7 +259,7 @@ const ContactInfoSection = () => {
               </div>
 
               <div className="self-end w-full ml-4 ">
-                <Input type="text" id="No" placeholder="000 0000 000" />
+                <Input type="text" id="No" placeholder="Place Holder" />
               </div>
             </div>
           </div>

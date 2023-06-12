@@ -34,7 +34,7 @@ const SmallSelect = ({ ...props }: SelectProps) => {
         </select>
         <ArrowDown className={left} />
         <div className="absolute inset-y-0 right-0 flex items-center pointer-events-none left-[7px] top-[7px]">
-          <img src={Qatar} alt="ArrowDown" className="h-6  w-4 text-gray-700" />
+          <img src={Qatar} alt="ArrowDown" className="h-6  w-6 text-gray-700" />
         </div>
       </div>
     </div>
