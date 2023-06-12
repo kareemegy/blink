@@ -45,15 +45,15 @@ const EventPage = () => {
             <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
             <Benefits />
             <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
-            <div className="flex-col justify-center items-center gap-10 xl:flex xl:flex-row p-1">
+            <div className="flex flex-col lg:flex-row gap-3">
               <Button
-                className="w-full xl:w-40 lg:text-lg mb-10 xl:mb-0 whitespace-nowrap"
                 title="Reject. I'm not available at this time"
+                className="w-full lg:w-1/2 my-3 text-sm md:text-base  font-bold py-5 px-5 rounded"
                 style="outline"
                 handleClicked={toggleModal}
               />
               <Button
-                className="w-full xl:w-40 lg:text-lg xl:mb-0 whitespace-nowrap"
+                className="w-full lg:w-1/2 my-3 text-sm md:text-base  font-bold py-5 px-5 rounded"
                 title="Confirm trip and continue"
                 style="white"
                 icon={ChevronRight}
