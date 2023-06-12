@@ -5,6 +5,7 @@ import Event from "./pages/Event";
 import Info from "./pages/Info/Info";
 import InfoCheck from "./pages/InfoCheck/InfoCheck";
 import FoodChoices from "./pages/FoodChoices/FoodChoices";
+import Preferences from "./pages/Preferences/Preferences";
 
 const App = () => {
   useDocumentTitle();
@@ -33,6 +34,11 @@ const App = () => {
       path: "/food-choices",
       element: <FoodChoices />,
       name: "Food Choices",
+    },
+    {
+      path: "/preferences",
+      element: <Preferences />,
+      name: "Preferences",
     },
   ];
   const routing = useRoutes(routes);

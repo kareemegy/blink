@@ -8,7 +8,7 @@ const FoodChoices = () => {
   const navigate = useNavigate();
 
   const nextPage = () => {
-    navigate("/event");
+    navigate("/preferences");
   };
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
