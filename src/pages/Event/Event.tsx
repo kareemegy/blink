@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
 import Calendar from "../../assets/images/calendar.svg";
-import Profile from "../../assets/images/profile.svg";
+import Profile from "../../assets/images/Profile.svg";
 import Plane from "../../assets/images/plane.svg";
 import Bed from "../../assets/images/bed.svg";
 import Car from "../../assets/images/car.svg";
@@ -33,39 +33,35 @@ const EventPage = () => {
   return (
     <>
       <Header />
-      <div
-        className={cn(
-          " bg-black flex flex-col justify-center items-center text-white",
-          { hidden: showModal }
-        )}
-      >
-        <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 xl:max-w-[1280px]">
+      <div className={cn(" bg-black  text-white", { hidden: showModal })}>
+        <div className="container mx-auto flex flex-col justify-start  items-center max-w-3xl">
           <PageHeader title={title} subtitle={subtitle} />
-          <div className=" mt-7 bg-Gray900 md:bg-EventBg p-5 md:px-[52px] md:py-[60px] w-[100%] md:w-[70%] md:ml-7">
+          <div className="flex flex-col  w-full px-5 md:px-14 py-10  bg-Gray900 md:bg-EventBg md:max-w-[838px]  ">
             <TripDetails />
-            <hr className="my-10 border-b-1  max-w-3xl border-Gray50  md:border-Primary700" />
+            <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50  md:border-Primary700" />
             <TripDates />
-            <hr className="my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
+            <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
             <Companions />
-            <hr className="my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
+            <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
             <Benefits />
-            <hr className="my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
+            <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
 
             <div className="flex-col xl:flex xl:flex-row  p-1 ">
               <Button
-                className="w-full text-base lg:text-lg mb-10 xl:mb-0 mr-10"
+                className="w-full text-base lg:text-lg mb-10 xl:mb-0 mr-10 whitespace-nowrap"
                 title="Reject. I'm not available at this time"
                 style="outline"
                 handleClicked={toggleModal}
               />
               <Button
-                className="w-full text-base lg:text-lg "
+                className="w-full text-base lg:text-lg whitespace-nowrap "
                 title="Confirm trip and continue"
                 handleClicked={nextPage}
                 icon={ChevronRight}
                 style="white"
               />
             </div>
+            <ConfirmationMessage />
           </div>
           <Footer />
         </div>
@@ -116,7 +112,7 @@ const Companions = () => {
       <h1 className="text-xl font-bold mb-3">Companions</h1>
       <div className="flex items-center flex-wrap ">
         {companions.map((_, i) => (
-          <div key={i} className="flex mr-5 p-1 ">
+          <div key={i} className="flex mr-5 p-1 md:pl-0 ">
             <img
               className="mr-1 w-[50px] h-[50px]"
               src={Profile}
@@ -170,7 +166,7 @@ const Benefits = () => {
       <div>
         <div className="flex flex-wrap">
           {benefitsList.map((benefit, index) => (
-            <div className="flex mr-5 p-1" key={index}>
+            <div className="flex mr-5 p-1 pl-0" key={index}>
               <img
                 className="mr-1 w-[24px] h-[24px]"
                 src={benefit.icon}
@@ -184,6 +180,14 @@ const Benefits = () => {
         </div>
       </div>
     </>
+  );
+};
+
+const ConfirmationMessage = () => {
+  return (
+    <p className="text-sm md:text-base text-Gray300 mt-7 md:text-center">
+      By confirming your trip, your accommodation will be booked accordingly{" "}
+    </p>
   );
 };
 
