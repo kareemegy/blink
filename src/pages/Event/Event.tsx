@@ -16,6 +16,7 @@ import { useEffect, useRef, useState } from "react";
 import PageHeader from "../../components/PageHeader";
 import Modal from "../../components/Modal";
 import Button from "../../components/Button";
+import Wrapper from "../../components/Wrapper/Wrapper";
 
 const EventPage = () => {
   const navigate = useNavigate();
@@ -33,38 +34,36 @@ const EventPage = () => {
   return (
     <>
       <Header />
-      <div className={cn(" bg-black  text-white", { hidden: showModal })}>
-        <div className="container mx-auto flex flex-col justify-start  items-center max-w-3xl">
-          <PageHeader title={title} subtitle={subtitle} />
-          <div className="flex flex-col  w-full px-5 md:px-14 py-10  bg-Gray900 md:bg-EventBg md:max-w-[838px]  ">
-            <TripDetails />
-            <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50  md:border-Primary700" />
-            <TripDates />
-            <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
-            <Companions />
-            <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
-            <Benefits />
-            <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
-            <div className="flex flex-col lg:flex-row gap-3">
-              <Button
-                title="Reject. I'm not available at this time"
-                className="w-full lg:w-1/2 my-3 text-sm md:text-base  font-bold py-5 px-5 rounded"
-                style="outline"
-                handleClicked={toggleModal}
-              />
-              <Button
-                className="w-full lg:w-1/2 my-3 text-sm md:text-base  font-bold py-5 px-5 rounded"
-                title="Confirm trip and continue"
-                style="white"
-                icon={ChevronRight}
-                handleClicked={nextPage}
-              />
-            </div>
-            <ConfirmationMessage />
+      <Wrapper showModal={showModal}>
+        <PageHeader title={title} subtitle={subtitle} />
+        <div className="flex flex-col  w-full px-5 md:px-14 py-10  bg-Gray900 md:bg-EventBg md:max-w-[838px]  ">
+          <TripDetails />
+          <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50  md:border-Primary700" />
+          <TripDates />
+          <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
+          <Companions />
+          <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
+          <Benefits />
+          <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
+          <div className="flex flex-col lg:flex-row gap-3">
+            <Button
+              title="Reject. I'm not available at this time"
+              className="w-full lg:w-1/2 my-3 text-sm md:text-base  font-bold py-5 px-5 rounded"
+              style="outline"
+              handleClicked={toggleModal}
+            />
+            <Button
+              className="w-full lg:w-1/2 my-3 text-sm md:text-base  font-bold py-5 px-5 rounded"
+              title="Confirm trip and continue"
+              style="white"
+              icon={ChevronRight}
+              handleClicked={nextPage}
+            />
           </div>
-          <Footer />
+          <ConfirmationMessage />
         </div>
-      </div>
+        <Footer />
+      </Wrapper>
       <RejectModal showModal={showModal} toggleModal={toggleModal} />
     </>
   );
