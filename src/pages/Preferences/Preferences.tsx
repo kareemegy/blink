@@ -5,6 +5,7 @@ import Wrapper from "../../components/Wrapper/Wrapper";
 import Bar from "../../assets/images/bar.svg";
 import Check from "../../assets/images/check.svg";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Preferences = () => {
   return (
     <>
@@ -29,6 +30,10 @@ type Preferences =
   | "Other";
 
 const PreferencesChoices = () => {
+  const navigate = useNavigate();
+  const nextPage = () => {
+    navigate("/Allergies");
+  };
   const choices: Preferences[] = [
     "No Preference",
     "Vegan",
@@ -57,8 +62,8 @@ const PreferencesChoices = () => {
           return (
             <div
               key={choice}
-              className={`flex justify-between items-center mb-5 bg-Darker w-full md:w-[350px] h-[60px] border ${
-                isSelected ? "border-white" : "border-gray-500"
+              className={`flex justify-between items-center mb-5 bg-Darker w-full md:w-[350px] transition-all h-[60px] border ${
+                isSelected ? "border-white" : "border-none"
               } cursor-pointer`}
               onClick={() => handlePreferenceClick(choice)}
             >
@@ -83,6 +88,7 @@ const PreferencesChoices = () => {
           style="white"
           className="w-full md:w-[350px]"
           isDisabled={isButtonDisabled}
+          handleClicked={nextPage}
         />
       </div>
     </>
