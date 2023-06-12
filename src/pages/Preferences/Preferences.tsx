@@ -29,7 +29,7 @@ type Preferences =
   | "Other";
 
 const PreferencesChoices = () => {
-  const choices = [
+  const choices: Preferences[] = [
     "No Preference",
     "Vegan",
     "Vegetarian",
