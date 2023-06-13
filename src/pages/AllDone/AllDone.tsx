@@ -1,5 +1,4 @@
 import CopyRight from "../../components/CopyRight/CopyRight";
-import Bar from "../../assets/images/bar.svg";
 import Alldone from "../../assets/images/allDone.png";
 import Check from "../../assets/images/check.svg";
 import Header from "../../components/Header/Header";
