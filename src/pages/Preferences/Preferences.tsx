@@ -6,18 +6,22 @@ import Bar from "../../assets/images/bar.svg";
 import Check from "../../assets/images/check.svg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
 const Preferences = () => {
   return (
-    <>
+    <div className="bg-black">
       <Header />
-      <Wrapper className="h-screen">
+      <ProgressBar className="hidden md:block" />
+      <div className="container mx-auto">
         <PageHeader
           title="Preferences"
-          subtitle="Let’s start with food preference, which of these practices [do name of user] follow? "
+          subtitle="Let’s start with food preference, which of these practices do you follow?"
         />
+      </div>
+      <Wrapper className="h-screen">
         <PreferencesChoices />
       </Wrapper>
-    </>
+    </div>
   );
 };
 
