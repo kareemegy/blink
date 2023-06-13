@@ -137,11 +137,11 @@ const AllergiesChoices = () => {
           </span>
         </div>
       ))}
-        <img
-          className="md:hidden w-full mt-10 mb-4 col-span-3"
-          src={Bar}
-          alt="progress bar"
-        />
+      <img
+        className="md:hidden w-full mt-10 mb-4 col-span-3"
+        src={Bar}
+        alt="progress bar"
+      />
       <Button
         title="Next"
         handleClicked={goToNotes}
