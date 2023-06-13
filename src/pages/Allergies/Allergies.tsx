@@ -12,6 +12,8 @@ import ShellFish from "../../assets/images/Shellfish.svg";
 import Soy from "../../assets/images/soy.svg";
 import SeaSame from "../../assets/images/Seasame.svg";
 import ProgressBar from "../../components/ProgressBar";
+import { useEffect, useState } from "react";
+import Bar from "../../assets/images/bar.svg";
 const Allergies = () => {
   return (
     <div className="bg-black">
@@ -39,14 +41,33 @@ interface Allergy {
 
 const AllergiesChoices = () => {
   const navigate = useNavigate();
+  const [selectedAllergies, setSelectedAllergies] = useState<Allergy[]>([]);
 
   const goToNotes = () => {
     navigate("/notes");
   };
 
+  const selectAllergies = (allergy: Allergy) => {
+    if (allergy.text === "No Allergies") {
+      setSelectedAllergies([allergy]);
+    } else if (selectedAllergies.some((a) => a.text === "No Allergies")) {
+      setSelectedAllergies([allergy]);
+    } else {
+      const index = selectedAllergies.findIndex((a) => a.text === allergy.text);
+      if (index >= 0) {
+        setSelectedAllergies(
+          selectedAllergies.filter((a) => a.text !== allergy.text)
+        );
+      } else {
+        setSelectedAllergies([...selectedAllergies, allergy]);
+      }
+    }
+  };
+
   const allergies: Allergy[] = [
     {
       text: "No Allergies",
+      icon: "",
     },
     {
       text: "Eggs",
@@ -80,10 +101,62 @@ const AllergiesChoices = () => {
       text: "Seasame",
       icon: SeaSame,
     },
+    {
+      text: "Other",
+      icon: "",
+    },
   ];
+
   return (
-    <>
-      <div></div>
-    </>
+    <div className="grid grid-cols-3 gap-3">
+      {allergies.map((allergy) => (
+        <div
+          key={allergy.text}
+          className={`flex flex-col items-center justify-center h-32 w-32 bg-Darker shadow-lg ${
+            selectedAllergies.some((a) => a.text === allergy.text)
+              ? "border-2 border-white text-white font-bold"
+              : "border-2 border-Darker text-DarkestWhite"
+          } ${allergy.text === "Other" ? "block  md:hidden h-[50px] " : ""}`}
+          onClick={() => selectAllergies(allergy)}
+        >
+          {allergy.icon && (
+            <img
+              className="h-16 w-16 mb-2"
+              src={allergy.icon}
+              alt={allergy.text}
+            />
+          )}
+          <span
+            className={`${
+              selectedAllergies.some((a) => a.text === allergy.text)
+                ? "text-white font-bold "
+                : ""
+            }`}
+          >
+            {allergy.text}
+          </span>
+        </div>
+      ))}
+        <img
+          className="md:hidden w-full mt-10 mb-4 col-span-3"
+          src={Bar}
+          alt="progress bar"
+        />
+      <Button
+        title="Next"
+        handleClicked={goToNotes}
+        style="white"
+        className="w-full col-span-3"
+      />
+    </div>
   );
 };
+
+{
+  /* <Button
+title="Next"
+handleClicked={goToNotes}
+style="white"
+className="w-full col-span-3"
+/> */
+}
