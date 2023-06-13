@@ -7,8 +7,13 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import SelectLabel from "../../components/SelectLabel/SelectLabel";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import Bar from "../../assets/images/bar.svg";
+import { useNavigate } from "react-router-dom";
 
 const Notes = () => {
+  const navigate = useNavigate();
+  const nextPage = () => {
+    navigate("/alldone");
+  };
   return (
     <div className="bg-black h-screen">
       <Header />
@@ -28,7 +33,12 @@ const Notes = () => {
             placeholder="Type here..."
             className="bg-inputBg"
           />
-          <Button title="Next" style="white" className="w-full mt-10" />
+          <Button
+            title="Next"
+            style="white"
+            className="w-full mt-10"
+            handleClicked={nextPage}
+          />
           <img
             className="md:hidden w-full mt-10 mb-4"
             src={Bar}

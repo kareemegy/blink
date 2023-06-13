@@ -2,13 +2,16 @@ import Bill from "../../assets/images/bill.svg";
 import SignOutIcon from "../../assets/images/signOut-icon.svg";
 import { useNavigate } from "react-router-dom";
 import Frame from "../../assets/images/Frame.svg";
-const Header = () => {
+interface HeaderProps {
+  className?: string;
+}
+const Header = ({ className }: HeaderProps) => {
   const navigate = useNavigate();
   const handleGoHome = () => {
     navigate("/");
   };
   return (
-    <div className=" bg-black ">
+    <div className={` bg-black ${className}`}>
       <header className="container mx-auto grid grid-cols-2 items-center pt-5 ">
         <div className="cursor-pointer ml-3  " onClick={handleGoHome}>
           <img

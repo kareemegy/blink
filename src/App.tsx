@@ -8,6 +8,7 @@ import FoodChoices from "./pages/FoodChoices/FoodChoices";
 import Preferences from "./pages/Preferences/Preferences";
 import Allergies from "./pages/Allergies/Allergies";
 import Notes from "./pages/Notes/Notes";
+import AllDone from "./pages/AllDone/AllDone";
 
 const App = () => {
   useDocumentTitle();
@@ -52,6 +53,12 @@ const App = () => {
       element: <Notes />,
       name: "Notes",
     },
+    {
+      path: "/alldone",
+      element: <AllDone />,
+      name: "All Done",
+    },
+
   ];
   const routing = useRoutes(routes);
   return routing;
