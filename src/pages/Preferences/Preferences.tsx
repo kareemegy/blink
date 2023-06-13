@@ -32,7 +32,7 @@ type Preferences =
 const PreferencesChoices = () => {
   const navigate = useNavigate();
   const nextPage = () => {
-    navigate("/Allergies");
+    navigate("/allergies");
   };
   const choices: Preferences[] = [
     "No Preference",
