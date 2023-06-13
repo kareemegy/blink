@@ -12,13 +12,13 @@ import ShellFish from "../../assets/images/Shellfish.svg";
 import Soy from "../../assets/images/soy.svg";
 import SeaSame from "../../assets/images/Seasame.svg";
 import ProgressBar from "../../components/ProgressBar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Bar from "../../assets/images/bar.svg";
 const Allergies = () => {
   return (
     <div className="bg-black">
       <Header />
-      <ProgressBar className="hidden md:block" />
+      <ProgressBar className="hidden md:block" type="allergies" />
       <div className="container mx-auto">
         <PageHeader
           title="Allergies"
@@ -151,12 +151,3 @@ const AllergiesChoices = () => {
     </div>
   );
 };
-
-{
-  /* <Button
-title="Next"
-handleClicked={goToNotes}
-style="white"
-className="w-full col-span-3"
-/> */
-}

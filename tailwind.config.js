@@ -24,6 +24,7 @@ export default {
         gray500: "#535353",
         bdwhite: "#757575",
         inputColor: " #9a9a9a",
+        inputBg: "#000000",
         error: "#fda29b",
       },
     },

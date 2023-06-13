@@ -7,6 +7,7 @@ import InfoCheck from "./pages/InfoCheck/InfoCheck";
 import FoodChoices from "./pages/FoodChoices/FoodChoices";
 import Preferences from "./pages/Preferences/Preferences";
 import Allergies from "./pages/Allergies/Allergies";
+import Notes from "./pages/Notes/Notes";
 
 const App = () => {
   useDocumentTitle();
@@ -45,6 +46,11 @@ const App = () => {
       path: "/allergies",
       element: <Allergies />,
       name: "Allergies",
+    },
+    {
+      path: "/notes",
+      element: <Notes />,
+      name: "Notes",
     },
   ];
   const routing = useRoutes(routes);

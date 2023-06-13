@@ -1,16 +1,18 @@
 import LGBar from "../../assets/images/lg-progressBar.svg";
-
+import AllergiesBar from "../../assets/images/allergiesBar.svg";
 interface ProgressBarProps {
   className?: string;
+  type?: string;
 }
 
-const ProgressBar = ({ className }: ProgressBarProps) => {
+const ProgressBar = ({ className, type }: ProgressBarProps) => {
   return (
     <div className="container mx-auto my-6 ">
-      <img
-        className={` ml-3 h-4 " src={LGBar} alt="progress Bar ${className}`}
-        src={LGBar}
-      />
+      {type == "allergies" ? (
+        <img src={AllergiesBar} alt="progress bar" className="w-full" />
+      ) : (
+        <img src={LGBar} alt="progress bar" className="w-full" />
+      )}
     </div>
   );
 };
