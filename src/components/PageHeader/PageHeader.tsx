@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 type PageHeaderProps = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   className?: string;
 };
 const PageHeader = ({ title, subtitle, className }: PageHeaderProps) => {

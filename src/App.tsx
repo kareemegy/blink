@@ -9,6 +9,7 @@ import Preferences from "./pages/Preferences/Preferences";
 import Allergies from "./pages/Allergies/Allergies";
 import Notes from "./pages/Notes/Notes";
 import AllDone from "./pages/AllDone/AllDone";
+import Notification from "./pages/Notification/Notification";
 
 const App = () => {
   useDocumentTitle();
@@ -57,6 +58,11 @@ const App = () => {
       path: "/alldone",
       element: <AllDone />,
       name: "All Done",
+    },
+    {
+      path: "/notification",
+      element: <Notification />,
+      name: "Notification",
     },
 
   ];

@@ -10,6 +10,9 @@ const Header = ({ className }: HeaderProps) => {
   const handleGoHome = () => {
     navigate("/");
   };
+  const handleGoNotification = () => {
+    navigate("/notification");
+  };
   return (
     <div className={` bg-black ${className}`}>
       <header className="container mx-auto grid grid-cols-2 items-center pt-5 ">
@@ -25,6 +28,7 @@ const Header = ({ className }: HeaderProps) => {
             className="mr-3 w-[40px] h-[40px] md:w-[50px] md:h-[50px] "
             src={Bill}
             alt="Bill Notification"
+            onClick={handleGoNotification}
           />
           <button className="hidden md:block text-white border-2 px-[30px] py-[12px]">
             Sign Out
