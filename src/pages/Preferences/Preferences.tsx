@@ -7,6 +7,7 @@ import Check from "../../assets/images/check.svg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import Footer from "../../components/Footer/Footer";
 const Preferences = () => {
   return (
     <div className="bg-black">
@@ -18,9 +19,10 @@ const Preferences = () => {
           subtitle="Let’s start with food preference, which of these practices do you follow?"
         />
       </div>
-      <Wrapper className="h-screen">
+      <Wrapper>
         <PreferencesChoices />
       </Wrapper>
+      <Footer />
     </div>
   );
 };
