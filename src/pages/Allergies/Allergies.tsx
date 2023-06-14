@@ -36,9 +36,8 @@ export default Allergies;
 
 interface Allergy {
   text: string;
-  icon?: string;
+  icon: string;
 }
-
 const AllergiesChoices = () => {
   const navigate = useNavigate();
   const [selectedAllergies, setSelectedAllergies] = useState<Allergy[]>([]);
@@ -64,7 +63,7 @@ const AllergiesChoices = () => {
     }
   };
 
-  const allergies: Allergy[] = [
+  const allergies = [
     {
       text: "No Allergies",
       icon: "",
@@ -108,15 +107,15 @@ const AllergiesChoices = () => {
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid grid-cols-3 gap-3 mx-5">
       {allergies.map((allergy) => (
         <div
           key={allergy.text}
-          className={`flex flex-col items-center justify-center h-32 w-32 bg-Darker shadow-lg ${
+          className={`flex flex-col items-center justify-center h-32 md:w-32 bg-Darker shadow-lg ${
             selectedAllergies.some((a) => a.text === allergy.text)
-              ? "border-2 border-white text-white font-bold"
-              : "border-2 border-Darker text-DarkestWhite"
-          } ${allergy.text === "Other" ? "block  md:hidden h-[50px] " : ""}`}
+              ? "border-2 border-white text-white font-bold max-sm:text-sm"
+              : "border-2 border-Darker text-DarkestWhite max-sm:text-sm"
+          } ${allergy.text === "Other" ? "block  md:hidden h-[50px] !col-span-3  " : ""}`}
           onClick={() => selectAllergies(allergy)}
         >
           {allergy.icon && (
