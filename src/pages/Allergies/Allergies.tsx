@@ -14,6 +14,7 @@ import SeaSame from "../../assets/images/Seasame.svg";
 import ProgressBar from "../../components/ProgressBar";
 import { useState } from "react";
 import { ReactComponent as Bar } from "../../assets/images/progressBar2.svg";
+import Footer from "../../components/Footer/Footer";
 const Allergies = () => {
   return (
     <div className="bg-black">
@@ -25,9 +26,10 @@ const Allergies = () => {
           subtitle="Please choose the foods against which [you’re] allergic "
         />
       </div>
-      <Wrapper className="h-screen">
+      <Wrapper>
         <AllergiesChoices />
       </Wrapper>
+      <Footer />
     </div>
   );
 };
@@ -147,6 +149,7 @@ const AllergiesChoices = () => {
         handleClicked={goToNotes}
         style="white"
         className="w-full col-span-3"
+        isDisabled={selectedAllergies.length === 0}
       />
     </div>
   );
