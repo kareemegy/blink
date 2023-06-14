@@ -11,7 +11,7 @@ const AllDone = () => {
   };
   return (
     <>
-      <Header className="bg-none" />
+      <Header className="max-md:absolute" />
       <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
         <div
           className="flex justify-center items-center bg-cover bg-center "
