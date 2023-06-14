@@ -7,7 +7,7 @@ interface ProgressBarProps {
 
 const ProgressBar = ({ className, type }: ProgressBarProps) => {
   return (
-    <div className="container mx-auto my-6 ">
+    <div className={`container mx-auto my-6 ${className} `}>
       {type == "allergies" ? (
         <img src={AllergiesBar} alt="progress bar" className="w-full" />
       ) : (

@@ -12,6 +12,9 @@ const InfoCheck = () => {
   const nextPage = () => {
     navigate("/food-choices");
   };
+  const backToInfo = () => {
+    navigate("/info");
+  };
   return (
     <>
       <Header />
@@ -33,7 +36,7 @@ const InfoCheck = () => {
             Please make sure that your information is correct before you submit
           </p>
           <div className="flex flex-col md:flex-row gap-10">
-            <Button title="Back to edit" style="outline" className="w-full" />
+            <Button handleClicked={backToInfo} title="Back to edit" style="outline" className="w-full" />
             <Button
               title="Submit"
               style="white"

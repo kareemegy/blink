@@ -10,6 +10,9 @@ const FoodChoices = () => {
   const nextPage = () => {
     navigate("/preferences");
   };
+  const goToAllDone = () => {
+    navigate("/alldone");
+  };
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
       <div
@@ -18,7 +21,7 @@ const FoodChoices = () => {
       ></div>
       <div className="flex flex-col items-center  bg-black text-white md:bg-none w-full md:mx-auto">
         <div className="flex flex-col justify-center mx-5 px-6 md:px-0 pb-3 h-[90%] w-full md:w-[350px]">
-          <h1 className="font-bold text-2xl md:text-4xl  leading-10 mb-3">
+          <h1 className="font-bold text-2xl md:text-4xl  leading-10 mb-3 max-sm:mt-3">
             Food Choices
           </h1>
           <EventMessage />
@@ -26,7 +29,7 @@ const FoodChoices = () => {
           <Button
             title="Skip, I have no preference"
             style="outline"
-            handleClicked={nextPage}
+            handleClicked={goToAllDone}
             className="py-[18px] px-[138px] my-5"
           />
           <Button
