@@ -37,7 +37,7 @@ const FoodChoices = () => {
             icon={<ChervronRight className="stroke-black" />}
             style="white"
             handleClicked={nextPage}
-            className="py-[18px] px-[138px] "
+            className="py-[18px] px-[138px] mb-3 "
           />
         </div>
         <CopyRight className="self-start ml-6 md:self-center md:mt-auto md:mb-10" />

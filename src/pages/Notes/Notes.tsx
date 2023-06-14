@@ -43,11 +43,7 @@ const Notes = () => {
           </Wrapper>
         </div>
       </div>
-      <img
-        className="md:hidden w-full  px-10  "
-        src={Bar}
-        alt="progress bar"
-      />
+      <img className="md:hidden w-full  px-10  " src={Bar} alt="progress bar" />
       <Footer className="flex-none" />
     </div>
   );
