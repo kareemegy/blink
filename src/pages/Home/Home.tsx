@@ -1,6 +1,7 @@
 import Logo from "../../assets/images/logo.png";
 import GDBImage from "../../assets/images/Home Page/GDB-desktop-main-LD.png";
-import ChervronRight from "../../assets/images/Home Page/Chevron right.svg";
+// import ChervronRight from "../../assets/images/Home Page/Chevron right.svg";
+import { ReactComponent as ChervronRight } from "../../assets/images/Home Page/Chevron right.svg";
 import leftArrow from "../../assets/images/Home Page/left-arrow.svg";
 import { useState } from "react";
 import Button from "../../components/Button/Button";
@@ -37,7 +38,7 @@ const Home = () => {
           </div>
           <Button
             title="Continue"
-            icon={ChervronRight}
+            icon={<ChervronRight className="stroke-black" />}
             style="white"
             handleClicked={nextPage}
             className="py-[18px] px-[138px] my-10"

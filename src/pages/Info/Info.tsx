@@ -8,7 +8,7 @@ import FullInput from "../../components/FullInput";
 import Input from "../../components/Input/Input";
 import SmallSelect from "../../components/SmallSelect";
 import Footer from "../../components/Footer";
-import ChervronRight from "../../assets/images/Home Page/Chevron right.svg";
+import {ReactComponent as ChervronRight} from "../../assets/images/Home Page/Chevron right.svg";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 const Info = () => {
@@ -51,7 +51,7 @@ const Info = () => {
             title="Save"
             style="white"
             className="w-full text-lg mt-10 mb-5"
-            icon={ChervronRight}
+            icon={<ChervronRight className="stroke-black" />}
           />
           <p className="text-Gray300">
             *Due to high demand, requested arrival & departure dates are subject

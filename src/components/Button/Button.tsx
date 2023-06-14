@@ -1,7 +1,7 @@
 import cn from "classnames";
 interface ButtonProps {
   title: string;
-  icon?: string;
+  icon?: any;
   style?: "white" | "outline";
   className?: string;
   isDisabled?: boolean;
@@ -22,7 +22,7 @@ const Button = ({ ...props }: ButtonProps) => {
       )}
     >
       {title}
-      <Icon icon={icon} alt={title} />
+      {icon && icon}
     </button>
   );
 };

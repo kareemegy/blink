@@ -5,7 +5,7 @@ import Wrapper from "../../components/Wrapper/Wrapper";
 import Protrait from "../../assets/images/Protrait.png";
 import Passport from "../../assets/images/Passport.png";
 import Button from "../../components/Button";
-import ChevronRight from "../../assets/images/Home Page/Chevron right.svg";
+import { ReactComponent as ChevronRight } from "../../assets/images/Home Page/Chevron right.svg";
 import { useNavigate } from "react-router-dom";
 const InfoCheck = () => {
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ const InfoCheck = () => {
             <Button
               title="Submit"
               style="white"
-              icon={ChevronRight}
+              icon={<ChevronRight className="stroke-black" />}
               className="w-full"
               handleClicked={nextPage}
             />

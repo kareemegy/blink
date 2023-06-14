@@ -8,10 +8,9 @@ import Food from "../../assets/images/food.svg";
 import Planed from "../../assets/images/planed.svg";
 import SkyBox from "../../assets/images/skybox.svg";
 import View from "../../assets/images/view.svg";
-import ChevronRight from "../../assets/images/Home Page/Chevron right.svg";
+import { ReactComponent as ChevronRight } from "../../assets/images/Home Page/Chevron right.svg";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
-import cn from "classnames";
 import { useEffect, useRef, useState } from "react";
 import PageHeader from "../../components/PageHeader";
 import Modal from "../../components/Modal";
@@ -56,7 +55,7 @@ const EventPage = () => {
               className="w-full lg:w-1/2 my-3 text-sm md:text-base  font-bold py-5 px-5 rounded"
               title="Confirm trip and continue"
               style="white"
-              icon={ChevronRight}
+              icon={<ChevronRight className="stroke-black" />}
               handleClicked={nextPage}
             />
           </div>

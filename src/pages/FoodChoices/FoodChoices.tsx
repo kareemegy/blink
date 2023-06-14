@@ -1,4 +1,4 @@
-import ChervronRight from "../../assets/images/Home Page/Chevron right.svg";
+import { ReactComponent as ChervronRight } from "../../assets/images/Home Page/Chevron right.svg";
 import Button from "../../components/Button/Button";
 import CopyRight from "../../components/CopyRight/CopyRight";
 import { useNavigate } from "react-router-dom";
@@ -31,7 +31,7 @@ const FoodChoices = () => {
           />
           <Button
             title="Continue"
-            icon={ChervronRight}
+            icon={<ChervronRight className="stroke-black" />}
             style="white"
             handleClicked={nextPage}
             className="py-[18px] px-[138px] "
