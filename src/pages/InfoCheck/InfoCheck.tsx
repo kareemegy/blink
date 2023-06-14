@@ -7,6 +7,7 @@ import Passport from "../../assets/images/Passport.png";
 import Button from "../../components/Button";
 import { ReactComponent as ChevronRight } from "../../assets/images/Home Page/Chevron right.svg";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 const InfoCheck = () => {
   const navigate = useNavigate();
   const nextPage = () => {
@@ -36,7 +37,12 @@ const InfoCheck = () => {
             Please make sure that your information is correct before you submit
           </p>
           <div className="flex flex-col md:flex-row gap-10">
-            <Button handleClicked={backToInfo} title="Back to edit" style="outline" className="w-full" />
+            <Button
+              handleClicked={backToInfo}
+              title="Back to edit"
+              style="outline"
+              className="w-full"
+            />
             <Button
               title="Submit"
               style="white"
@@ -47,6 +53,7 @@ const InfoCheck = () => {
           </div>
         </BoxWrapper>
       </Wrapper>
+      <Footer />
     </>
   );
 };
