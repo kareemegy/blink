@@ -13,7 +13,7 @@ import Soy from "../../assets/images/soy.svg";
 import SeaSame from "../../assets/images/Seasame.svg";
 import ProgressBar from "../../components/ProgressBar";
 import { useState } from "react";
-import Bar from "../../assets/images/bar.svg";
+import { ReactComponent as Bar } from "../../assets/images/progressBar2.svg";
 const Allergies = () => {
   return (
     <div className="bg-black">
@@ -115,7 +115,11 @@ const AllergiesChoices = () => {
             selectedAllergies.some((a) => a.text === allergy.text)
               ? "border-2 border-white text-white font-bold max-sm:text-sm"
               : "border-2 border-Darker text-DarkestWhite max-sm:text-sm"
-          } ${allergy.text === "Other" ? "block  md:hidden h-[50px] !col-span-3  " : ""}`}
+          } ${
+            allergy.text === "Other"
+              ? "block  md:hidden h-[50px] !col-span-3  "
+              : ""
+          }`}
           onClick={() => selectAllergies(allergy)}
         >
           {allergy.icon && (
@@ -136,11 +140,8 @@ const AllergiesChoices = () => {
           </span>
         </div>
       ))}
-      <img
-        className="md:hidden w-full mt-10 mb-4 col-span-3"
-        src={Bar}
-        alt="progress bar"
-      />
+
+      <Bar className="md:hidden w-full mt-10 mb-4 col-span-3" />
       <Button
         title="Next"
         handleClicked={goToNotes}
