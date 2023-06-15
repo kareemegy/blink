@@ -10,7 +10,7 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Footer from "../../components/Footer/Footer";
 const Preferences = () => {
   return (
-    <div className="bg-black">
+    <div className="h-screen bg-black">
       <Header />
       <ProgressBar className="hidden md:block" />
       <div className="container mx-auto">
@@ -19,7 +19,7 @@ const Preferences = () => {
           subtitle="Let’s start with food preference, which of these practices do you follow?"
         />
       </div>
-      <Wrapper>
+      <Wrapper className="bg-black" >
         <PreferencesChoices />
       </Wrapper>
       <Footer />

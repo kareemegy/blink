@@ -6,10 +6,10 @@ import { ReactComponent as Document } from "../../assets/images/document.svg";
 const Notification = () => {
   return (
     <>
-      <div className="md:hidden">
+      <div className=" md:hidden">
         <Header />
       </div>
-      <div className="bg-black h-screen">
+      <div className="bg-black ">
         <div className="container mx-auto">
           <div className="">
             <PageHeader title="Notifications" className="pt-7 !mt-0" />

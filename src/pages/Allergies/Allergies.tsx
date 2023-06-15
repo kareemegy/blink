@@ -17,9 +17,9 @@ import { ReactComponent as Bar } from "../../assets/images/progressBar2.svg";
 import Footer from "../../components/Footer/Footer";
 const Allergies = () => {
   return (
-    <div className="bg-black">
+    <div className="h-screen bg-black">
       <Header />
-      <ProgressBar className="hidden md:block" type="allergies" />
+      <ProgressBar className="hidden md:block" type="full" />
       <div className="container mx-auto">
         <PageHeader
           title="Allergies"

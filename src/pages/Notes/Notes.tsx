@@ -19,7 +19,7 @@ const Notes = () => {
       <Header className="flex-none" />
       <div className="flex-grow overflow-y-auto">
         <div className="container mx-auto">
-          <ProgressBar className="hidden md:block" />
+          <ProgressBar type="full" className="hidden md:block" />
           <PageHeader
             title="Notes"
             subtitle="Let us know if there are any other notes you’d like us to know."
@@ -43,7 +43,7 @@ const Notes = () => {
           </Wrapper>
         </div>
       </div>
-      <img className="md:hidden w-full  px-10  " src={Bar} alt="progress bar" />
+      <img className="md:hidden w-full  px-10" src={Bar} alt="progress bar" />
       <Footer className="flex-none" />
     </div>
   );

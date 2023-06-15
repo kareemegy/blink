@@ -1,7 +1,7 @@
 import Bill from "../../assets/images/bill.svg";
 import SignOutIcon from "../../assets/images/signOut-icon.svg";
 import { useNavigate } from "react-router-dom";
-import Frame from "../../assets/images/Frame.svg";
+import Logo from "../../assets/images/Frame.svg";
 interface HeaderProps {
   className?: string;
 }
@@ -14,14 +14,14 @@ const Header = ({ className }: HeaderProps) => {
     navigate("/notification");
   };
   return (
-    <div className={` bg-black  `}>
+    <div className="bg-black">
       <header
         className={` ${className} container mx-auto grid grid-cols-2 items-center  pt-5 `}
       >
         <div className="cursor-pointer ml-6  " onClick={handleGoHome}>
           <img
             className=" w-[100px] md:w-[150px] "
-            src={Frame}
+            src={Logo}
             alt="BLink Logo"
           />
         </div>
