@@ -44,14 +44,26 @@ const AllergiesChoices = () => {
   const navigate = useNavigate();
   const [selectedAllergies, setSelectedAllergies] = useState<Allergy[]>([]);
 
-  const goToNotes = () => {
-    navigate("/notes");
-  };
+  const allergies = [
+    { text: "No Allergies", icon: "" },
+    { text: "Eggs", icon: Egg },
+    { text: "Dairy", icon: Dairy },
+    { text: "Peanuts", icon: Peanut },
+    { text: "Tree Nuts", icon: TreeNuts },
+    { text: "Fish", icon: Fish },
+    { text: "Shellfish", icon: ShellFish },
+    { text: "Soy", icon: Soy },
+    { text: "Seasame", icon: SeaSame },
+    { text: "Other", icon: "" },
+  ];
 
   const selectAllergies = (allergy: Allergy) => {
     if (allergy.text === "No Allergies") {
       setSelectedAllergies([allergy]);
-    } else if (selectedAllergies.some((a) => a.text === "No Allergies")) {
+    } else if (
+      allergy.text === "Other" ||
+      selectedAllergies.some((a) => a.text === "Other")
+    ) {
       setSelectedAllergies([allergy]);
     } else {
       const index = selectedAllergies.findIndex((a) => a.text === allergy.text);
@@ -65,61 +77,25 @@ const AllergiesChoices = () => {
     }
   };
 
-  const allergies = [
-    {
-      text: "No Allergies",
-      icon: "",
-    },
-    {
-      text: "Eggs",
-      icon: Egg,
-    },
-    {
-      text: "Dairy",
-      icon: Dairy,
-    },
-    {
-      text: "Peanuts",
-      icon: Peanut,
-    },
-    {
-      text: "Tree Nuts",
-      icon: TreeNuts,
-    },
-    {
-      text: "Fish",
-      icon: Fish,
-    },
-    {
-      text: "Shellfish",
-      icon: ShellFish,
-    },
-    {
-      text: "Soy",
-      icon: Soy,
-    },
-    {
-      text: "Seasame",
-      icon: SeaSame,
-    },
-    {
-      text: "Other",
-      icon: "",
-    },
-  ];
+  const goToNotes = () => {
+    navigate("/notes");
+  };
+
+  const isAllergySelected = (allergy: Allergy) =>
+    selectedAllergies.some((a) => a.text === allergy.text);
 
   return (
     <div className="grid grid-cols-3 gap-3 mx-5">
       {allergies.map((allergy) => (
         <div
           key={allergy.text}
-          className={`flex flex-col items-center justify-center h-32 md:w-32 bg-Darker shadow-lg ${
-            selectedAllergies.some((a) => a.text === allergy.text)
-              ? "border-2 border-white text-white font-bold max-sm:text-sm"
-              : "border-2 border-Darker text-DarkestWhite max-sm:text-sm"
+          className={`flex flex-col items-center justify-center h-32 md:w-32 bg-Darker shadow-lg border-2 max-sm:text-sm ${
+            isAllergySelected(allergy)
+              ? "border-white text-white font-bold"
+              : "border-Darker text-DarkestWhite"
           } ${
             allergy.text === "Other"
-              ? "block  md:hidden h-[50px] !col-span-3  "
+              ? "block md:hidden h-[50px] !col-span-3"
               : ""
           }`}
           onClick={() => selectAllergies(allergy)}
@@ -133,9 +109,7 @@ const AllergiesChoices = () => {
           )}
           <span
             className={`${
-              selectedAllergies.some((a) => a.text === allergy.text)
-                ? "text-white font-bold "
-                : ""
+              isAllergySelected(allergy) ? "text-white font-bold" : ""
             }`}
           >
             {allergy.text}

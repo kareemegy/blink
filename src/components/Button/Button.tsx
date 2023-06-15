@@ -28,11 +28,4 @@ const Button = ({ ...props }: ButtonProps) => {
 };
 
 export default Button;
-interface IconProps {
-  icon?: string;
-  alt?: string;
-}
-const Icon = ({ icon, alt }: IconProps) => {
-  if (!icon) return null;
-  return <img className="text-sm pl-4" src={icon} alt={alt} />;
-};
+

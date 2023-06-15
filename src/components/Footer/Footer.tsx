@@ -1,21 +1,19 @@
 import Logo from "../../assets/images/Frame.svg";
+
 interface FooterProps {
   className?: string;
 }
-const Footer = ({ className }: FooterProps) => {
+
+const Footer: React.FC<FooterProps> = ({ className }) => {
   return (
-    <div
-      className={`container mx-auto md:hidden flex justify-between items-center bg-black h-28 text-white ${className} `}
+    <footer
+      className={`container mx-auto md:hidden flex justify-between items-center bg-black h-28 text-white ${className}`}
     >
-      <img
-        className="w-[100px] md:w-[150px] ml-6 "
-        src={Logo}
-        alt="Blink Logo"
-      />
-      <p className="text-sm w-[150px] pr-3 md:text-base  ">
-        Copyright © 2023 bl:nk™. All Rights Reserved.
+      <img className="w-24 md:w-36 ml-6" src={Logo} alt="Blink Logo" />
+      <p className="text-sm w-36 md:text-base pr-3">
+        &copy; 2023 bl:nk&trade;. All Rights Reserved.
       </p>
-    </div>
+    </footer>
   );
 };
 
