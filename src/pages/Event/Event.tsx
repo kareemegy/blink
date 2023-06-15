@@ -201,7 +201,7 @@ const RejectModal = ({ showModal, toggleModal }: RejectModalProps) => {
   }, [showModal]);
 
   const handleSendFeedback = () => {
-    console.log(textAreaRef.current?.value);
+    toggleModal();
   };
 
   return (
