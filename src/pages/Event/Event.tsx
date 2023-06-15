@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
 import Calendar from "../../assets/images/calendar.svg";
-import Profile from "../../assets/images/Profile.svg";
+import Profile from "../../assets/images/Profile.png";
 import Plane from "../../assets/images/plane.svg";
 import Bed from "../../assets/images/bed.svg";
 import Car from "../../assets/images/car.svg";
