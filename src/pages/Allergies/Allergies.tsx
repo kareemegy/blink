@@ -5,7 +5,7 @@ import Wrapper from "../../components/Wrapper/Wrapper";
 import { useNavigate } from "react-router-dom";
 import Egg from "../../assets/images/egg.svg";
 import Dairy from "../../assets/images/dairy.svg";
-import Peanut from "../../assets/images/peanuts.svg";
+import Peanut from "../../assets/images/Peanuts.svg";
 import TreeNuts from "../../assets/images/treeNuts.svg";
 import Fish from "../../assets/images/Fish.svg";
 import ShellFish from "../../assets/images/Shellfish.svg";
