@@ -111,7 +111,7 @@ const Companions = () => {
         {companions.map((_, i) => (
           <div key={i} className="flex mr-5 p-1 md:pl-0 ">
             <img
-              className="mr-1 w-[50px] h-[50px]"
+              className="mr-1 w-[40px] h-[50px]"
               src={Profile}
               alt=" profile_icon"
             />
@@ -194,8 +194,7 @@ type RejectModalProps = {
 };
 
 const RejectModal = ({ showModal, toggleModal }: RejectModalProps) => {
-  const textAreaRef = useRef<any>(null);
-
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
   useEffect(() => {
     textAreaRef.current?.focus();
   }, [showModal]);
