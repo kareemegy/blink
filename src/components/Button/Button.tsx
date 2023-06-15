@@ -2,7 +2,7 @@ import cn from "classnames";
 interface ButtonProps {
   title: string;
   icon?: any;
-  style?: "white" | "outline";
+  style: "white" | "outline";
   className?: string;
   isDisabled?: boolean;
   handleClicked?: () => void;

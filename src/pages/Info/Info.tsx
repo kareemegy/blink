@@ -1,14 +1,14 @@
 import Header from "../../components/Header/Header";
 import PageHeader from "../../components/PageHeader";
 import Icon from "../../assets/images/icon.svg";
-import Upload from "../../assets/images/upload.svg";
+import { ReactComponent as Upload } from "../../assets/images/upload.svg";
 import SelectLabel from "../../components/SelectLabel";
 import SelectOptions from "../../components/SelectOptions";
 import FullInput from "../../components/FullInput";
 import Input from "../../components/Input/Input";
 import SmallSelect from "../../components/SmallSelect";
 import Footer from "../../components/Footer";
-import {ReactComponent as ChervronRight} from "../../assets/images/Home Page/Chevron right.svg";
+import { ReactComponent as ChervronRight } from "../../assets/images/Home Page/Chevron right.svg";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 const Info = () => {
@@ -79,7 +79,11 @@ const PortraitSection = () => {
           src={Icon}
           alt="user photo"
         />
-        <Button title="Browse photos" icon={Upload} style="outline" />
+        <Button
+          title="Browse photos"
+          icon={<Upload className="ml-3" />}
+          style="outline"
+        />
       </div>
     </div>
   );
@@ -97,10 +101,12 @@ const PassportPhotoSection = () => {
       </label>
       <div className="flex justify-between flex-wrap mt-4">
         <FullInput id="passport" placeholder="passport.jpge" />
-        <button className="flex justify-center items-center w-full h-[50px] md:w-[40%]  lg:max-w-[30%]  text-white  font-bold border-2 px-[10px] py-[5px] md:text-sm ">
-          <span>Browse photos</span>
-          <img className="p-3" src={Upload} alt="user photo" />
-        </button>
+        <Button
+          title="Browse photos"
+          icon={<Upload className="ml-3" />}
+          style="outline"
+          className="flex justify-center items-center w-full h-[50px] md:w-[40%]  lg:max-w-[30%]  text-white  font-bold border-2 px-[10px] py-[5px] md:text-sm "
+        />
       </div>
     </div>
   );
