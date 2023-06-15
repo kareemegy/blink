@@ -9,7 +9,7 @@ import Peanut from "../../assets/images/Peanuts.svg";
 import TreeNuts from "../../assets/images/treeNuts.svg";
 import Fish from "../../assets/images/Fish.svg";
 import ShellFish from "../../assets/images/Shellfish.svg";
-import Soy from "../../assets/images/soy.svg";
+import Soy from "../../assets/images/Soy.svg";
 import SeaSame from "../../assets/images/Seasame.svg";
 import ProgressBar from "../../components/ProgressBar";
 import { useState } from "react";
