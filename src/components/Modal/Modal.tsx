@@ -39,7 +39,7 @@ const Modal = ({
     <>
       <div
         ref={modalRef}
-        className={cn("absolute inset-0 bg-black z-20 h-screen w-screen  ", {
+        className={cn("fixed  inset-0 bg-black z-20 ", {
           hidden: !showModal,
         })}
         onClick={handleModalClick}
@@ -55,7 +55,7 @@ const Modal = ({
         <div className=" fixed inset-0 flex items-center justify-center mx-3 max-sm:mx-0">
           <div
             className={cn(
-              "py-[52px] px-[46px]  md:w-[730px]  text-white w-screen  md:bg-blinkDashboard",
+              "py-[52px] px-[46px]  md:w-[730px]  text-white  md:bg-blinkDashboard",
               className
             )}
           >
