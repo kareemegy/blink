@@ -64,7 +64,7 @@ const EventMessage = ({ toggleModal }: EventMessage) => {
         Please RSVP and register to confirm your attendance.
       </p>
       <p
-        className=" mt-4 text-sm md:text-base underline cursor-pointer"
+        className=" mt-4 text-sm md:text-base underline cursor-pointer font-bold"
         onClick={toggleModal}
       >
         Read our security policy.
@@ -100,9 +100,9 @@ const SecurityPolicyModal = ({
       toggleModal={toggleModal}
       headerText="Security Policy"
       icon={leftArrow}
-      className="md:h-[490px]"
+      className="  "
     >
-      <h3 className="text-lg  md:text-xl  mb-4">
+      <h3 className="text-lg  md:text-xl  mb-4 font-bold">
         Malesuada Pulvinar Elementum, Ultrices Mi
       </h3>
       <p className="overflow-y-scroll pr-5 text-sm text-GraySecondary md:h-[280px] scrollbar-style h-[500px]">

@@ -55,7 +55,7 @@ const Modal = ({
         <div className=" fixed inset-0 flex items-center justify-center mx-3 max-sm:mx-0">
           <div
             className={cn(
-              "py-[52px] px-[46px] md:h-[570px] md:w-[730px]  text-white w-screen  h-screen md:bg-blinkDashboard",
+              "py-[52px] px-[46px]  md:w-[730px]  text-white w-screen  md:bg-blinkDashboard",
               className
             )}
           >
