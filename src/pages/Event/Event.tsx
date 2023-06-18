@@ -21,7 +21,8 @@ const EventPage = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const title = "[Event Name]";
-  const subtitle = `We cordially invite you to [Event Name] in [Location]. Please read our Security Policy for further information`;
+  const subtitle = `We cordially invite you to [Event Name] in [Location].
+  Please read our Security Policy for further information`;
 
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -37,22 +38,22 @@ const EventPage = () => {
         <PageHeader title={title} subtitle={subtitle} />
         <div className="flex flex-col  w-full px-5 md:px-14 py-10  bg-Gray900 md:bg-EventBg md:max-w-[838px]">
           <TripDetails />
-          <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50  md:border-Primary700" />
+          <CustomHr />
           <TripDates />
-          <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
+          <CustomHr />
           <Companions />
-          <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
+          <CustomHr />
           <Benefits />
-          <hr className="my-7 md:my-10 border-b-1  max-w-3xl border-Gray50 md:border-Primary700" />
-          <div className="flex flex-col lg:flex-row gap-3">
+          <CustomHr />
+          <div className="flex flex-col lg:flex-row ">
             <Button
               title="Reject. I'm not available at this time"
-              className="w-full lg:w-1/2 my-3 text-sm md:text-base  font-bold py-5 px-5 rounded"
+              className="w-full lg:w-1/2 my-3 text-base md:mr-10  py-5 px-5 rounded whitespace-nowrap"
               style="outline"
               handleClicked={toggleModal}
             />
             <Button
-              className="w-full lg:w-1/2 my-3 text-sm md:text-base  font-bold py-5 px-5 rounded"
+              className="w-full lg:w-1/2 my-3 text-base   py-5 px-5 rounded  whitespace-nowrap"
               title="Confirm trip and continue"
               style="white"
               icon={<ChevronRight className="stroke-black" />}
@@ -107,11 +108,11 @@ const Companions = () => {
   return (
     <div>
       <h1 className="text-xl font-bold mb-3">Companions</h1>
-      <div className="flex items-center flex-wrap ">
+      <div className="flex items-center flex-wrap max-sm:gap-7 ">
         {companions.map((_, i) => (
           <div key={i} className="flex mr-5 p-1 md:pl-0 ">
             <img
-              className="mr-1 w-[40px] h-[50px]"
+              className="mr-3 w-[40px] h-[50px]"
               src={Profile}
               alt=" profile_icon"
             />
@@ -141,10 +142,6 @@ const Benefits = () => {
       text: "Dedicated Car",
     },
     {
-      icon: Food,
-      text: "Formal Dinners",
-    },
-    {
       icon: Planed,
       text: "Planned Itinerary",
     },
@@ -156,21 +153,30 @@ const Benefits = () => {
       icon: View,
       text: "Exclusive Events",
     },
+    {
+      icon: Food,
+      text: "Formal Dinners",
+    },
   ];
   return (
     <>
-      <h1 className="text-xl font-bold mb-3 ">Benefits</h1>
+      <h1 className="text-xl font-bold mb-7 ">Benefits</h1>
       <div>
-        <div className="flex flex-wrap">
-          {benefitsList.map((benefit, index) => (
-            <div className="flex mr-5 p-1 pl-0" key={index}>
+        <div className="grid grid-cols-2 md:gap-y-5  md:flex md:flex-wrap">
+          {benefitsList.map(({ icon, text }, index) => (
+            <div
+              className={`flex max-sm:mb-5  ${
+                index < 3 ? "w-full md:w-1/3" : "w-full md:w-1/4"
+              } p-1 pl-0`}
+              key={index}
+            >
               <img
                 className="mr-1 w-[24px] h-[24px]"
-                src={benefit.icon}
+                src={icon}
                 alt=" profile_icon"
               />
               <div className="mr-1">
-                <p>{benefit.text}</p>
+                <p>{text}</p>
               </div>
             </div>
           ))}
@@ -229,5 +235,17 @@ const RejectModal = ({ showModal, toggleModal }: RejectModalProps) => {
         handleClicked={handleSendFeedback}
       />
     </Modal>
+  );
+};
+
+interface CustomHrProps {
+  className?: string;
+}
+
+const CustomHr = ({ className }: CustomHrProps) => {
+  return (
+    <hr
+      className={`my-7 md:my-10 border-b-1 max-w-3xl border-Gray50 md:border-Primary700 ${className}`}
+    />
   );
 };

@@ -15,10 +15,10 @@ const Button = ({ ...props }: ButtonProps) => {
       onClick={handleClicked}
       disabled={isDisabled}
       className={cn(
-        "flex justify-center items-center  font-bold px-[30px] py-[13px] rounded-sm disabled:opacity-50 disabled:cursor-not-allowed ",
+        "flex justify-center items-center  font-bold px-[30px] py-[13px] rounded-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white hover:text-black transition-all ease-in ",
         className,
-        { "bg-white text-Gray1000": style === "white" },
-        { "bg-gray-Gray50 text-white border": style === "outline" }
+        { "bg-white text-Gray1000 ": style === "white" },
+        { "bg-gray-Gray50 text-white border-2": style === "outline" }
       )}
     >
       {title}
