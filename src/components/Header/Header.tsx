@@ -1,4 +1,5 @@
 import Bill from "../../assets/images/bill.svg";
+import BillSm from "../../assets/images/BillSM.svg";
 import SignOutIcon from "../../assets/images/signOut-icon.svg";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/images/Frame.svg";
@@ -16,7 +17,7 @@ const Header = ({ className }: HeaderProps) => {
   return (
     <div className="bg-black">
       <header
-        className={` ${className} container mx-auto grid grid-cols-2 items-center  pt-5 `}
+        className={`${className} container mx-auto grid grid-cols-2  pt-5 `}
       >
         <div className="cursor-pointer ml-6  " onClick={handleGoHome}>
           <img
@@ -25,9 +26,17 @@ const Header = ({ className }: HeaderProps) => {
             alt="BLink Logo"
           />
         </div>
-        <div className="flex justify-end">
+        <div className="flex justify-end  ">
+          <div className=" flex justify-center  items-center border-2 border-white w-[40px] h-[40px] mr-3 md:hidden">
+            <img
+              className=" w-[20px] h-[20px]   "
+              src={BillSm}
+              alt="Bill Notification"
+              onClick={handleGoNotification}
+            />
+          </div>
           <img
-            className="mr-3 w-[40px] h-[40px] md:w-[50px] md:h-[50px] "
+            className="mr-3 hidden  md:block w-[50px] h-[50px] "
             src={Bill}
             alt="Bill Notification"
             onClick={handleGoNotification}
