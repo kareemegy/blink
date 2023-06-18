@@ -1,7 +1,8 @@
 import Logo from "../../assets/images/logo.png";
-import GDBImage from "../../assets/images/Home Page/GDB-desktop-main-LD.png";
-// import ChervronRight from "../../assets/images/Home Page/Chevron right.svg";
+import GDBDeskTopImage from "../../assets/images/Home Page/GDB-desktop-main-LD.png";
+import GDBMobileImage from "../../assets/images/GDB_mobile_main_D.png";
 import { ReactComponent as ChervronRight } from "../../assets/images/Home Page/Chevron right.svg";
+
 import leftArrow from "../../assets/images/Home Page/left-arrow.svg";
 import { useState } from "react";
 import Button from "../../components/Button/Button";
@@ -20,17 +21,29 @@ const Home = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
       <div
-        className="flex justify-center items-center bg-cover bg-center "
-        style={{ backgroundImage: `url("${GDBImage}")` }}
+        className={`flex justify-center items-center bg-cover bg-center  max-sm:h-[60vh] `}
+        style={{
+          backgroundImage: `url(${
+            window.innerWidth >= 768
+              ? `'${GDBDeskTopImage}'`
+              : `'${GDBMobileImage}'`
+          })`,
+        }}
       >
         <img className="hidden sm:block" src={Logo} alt="Blink_Logo" />
-      </div>
-      <div className="flex flex-col items-center  bg-black text-white md:bg-none w-full md:mx-auto">
-        <div className="flex flex-col justify-center mx-5 px-6 md:px-0 pb-3 h-[90%] w-full md:w-[350px]">
-          <h1 className="font-bold text-2xl md:text-4xl  leading-10 mb-3">
+        <div className="flex w-full h-full justify-start items-end px-6  sm:hidden ">
+          <h1 className="font-bold text-2xl md:text-4xl  text-white   leading-10 ">
             Hey [Mr. Bond],
           </h1>
-          <div className="hidden md:block">
+        </div>
+      </div>
+      <div className="flex flex-col items-center   bg-black  text-white md:bg-none w-full md:mx-auto">
+        <div className=" relative flex flex-col justify-center mx-5 px-6 md:px-0 pb-3 h-[90%] w-full md:w-[350px]">
+          <h1 className=" hidden md:block font-bold text-2xl md:text-4xl   leading-10 mb-3">
+            Hey [Mr. Bond],
+          </h1>
+
+          <div className="hidden md:block ">
             <EventMessage toggleModal={toggleModal} />
           </div>
           <div className="md:hidden">
@@ -100,7 +113,6 @@ const SecurityPolicyModal = ({
       toggleModal={toggleModal}
       headerText="Security Policy"
       icon={leftArrow}
-      className="  "
     >
       <h3 className="text-lg  md:text-xl  mb-4 font-bold">
         Malesuada Pulvinar Elementum, Ultrices Mi
