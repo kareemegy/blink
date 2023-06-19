@@ -11,7 +11,7 @@ const Notification = () => {
       </div>
       <div className="bg-black ">
         <div className="container mx-auto">
-          <div className="">
+          <div>
             <PageHeader title="Notifications" className="pt-7 !mt-0" />
             <Wrapper className="!items-start max-sm:px-6">
               <NotificationDate month="Nov" day="15" year="2023" />
@@ -99,9 +99,13 @@ const NotificationTitle = ({ document, title, msg }: INotificationTitle) => {
     <div className="flex justify-between">
       <div>
         <p className="text-sm md:text-base text-DarkestWhite mb-4">{title}</p>
-        <h1 className="text-sm md:text-base mb-4">{msg}</h1>
+        <h1 className="text-sm md:text-base mb-4 max-sm:w-[200px]">{msg}</h1>
       </div>
-      {document && <Document />}
+      {document && (
+        <div className="">
+          <Document className=" w-8 " />
+        </div>
+      )}
     </div>
   );
 };
