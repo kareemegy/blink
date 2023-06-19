@@ -4,6 +4,7 @@ import CopyRight from "../../components/CopyRight/CopyRight";
 import { useNavigate } from "react-router-dom";
 import FoodBG from "../../assets/images/food-choices.png";
 import Bar from "../../assets/images/bar.svg";
+import Header from "../../components/Header/Header";
 const FoodChoices = () => {
   const navigate = useNavigate();
 
@@ -14,35 +15,38 @@ const FoodChoices = () => {
     navigate("/alldone");
   };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
-      <div
-        className="flex justify-center items-center bg-cover bg-center "
-        style={{ backgroundImage: `url("${FoodBG}")` }}
-      ></div>
-      <div className="flex flex-col items-center  bg-black text-white md:bg-none w-full md:mx-auto">
-        <div className="flex flex-col justify-center mx-5 px-6 md:px-0 pb-3 h-[90%] w-full md:w-[350px]">
-          <h1 className="font-bold text-2xl md:text-4xl  leading-10 mb-3 max-sm:mt-3">
-            Food Choices
-          </h1>
-          <EventMessage />
-          <img className="md:hidden" src={Bar} alt="progress bar" />
-          <Button
-            title="Skip, I have no preference"
-            style="outline"
-            handleClicked={goToAllDone}
-            className="py-[18px] px-[138px] my-5"
-          />
-          <Button
-            title="Continue"
-            icon={<ChervronRight className="stroke-black" />}
-            style="white"
-            handleClicked={nextPage}
-            className="py-[18px] px-[138px] mb-3 "
-          />
+    <>
+      <Header />
+      <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
+        <div
+          className="flex justify-center items-center bg-cover bg-center "
+          style={{ backgroundImage: `url("${FoodBG}")` }}
+        ></div>
+        <div className="flex flex-col items-center  bg-black text-white md:bg-none w-full md:mx-auto">
+          <div className="flex flex-col justify-center mx-5 px-6 md:px-0 pb-3 h-[90%] w-full md:w-[350px]">
+            <h1 className="font-bold text-2xl md:text-4xl  leading-10 mb-3 max-sm:mt-3">
+              Food Choices
+            </h1>
+            <EventMessage />
+            <img className="md:hidden" src={Bar} alt="progress bar" />
+            <Button
+              title="Skip, I have no preference"
+              style="outline"
+              handleClicked={goToAllDone}
+              className="py-[18px] px-[138px] my-5"
+            />
+            <Button
+              title="Continue"
+              icon={<ChervronRight className="stroke-black" />}
+              style="white"
+              handleClicked={nextPage}
+              className="py-[18px] px-[138px] mb-3 "
+            />
+          </div>
+          <CopyRight className="self-start ml-6 md:self-center md:mt-auto md:mb-10" />
         </div>
-        <CopyRight className="self-start ml-6 md:self-center md:mt-auto md:mb-10" />
       </div>
-    </div>
+    </>
   );
 };
 
