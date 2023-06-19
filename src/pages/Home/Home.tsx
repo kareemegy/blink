@@ -2,7 +2,6 @@ import Logo from "../../assets/images/logo.png";
 import GDBDeskTopImage from "../../assets/images/Home Page/GDB-desktop-main-LD.png";
 import GDBMobileImage from "../../assets/images/GDB_mobile_main_D.png";
 import { ReactComponent as ChervronRight } from "../../assets/images/Home Page/Chevron right.svg";
-
 import leftArrow from "../../assets/images/Home Page/left-arrow.svg";
 import { useState } from "react";
 import Button from "../../components/Button/Button";
@@ -37,8 +36,8 @@ const Home = () => {
           </h1>
         </div>
       </div>
-      <div className="flex flex-col items-center   bg-black  text-white md:bg-none w-full md:mx-auto">
-        <div className=" relative flex flex-col justify-center mx-5 px-6 md:px-0 pb-3 h-[90%] w-full md:w-[350px]">
+      <div className="flex flex-col items-center  bg-black  text-white  w-full">
+        <div className="flex flex-col justify-center mx-5 px-6 md:px-0  h-full  md:w-[350px]">
           <h1 className=" hidden md:block font-bold text-2xl md:text-4xl   leading-10 mb-3">
             Hey [Mr. Bond],
           </h1>
@@ -51,7 +50,7 @@ const Home = () => {
           </div>
           <Button
             title="Continue"
-            icon={<ChervronRight className="stroke-black" />}
+            icon={<ChervronRight className="" />}
             style="white"
             handleClicked={nextPage}
             className="py-[18px] px-[138px] my-10"
