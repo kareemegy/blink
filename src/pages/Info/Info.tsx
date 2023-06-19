@@ -28,7 +28,6 @@ const Info = () => {
     <div className="bg-black">
       <Header />
       <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 xl:max-w-[1280px] ">
-        {/* <PageHeader title={title} subtitle={subtitle} className="!md:w-[70%]" info="true" /> */}
         <div
           className={`flex flex-col mt-7 mx-6 md:mx-0  items-baseline md:items-start  md:w-full  `}
           style={{ width: "70%" }}
@@ -46,7 +45,7 @@ const Info = () => {
               {title}
             </h1>
           </div>
-          <div className="mt-3 md:ml-7 mb-8 md:w-[400px] ">
+          <div className="mt-3 md:ml-7 mb-8  ">
             <p className=" text-sm md:text-base text-Gray200 ">{subtitle}</p>
           </div>
         </div>

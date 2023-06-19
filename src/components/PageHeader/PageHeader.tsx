@@ -23,7 +23,7 @@ const PageHeader = ({ title, subtitle, className }: PageHeaderProps) => {
           {title}
         </h1>
       </div>
-      <div className="mt-3 md:ml-7 mb-8 md:w-[400px] ">
+      <div className="mt-3 md:ml-7 mb-8  ">
         <p className=" text-sm md:text-base text-Gray200 ">{subtitle}</p>
       </div>
     </div>
