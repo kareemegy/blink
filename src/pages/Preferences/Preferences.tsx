@@ -17,7 +17,7 @@ const Preferences = () => {
         <PageHeader
           title="Preferences"
           subtitle="Let’s start with food preference, which of these practices do you follow?"
-          className="!px-5"
+          className="md:!px-5"
         />
       </div>
       <div className="bg-black">

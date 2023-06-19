@@ -1,5 +1,4 @@
 import Header from "../../components/Header/Header";
-import PageHeader from "../../components/PageHeader";
 import Icon from "../../assets/images/icon.svg";
 import { ReactComponent as Upload } from "../../assets/images/upload.svg";
 import SelectLabel from "../../components/SelectLabel";
@@ -29,8 +28,7 @@ const Info = () => {
       <Header />
       <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 xl:max-w-[1280px] ">
         <div
-          className={`flex flex-col mt-7 mx-6 md:mx-0  items-baseline md:items-start  md:w-full  `}
-          style={{ width: "70%" }}
+          className={`flex flex-col mt-7 mx-6 md:mx-0  items-baseline md:items-start w-full px-5  md:w-[70%]  `}
         >
           <div
             className="flex items-center cursor-pointer"
@@ -49,6 +47,7 @@ const Info = () => {
             <p className=" text-sm md:text-base text-Gray200 ">{subtitle}</p>
           </div>
         </div>
+
         <div className=" bg-blinkbg p-5 md:px-[52px] md:py-[60px] w-[100%] md:w-[70%] md:ml-7 text-white">
           <h1 className="text-xl font-bold">Documents</h1>
           <div className="flex items-center mt-3">
@@ -83,7 +82,7 @@ const Info = () => {
             to change based on availability
           </p>
         </div>
-        <Footer  />
+        <Footer />
       </div>
     </div>
   );
