@@ -19,17 +19,20 @@ const Allergies = () => {
   return (
     <div className="h-screen bg-black">
       <Header />
-      <ProgressBar className="hidden md:block" type="full" />
+      <ProgressBar className="hidden md:block !px-5" type="full" />
       <div className="container mx-auto">
         <PageHeader
           title="Allergies"
           subtitle="Please choose the foods against which [you’re] allergic "
+          className=" !px-5"
         />
       </div>
-      <Wrapper>
-        <AllergiesChoices />
-      </Wrapper>
-      <Footer />
+      <div className="bg-black">
+        <Wrapper>
+          <AllergiesChoices />
+        </Wrapper>
+        <Footer />
+      </div>
     </div>
   );
 };
