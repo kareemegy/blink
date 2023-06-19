@@ -5,6 +5,7 @@ type PageHeaderProps = {
   title: string;
   subtitle?: string;
   className?: string;
+  info?: string;
 };
 const PageHeader = ({ title, subtitle, className }: PageHeaderProps) => {
   const navigate = useNavigate();
@@ -18,7 +19,9 @@ const PageHeader = ({ title, subtitle, className }: PageHeaderProps) => {
     >
       <div className="flex items-center cursor-pointer" onClick={handleGoBack}>
         <img className="w-[13px] h-[26px]" src={LeftArrow} alt="Left_Arrow" />
-        <h1 className="ml-3 text-2xl md:text-3xl text-white font-bold">{title}</h1>
+        <h1 className="ml-3 text-2xl md:text-3xl text-white font-bold">
+          {title}
+        </h1>
       </div>
       <div className="mt-3 md:ml-7 mb-8 md:w-[400px] ">
         <p className=" text-sm md:text-base text-Gray200 ">{subtitle}</p>

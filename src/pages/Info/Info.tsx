@@ -11,6 +11,8 @@ import Footer from "../../components/Footer";
 import { ReactComponent as ChervronRight } from "../../assets/images/Home Page/Chevron right.svg";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
+import LeftArrow from "../../assets/images/Home Page/left-arrow.svg";
+
 const Info = () => {
   const title = "Personal Info";
   const subtitle = `To provide you with the most comfortable experience,  we ask you to
@@ -19,11 +21,35 @@ const Info = () => {
   const nextPage = () => {
     navigate("/info-check");
   };
+  const handleGoBack = () => {
+    navigate(-1);
+  };
   return (
     <div className="bg-black">
       <Header />
       <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 xl:max-w-[1280px] ">
-        <PageHeader title={title} subtitle={subtitle} className="md:w-[70%]" />
+        {/* <PageHeader title={title} subtitle={subtitle} className="!md:w-[70%]" info="true" /> */}
+        <div
+          className={`flex flex-col mt-7 mx-6 md:mx-0  items-baseline md:items-start  md:w-full  `}
+          style={{ width: "70%" }}
+        >
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={handleGoBack}
+          >
+            <img
+              className="w-[13px] h-[26px]"
+              src={LeftArrow}
+              alt="Left_Arrow"
+            />
+            <h1 className="ml-3 text-2xl md:text-3xl text-white font-bold">
+              {title}
+            </h1>
+          </div>
+          <div className="mt-3 md:ml-7 mb-8 md:w-[400px] ">
+            <p className=" text-sm md:text-base text-Gray200 ">{subtitle}</p>
+          </div>
+        </div>
         <div className=" bg-blinkbg p-5 md:px-[52px] md:py-[60px] w-[100%] md:w-[70%] md:ml-7 text-white">
           <h1 className="text-xl font-bold">Documents</h1>
           <div className="flex items-center mt-3">
