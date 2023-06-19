@@ -4,6 +4,7 @@ import SignOutIcon from "../../assets/images/signOut-icon.svg";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/images/Frame.svg";
 import Button from "../Button/Button";
+import ProgressBar from "../ProgressBar/ProgressBar";
 interface HeaderProps {
   className?: string;
 }
@@ -47,10 +48,6 @@ const Header = ({ className }: HeaderProps) => {
             style="outline"
             className="hidden xl:mr-6 md:block text-white border-2 px-[30px] py-[10px]"
           />
-
-          {/* <button className="hidden xl:mr-6 md:block text-white border-2 px-[30px] py-[12px]">
-            Sign Out
-          </button> */}
           <button className="md:hidden mr-3">
             <img
               className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] "

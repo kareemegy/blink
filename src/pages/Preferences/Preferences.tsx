@@ -12,17 +12,20 @@ const Preferences = () => {
   return (
     <div className="h-screen bg-black">
       <Header />
-      <ProgressBar className="hidden md:block" />
+      <ProgressBar className="hidden md:block !px-5" />
       <div className="container mx-auto">
         <PageHeader
           title="Preferences"
           subtitle="Let’s start with food preference, which of these practices do you follow?"
+          className="!px-5"
         />
       </div>
-      <Wrapper className="bg-black" >
-        <PreferencesChoices />
-      </Wrapper>
-      <Footer />
+      <div className="bg-black">
+        <Wrapper className="bg-black">
+          <PreferencesChoices />
+        </Wrapper>
+        <Footer />
+      </div>
     </div>
   );
 };
