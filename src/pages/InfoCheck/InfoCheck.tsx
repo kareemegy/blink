@@ -25,7 +25,7 @@ const InfoCheck = () => {
             title="Personal Info Check"
             subtitle="Please check your information and make sure its all correct. Please read our Security Policy for further information"
           />
-          <BoxWrapper>
+          <BoxWrapper className="max-sm:bg-black">
             <Documents />
             <hr className="border-Lightest my-7 md:my-9 border-b-1  max-w-3xl" />
             <IdentificationInfo />
@@ -67,7 +67,7 @@ const Documents = () => {
   return (
     <>
       <h1 className="text-xl md:text-2xl mb-10 font-bold">Documents </h1>
-      <div className="flex gap-5">
+      <div className="flex flex-col md:flex md:flex-row gap-5">
         <div>
           <p className="text-Gray200 mb-2">Portrait Photo</p>
           <img src={Protrait} alt="Portrait Photo" />
