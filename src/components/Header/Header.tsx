@@ -4,7 +4,6 @@ import SignOutIcon from "../../assets/images/signOut-icon.svg";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/images/Frame.svg";
 import Button from "../Button/Button";
-import ProgressBar from "../ProgressBar/ProgressBar";
 interface HeaderProps {
   className?: string;
 }
