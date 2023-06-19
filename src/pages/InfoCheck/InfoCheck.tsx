@@ -18,42 +18,45 @@ const InfoCheck = () => {
   };
   return (
     <>
-      <Header />
-      <Wrapper>
-        <PageHeader
-          title="Personal Info Check"
-          subtitle="Please check your information and make sure its all correct. Please read our Security Policy for further information"
-        />
-        <BoxWrapper>
-          <Documents />
-          <hr className="border-Lightest my-7 md:my-9 border-b-1  max-w-3xl" />
-          <IdentificationInfo />
-          <hr className="border-Lightest my-7 md:my-9 border-b-1  max-w-3xl" />
-          <PersonalInfo />
-          <hr className="border-Lightest my-7 md:my-9 border-b-1  max-w-3xl" />
-          <ContactInfo />
-          <hr className="border-Lightest my-7 md:my-9 border-b-1  max-w-3xl" />
-          <p className="text-DarkestWhite mb-5">
-            Please make sure that your information is correct before you submit
-          </p>
-          <div className="flex flex-col md:flex-row gap-10">
-            <Button
-              handleClicked={backToInfo}
-              title="Back to edit"
-              style="outline"
-              className="w-full"
-            />
-            <Button
-              title="Submit"
-              style="white"
-              icon={<ChevronRight className="stroke-black" />}
-              className="w-full"
-              handleClicked={nextPage}
-            />
-          </div>
-        </BoxWrapper>
-      </Wrapper>
-      <Footer />
+      <div className="bg-black">
+        <Header />
+        <Wrapper>
+          <PageHeader
+            title="Personal Info Check"
+            subtitle="Please check your information and make sure its all correct. Please read our Security Policy for further information"
+          />
+          <BoxWrapper>
+            <Documents />
+            <hr className="border-Lightest my-7 md:my-9 border-b-1  max-w-3xl" />
+            <IdentificationInfo />
+            <hr className="border-Lightest my-7 md:my-9 border-b-1  max-w-3xl" />
+            <PersonalInfo />
+            <hr className="border-Lightest my-7 md:my-9 border-b-1  max-w-3xl" />
+            <ContactInfo />
+            <hr className="border-Lightest my-7 md:my-9 border-b-1  max-w-3xl" />
+            <p className="text-DarkestWhite mb-5">
+              Please make sure that your information is correct before you
+              submit
+            </p>
+            <div className="flex flex-col md:flex-row gap-10">
+              <Button
+                handleClicked={backToInfo}
+                title="Back to edit"
+                style="outline"
+                className="w-full"
+              />
+              <Button
+                title="Submit"
+                style="white"
+                icon={<ChevronRight className="stroke-black" />}
+                className="w-full"
+                handleClicked={nextPage}
+              />
+            </div>
+          </BoxWrapper>
+        </Wrapper>
+        <Footer />
+      </div>
     </>
   );
 };
