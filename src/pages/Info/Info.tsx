@@ -83,7 +83,7 @@ const Info = () => {
             to change based on availability
           </p>
         </div>
-        <Footer />
+        <Footer  />
       </div>
     </div>
   );
