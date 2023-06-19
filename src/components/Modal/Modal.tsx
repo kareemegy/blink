@@ -9,6 +9,7 @@ type ModalProps = {
   children: React.ReactNode;
   icon?: string;
   className?: string;
+  titleStyle?: string;
 };
 
 const Modal = ({
@@ -18,6 +19,7 @@ const Modal = ({
   children,
   icon,
   className,
+  titleStyle,
 }: ModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -55,7 +57,7 @@ const Modal = ({
         <div className=" fixed inset-0 flex items-center justify-center mx-3 max-sm:mx-0">
           <div
             className={cn(
-              "py-[52px] px-[46px]  md:w-[730px]  text-white  md:bg-blinkDashboard",
+              "py-[52px] px-[46px]  md:w-[730px]  text-white bg-blinkDashboard",
               className
             )}
           >
@@ -65,9 +67,7 @@ const Modal = ({
                   <img className="" src={icon} alt="left Icon" />
                 </span>
               )}
-              <h1 className="text-2xl md:text-4xl font-bold mb-4">
-                {headerText}
-              </h1>
+              <ModalTitle title={headerText} className={titleStyle} />
             </div>
             {children}
           </div>
@@ -78,3 +78,17 @@ const Modal = ({
 };
 
 export default Modal;
+
+const ModalTitle = ({
+  title,
+  className,
+}: {
+  title: string;
+  className?: string;
+}) => {
+  return (
+    <h1 className={`text-2xl md:text-4xl font-bold mb-4 ${className}`}>
+      {title}
+    </h1>
+  );
+};

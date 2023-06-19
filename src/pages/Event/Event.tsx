@@ -214,7 +214,8 @@ const RejectModal = ({ showModal, toggleModal }: RejectModalProps) => {
       showModal={showModal}
       toggleModal={toggleModal}
       headerText="We’re sorry to hear that!"
-      className="md:w-[530px]"
+      className="!w-[430px] !h-[650px] !py-10"
+      titleStyle="w-[150px] md:w-[200px]"
     >
       <h3 className=" mb-4  text-DarkestWhite">
         Let us how we can make it work for you. Share your availability and you
@@ -231,7 +232,7 @@ const RejectModal = ({ showModal, toggleModal }: RejectModalProps) => {
       <Button
         title=" Send Your Feedback "
         style="white"
-        className="w-full mt-[30px] mb-[40px] text-xl font-bold text-blinkDashboard "
+        className="w-full mt-[30px] mb-[40px] text-xl font-bold text-blinkDashboard whitespace-nowrap "
         handleClicked={handleSendFeedback}
       />
     </Modal>
