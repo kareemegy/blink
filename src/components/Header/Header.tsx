@@ -22,12 +22,12 @@ const Header = ({ className }: HeaderProps) => {
       >
         <div className="cursor-pointer ml-6" onClick={handleGoHome}>
           <img
-            className=" w-[100px] md:w-[150px] "
+            className="w-[100px] md:w-[150px] "
             src={Logo}
             alt="BLink Logo"
           />
         </div>
-        <div className="flex justify-end  ">
+        <div className="flex justify-end">
           <div className=" flex justify-center  items-center border-2 border-white w-[40px] h-[40px] mr-3 md:hidden">
             <img
               className=" w-[20px] h-[20px]   "
@@ -37,7 +37,7 @@ const Header = ({ className }: HeaderProps) => {
             />
           </div>
           <img
-            className="mr-3  hidden  md:block w-[50px] h-[50px] "
+            className="mr-3  hidden  md:block w-[50px] h-[50px]  cursor-pointer "
             src={Bill}
             alt="Bill Notification"
             onClick={handleGoNotification}
@@ -45,7 +45,7 @@ const Header = ({ className }: HeaderProps) => {
           <Button
             title=" Sign Out"
             style="outline"
-            className="hidden xl:mr-6 md:block text-white border-2 px-[30px] py-[10px]"
+            className="hidden xl:mr-6 md:block text-white border-2 px-[30px] py-[5px]"
           />
           <button className="md:hidden mr-3">
             <img

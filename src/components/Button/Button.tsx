@@ -43,7 +43,7 @@ const Button = ({
   );
 
   const iconClassName = classnames(
-    (icon as React.ReactElement).props.className,
+    typeof icon === 'object' && React.isValidElement(icon) ? icon.props.className : '',
     {
       "stroke-black": style === "white" && !isHovered,
       "stroke-white": style === "outline" && !isHovered,

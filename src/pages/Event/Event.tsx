@@ -32,7 +32,7 @@ const EventPage = () => {
   };
 
   return (
-    <>
+    <div className="bg-black">
       <Header />
       <Wrapper showModal={showModal}>
         <PageHeader title={title} subtitle={subtitle} />
@@ -62,10 +62,10 @@ const EventPage = () => {
           </div>
           <ConfirmationMessage />
         </div>
-        <Footer />
       </Wrapper>
+        <Footer />
       <RejectModal showModal={showModal} toggleModal={toggleModal} />
-    </>
+    </div>
   );
 };
 export default EventPage;
