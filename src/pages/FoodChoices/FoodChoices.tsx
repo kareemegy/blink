@@ -21,7 +21,7 @@ const FoodChoices = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
         <div
-          className="flex justify-center items-center bg-cover bg-center "
+          className="flex justify-center items-center bg-cover bg-center max-sm:h-[50vh] "
           style={{ backgroundImage: `url("${FoodBG}")` }}
         ></div>
         <div className="flex flex-col items-center  bg-black text-white md:bg-none w-full md:mx-auto">
@@ -45,7 +45,7 @@ const FoodChoices = () => {
               className="py-[18px] px-[138px] mb-3 "
             />
           </div>
-          <CopyRight className="self-start ml-6 md:self-center md:mt-auto md:mb-10" />
+          <CopyRight className="self-start ml-6 md:self-center md:mt-auto md:mb-10 mt-10 mb-10  " />
         </div>
       </div>
     </>
@@ -55,7 +55,7 @@ const FoodChoices = () => {
 const EventMessage = () => {
   return (
     <>
-      <p className="text-Gray200 md:text-Gray300 text-sm md:text-base leading-6 mt-4 mb-10">
+      <p className="text-Gray200 md:text-Gray300 text-sm md:text-base leading-6 mt-4 mb-5 md:mb-10">
         At this upcoming event, food will be likely served. Please take a few
         seconds to let us know if you have any food preferences or allergies
       </p>
