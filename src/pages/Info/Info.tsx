@@ -11,7 +11,6 @@ import { ReactComponent as ChervronRight } from "../../assets/images/Home Page/C
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import LeftArrow from "../../assets/images/Home Page/left-arrow.svg";
-import PageHeader from "../../components/PageHeader/PageHeader";
 
 const Info = () => {
   const title = "Personal Info";
@@ -83,7 +82,6 @@ const Info = () => {
             *Due to high demand, requested arrival & departure dates are subject
             to change based on availability
           </p>
-          P
         </div>
       </div>
       <Footer />
