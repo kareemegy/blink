@@ -11,6 +11,7 @@ import { ReactComponent as ChervronRight } from "../../assets/images/Home Page/C
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import LeftArrow from "../../assets/images/Home Page/left-arrow.svg";
+import PageHeader from "../../components/PageHeader/PageHeader";
 
 const Info = () => {
   const title = "Personal Info";
@@ -27,8 +28,9 @@ const Info = () => {
     <div className="bg-black">
       <Header />
       <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 xl:max-w-[1280px] ">
+        {/* <PageHeader title={title} subtitle={title} /> */}
         <div
-          className={`flex flex-col mt-7 mx-6 md:mx-0  items-baseline md:items-start w-full px-5  md:w-[70%]  `}
+          className={`flex flex-col mt-7 mx-6 md:mx-0  items-baseline md:items-start w-full px-5  md:w-[70%]  md:mr-[60px] `}
         >
           <div
             className="flex items-center cursor-pointer"
@@ -81,9 +83,10 @@ const Info = () => {
             *Due to high demand, requested arrival & departure dates are subject
             to change based on availability
           </p>
+          P
         </div>
       </div>
-        <Footer />
+      <Footer />
     </div>
   );
 };

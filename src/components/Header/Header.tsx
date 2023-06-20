@@ -18,9 +18,9 @@ const Header = ({ className }: HeaderProps) => {
   return (
     <div className="bg-black">
       <header
-        className={`${className} container mx-auto grid grid-cols-2  pt-5 `}
+        className={`${className} container mx-auto grid grid-cols-2  pt-5 max-[768px]:px-5 `}
       >
-        <div className="cursor-pointer ml-6" onClick={handleGoHome}>
+        <div className="cursor-pointer  md:ml-6" onClick={handleGoHome}>
           <img
             className="w-[100px] md:w-[150px] "
             src={Logo}

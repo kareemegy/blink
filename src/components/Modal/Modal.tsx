@@ -88,7 +88,7 @@ const ModalTitle = ({
   className?: string;
 }) => {
   return (
-    <h1 className={`text-2xl md:text-4xl font-bold mb-4 ${className}`}>
+    <h1 className={`text-3xl md:text-4xl font-bold mb-4 ${className}`}>
       {title}
     </h1>
   );
