@@ -38,7 +38,7 @@ const Home = () => {
         </div>
       </div>
       <div className="flex flex-col items-center  bg-black  text-white  w-full">
-        <div className="flex flex-col justify-center mx-5  md:px-0  h-full  md:w-[350px]">
+        <div className="flex flex-col justify-start md:justify-center mx-5  md:px-0  h-full  md:w-[350px]">
           <h1 className=" hidden  min-[452px]:block font-bold text-2xl md:text-4xl leading-10 mb-3">
             Hey [Mr. Bond],
           </h1>
@@ -46,7 +46,7 @@ const Home = () => {
           <div className="hidden md:block ">
             <EventMessage toggleModal={toggleModal} />
           </div>
-          <div className="  md:hidden">
+          <div className=" mt-2  md:hidden">
             <MobileMessage />
           </div>
           <Button
@@ -56,7 +56,7 @@ const Home = () => {
             handleClicked={nextPage}
             className="py-[18px] px-[138px] my-10"
           />
-        <CopyRight className="md:hidden mb-2" />
+        <CopyRight className="md:hidden mb-6" />
         </div>
         <CopyRight className=" hidden md:block self-start  md:self-center mb-5 md:mt-auto md:mb-10" />
       </div>
@@ -119,7 +119,7 @@ const SecurityPolicyModal = ({
       <h3 className="text-lg  md:text-xl  mb-4 font-bold">
         Malesuada Pulvinar Elementum, Ultrices Mi
       </h3>
-      <p className="md:overflow-y-scroll pr-5 text-sm text-GraySecondary md:h-[280px] scrollbar-style ">
+      <p className=" md:overflow-y-scroll pr-5 text-sm text-GraySecondary md:h-[280px] scrollbar-style h-[500px]">
         Adipiscing mauris lectus enim nullam. Scelerisque congue proin cursus
         eget. Dui ornare vitae, netus sed ultricies. Integer imperdiet nunc eget
         duis diam risus. Lobortis tincidunt nunc, lobortis non. Ut tempor, dui
