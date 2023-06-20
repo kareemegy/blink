@@ -25,7 +25,7 @@ const Allergies = () => {
           <PageHeader
             title="Allergies"
             subtitle="Please choose the foods against which [you’re] allergic "
-            className="!pl-0 md:!px-5"
+            className=" md:!px-5"
           />
         </div>
         <div className="bg-black">
@@ -33,7 +33,7 @@ const Allergies = () => {
             <AllergiesChoices />
           </Wrapper>
         </div>
-        <Footer className="!h-[300px] mb-6" />
+        <Footer className="md:!h-[300px] mb-6" />
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-
 import cn from "classnames";
 
 interface ButtonProps {
@@ -20,12 +19,10 @@ const Button = ({ ...props }: ButtonProps) => {
         "flex justify-center items-center  font-extrabold px-[30px] py-[13px] rounded-sm disabled:opacity-50 disabled:cursor-not-allowed transition-all ease-in ",
         className,
         {
-          "bg-white text-Gray1000      ":
-            style === "white",
+          "bg-white text-Gray1000      ": style === "white",
         },
         {
-          "bg-gray-Gray50 text-white border-2   ":
-            style === "outline",
+          "bg-gray-Gray50 text-white border-2   ": style === "outline",
         }
       )}
     >
