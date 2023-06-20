@@ -17,6 +17,7 @@ const Home = () => {
   const nextPage = () => {
     navigate("/event");
   };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
       <div
@@ -30,22 +31,22 @@ const Home = () => {
         }}
       >
         <img className="hidden sm:block" src={Logo} alt="Blink_Logo" />
-        <div className="flex w-full h-full justify-start items-end px-6  sm:hidden ">
-          <h1 className="font-bold text-2xl md:text-4xl  text-white   leading-10 ">
+        <div className="sm:hidden min-[452px]:hidden  flex w-full h-full justify-start items-end px-5  ">
+          <h1 className=" font-bold text-2xl md:text-4xl  text-white   leading-10 ">
             Hey [Mr. Bond],
           </h1>
         </div>
       </div>
       <div className="flex flex-col items-center  bg-black  text-white  w-full">
-        <div className="flex flex-col justify-center mx-5 px-6 md:px-0  h-full  md:w-[350px]">
-          <h1 className=" hidden md:block font-bold text-2xl md:text-4xl   leading-10 mb-3">
+        <div className="flex flex-col justify-center mx-5  md:px-0  h-full  md:w-[350px]">
+          <h1 className=" hidden  min-[452px]:block font-bold text-2xl md:text-4xl leading-10 mb-3">
             Hey [Mr. Bond],
           </h1>
 
           <div className="hidden md:block ">
             <EventMessage toggleModal={toggleModal} />
           </div>
-          <div className="md:hidden">
+          <div className="  md:hidden">
             <MobileMessage />
           </div>
           <Button
@@ -55,8 +56,9 @@ const Home = () => {
             handleClicked={nextPage}
             className="py-[18px] px-[138px] my-10"
           />
+        <CopyRight className="md:hidden mb-2" />
         </div>
-        <CopyRight className="self-start ml-6 md:self-center md:mt-auto md:mb-10" />
+        <CopyRight className=" hidden md:block self-start  md:self-center mb-5 md:mt-auto md:mb-10" />
       </div>
       <SecurityPolicyModal showModal={showModal} toggleModal={toggleModal} />
     </div>
