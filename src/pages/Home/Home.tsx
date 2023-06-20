@@ -51,7 +51,7 @@ const Home = () => {
           </div>
           <Button
             title="Continue"
-            icon={<ChervronRight className="" />}
+            icon={<ChervronRight className="stroke-black" />}
             style="white"
             handleClicked={nextPage}
             className="py-[18px] px-[138px] my-10"

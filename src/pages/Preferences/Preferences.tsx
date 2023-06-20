@@ -10,21 +10,23 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Footer from "../../components/Footer/Footer";
 const Preferences = () => {
   return (
-    <div className="h-screen bg-black">
-      <Header />
-      <ProgressBar className="hidden md:block !px-5" />
-      <div className="container mx-auto">
-        <PageHeader
-          title="Preferences"
-          subtitle="Let’s start with food preference, which of these practices do you follow?"
-          className="md:!px-5"
-        />
-      </div>
+    <div className=" h-screen bg-black">
       <div className="bg-black">
-        <Wrapper className="bg-black">
-          <PreferencesChoices />
-        </Wrapper>
-        <Footer />
+        <Header />
+        <ProgressBar className="hidden md:block " />
+        <div className="container mx-auto">
+          <PageHeader
+            title="Preferences"
+            subtitle="Let’s start with food preference, which of these practices do you follow?"
+            className="!pl-0 md:!px-5"
+          />
+        </div>
+        <div className="bg-black">
+          <Wrapper className="bg-black">
+            <PreferencesChoices />
+          </Wrapper>
+        </div>
+      <Footer className="!h-[300px] mb-5" />
       </div>
     </div>
   );

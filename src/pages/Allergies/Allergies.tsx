@@ -17,21 +17,23 @@ import { ReactComponent as Bar } from "../../assets/images/progressBar2.svg";
 import Footer from "../../components/Footer/Footer";
 const Allergies = () => {
   return (
-    <div className="h-screen bg-black">
-      <Header />
-      <ProgressBar className="hidden md:block !px-5" type="full" />
-      <div className="container mx-auto">
-        <PageHeader
-          title="Allergies"
-          subtitle="Please choose the foods against which [you’re] allergic "
-          className="!pl-0 md:!px-5"
-        />
-      </div>
+    <div className=" h-screen bg-black">
       <div className="bg-black">
-        <Wrapper>
-          <AllergiesChoices />
-        </Wrapper>
-        <Footer />
+        <Header />
+        <ProgressBar className="hidden md:block !px-5" type="full" />
+        <div className="container mx-auto">
+          <PageHeader
+            title="Allergies"
+            subtitle="Please choose the foods against which [you’re] allergic "
+            className="!pl-0 md:!px-5"
+          />
+        </div>
+        <div className="bg-black">
+          <Wrapper className="bg-black">
+            <AllergiesChoices />
+          </Wrapper>
+        </div>
+        <Footer className="!h-[300px] mb-6" />
       </div>
     </div>
   );
