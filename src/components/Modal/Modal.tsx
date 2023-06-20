@@ -55,9 +55,10 @@ const Modal = ({
           <img src={CloseBTN} alt="close button" />
         </span>
         <div className=" fixed inset-0 flex items-center justify-center mx-3 max-sm:mx-0">
+          {/* bg-blinkDashboard */}
           <div
             className={cn(
-              "py-[52px] px-[46px]  md:w-[730px]  text-white bg-blinkDashboard",
+              "py-[52px] px-[46px]  md:w-[730px]  text-white bg-blinkDashboard ",
               className
             )}
           >

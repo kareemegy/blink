@@ -60,7 +60,7 @@ const Home = () => {
         </div>
         <CopyRight className=" hidden md:block self-start  md:self-center mb-5 md:mt-auto md:mb-10" />
       </div>
-      <SecurityPolicyModal showModal={showModal} toggleModal={toggleModal} />
+      <SecurityPolicyModal showModal={showModal} toggleModal={toggleModal}  />
     </div>
   );
 };
@@ -114,11 +114,12 @@ const SecurityPolicyModal = ({
       toggleModal={toggleModal}
       headerText="Security Policy"
       icon={leftArrow}
+      className="max-md:!bg-black"
     >
       <h3 className="text-lg  md:text-xl  mb-4 font-bold">
         Malesuada Pulvinar Elementum, Ultrices Mi
       </h3>
-      <p className="overflow-y-scroll pr-5 text-sm text-GraySecondary md:h-[280px] scrollbar-style h-[500px]">
+      <p className="md:overflow-y-scroll pr-5 text-sm text-GraySecondary md:h-[280px] scrollbar-style ">
         Adipiscing mauris lectus enim nullam. Scelerisque congue proin cursus
         eget. Dui ornare vitae, netus sed ultricies. Integer imperdiet nunc eget
         duis diam risus. Lobortis tincidunt nunc, lobortis non. Ut tempor, dui
