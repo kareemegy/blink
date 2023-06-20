@@ -16,7 +16,9 @@ const FoodChoices = () => {
   };
   return (
     <>
-      <Header />
+      <div className="relative container mx-auto ">
+        <Header className="absolute top-0 left-0" bg="!bg-transparent" />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
         <div
           className="flex justify-center items-center bg-cover bg-center "

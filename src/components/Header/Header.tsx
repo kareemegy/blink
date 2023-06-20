@@ -6,8 +6,9 @@ import Logo from "../../assets/images/Frame.svg";
 import Button from "../Button/Button";
 interface HeaderProps {
   className?: string;
+  bg?: string;
 }
-const Header = ({ className }: HeaderProps) => {
+const Header = ({ className,bg }: HeaderProps) => {
   const navigate = useNavigate();
   const handleGoHome = () => {
     navigate("/");
@@ -16,7 +17,7 @@ const Header = ({ className }: HeaderProps) => {
     navigate("/notification");
   };
   return (
-    <div className="bg-black">
+    <div className={`bg-black ${bg}`}>
       <header
         className={`${className} container mx-auto grid grid-cols-2  pt-5 max-[768px]:px-5 `}
       >
