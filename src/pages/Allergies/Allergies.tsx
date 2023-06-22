@@ -20,7 +20,7 @@ const Allergies = () => {
     <div className=" h-screen bg-black">
       <div className="bg-black">
         <Header />
-        <ProgressBar className="hidden md:block !px-5" type="full" />
+        <ProgressBar className="hidden md:block md:px-6" type="full"/>
         <div className="container mx-auto">
           <PageHeader
             title="Allergies"
@@ -30,6 +30,7 @@ const Allergies = () => {
         </div>
         <div className="bg-black">
           <Wrapper className="bg-black">
+
             <AllergiesChoices />
           </Wrapper>
         </div>
@@ -94,20 +95,20 @@ const AllergiesChoices = () => {
       {allergies.map((allergy) => (
         <div
           key={allergy.text}
-          className={`flex flex-col items-center justify-center h-32 md:w-32 bg-Darker shadow-lg border-2 max-sm:text-sm ${
+          className={`flex flex-col items-center justify-center h-[105px] w-[98px] md:w-[105px] bg-Darker shadow-lg border-2 max-sm:text-sm ${
             isAllergySelected(allergy)
               ? "border-white text-white font-bold"
               : "border-Darker text-DarkestWhite"
           } ${
             allergy.text === "Other"
-              ? "block md:hidden h-[50px] !col-span-3"
+              ? "block md:hidden h-[47px] !col-span-3"
               : ""
           }`}
           onClick={() => selectAllergies(allergy)}
         >
           {allergy.icon && (
             <img
-              className="h-16 w-16 mb-2"
+              className="h-[47px] w-[47px] mb-2"
               src={allergy.icon}
               alt={allergy.text}
             />

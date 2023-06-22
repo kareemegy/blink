@@ -14,7 +14,7 @@ const Preferences = () => {
       <div className="bg-black">
         <div className="container mx-auto">
           <Header />
-          <ProgressBar className="hidden md:block" />
+          <ProgressBar className="hidden md:block md:px-6    " />
         </div>
         <div className="container mx-auto">
           <PageHeader

@@ -8,7 +8,7 @@ interface HeaderProps {
   className?: string;
   bg?: string;
 }
-const Header = ({ className,bg }: HeaderProps) => {
+const Header = ({ className, bg }: HeaderProps) => {
   const navigate = useNavigate();
   const handleGoHome = () => {
     navigate("/");
@@ -18,17 +18,18 @@ const Header = ({ className,bg }: HeaderProps) => {
   };
   return (
     <div className={`bg-black ${bg}`}>
+      {/* max-[768px]:px-5  */}
       <header
-        className={`${className} container mx-auto grid grid-cols-2  pt-5 max-[768px]:px-5 `}
+        className={`${className} container mx-auto grid grid-cols-2  pt-5 `}
       >
-        <div className="cursor-pointer  md:ml-6" onClick={handleGoHome}>
+        <div className="cursor-pointer ml-3  md:ml-6" onClick={handleGoHome}>
           <img
             className="w-[100px] md:w-[150px] "
             src={Logo}
             alt="BLink Logo"
           />
         </div>
-        <div className="flex justify-end">
+        <div className="flex justify-end  ">
           <div className=" flex justify-center  items-center border-2 border-white w-[40px] h-[40px] mr-3 md:hidden">
             <img
               className=" w-[20px] h-[20px]   "
@@ -46,11 +47,11 @@ const Header = ({ className,bg }: HeaderProps) => {
           <Button
             title=" Sign Out"
             style="outline"
-            className="hidden xl:mr-6 md:block text-white border-2 px-[30px] py-[5px]"
+            className="hidden md:mr-6  md:block text-white border-2 px-[30px] py-[5px]"
           />
           <button className="md:hidden mr-3">
             <img
-              className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] "
+              className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]  "
               src={SignOutIcon}
               alt="Bill Notification"
             />
