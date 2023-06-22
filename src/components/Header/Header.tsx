@@ -22,7 +22,7 @@ const Header = ({ className, bg }: HeaderProps) => {
       <header
         className={`${className} container mx-auto grid grid-cols-2  pt-5 `}
       >
-        <div className="cursor-pointer ml-3  md:ml-6" onClick={handleGoHome}>
+        <div className="cursor-pointer ml-6" onClick={handleGoHome}>
           <img
             className="w-[100px] md:w-[150px] "
             src={Logo}

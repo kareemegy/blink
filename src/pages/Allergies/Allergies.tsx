@@ -108,7 +108,7 @@ const AllergiesChoices = () => {
         >
           {allergy.icon && (
             <img
-              className="h-[47px] w-[47px] mb-2"
+              className="h-[47px] w-[47px] mb-1"
               src={allergy.icon}
               alt={allergy.text}
             />
