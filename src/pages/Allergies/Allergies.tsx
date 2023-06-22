@@ -17,10 +17,10 @@ import { ReactComponent as Bar } from "../../assets/images/progressBar2.svg";
 import Footer from "../../components/Footer/Footer";
 const Allergies = () => {
   return (
-    <div className=" h-screen bg-black">
-      <div className="bg-black">
+    <div className="bg-black h-screen flex flex-col  ">
+      <div className="flex-grow">
         <Header />
-        <ProgressBar className="hidden md:block md:px-6" type="full"/>
+        <ProgressBar className="hidden md:block md:px-6" type="full" />
         <div className="container mx-auto">
           <PageHeader
             title="Allergies"
@@ -30,12 +30,11 @@ const Allergies = () => {
         </div>
         <div className="bg-black">
           <Wrapper className="bg-black">
-
             <AllergiesChoices />
           </Wrapper>
         </div>
-        <Footer className="md:!h-[300px] mb-6" />
       </div>
+      <Footer/>
     </div>
   );
 };
