@@ -28,7 +28,7 @@ const Allergies = () => {
             className=" md:!px-5"
           />
         </div>
-        <Wrapper className="bg-black">
+        <Wrapper>
           <AllergiesChoices />
         </Wrapper>
         <Footer />

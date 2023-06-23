@@ -11,7 +11,7 @@ import Footer from "../../components/Footer/Footer";
 const Preferences = () => {
   return (
     <div className=" bg-black h-screen flex flex-col">
-      <div className="flex-grow">
+      <div className="flex-grow bg-black">
         <div className="container mx-auto">
           <Header />
           <ProgressBar className="hidden md:block md:px-6    " />
@@ -23,13 +23,11 @@ const Preferences = () => {
             className="  md:!px-5"
           />
         </div>
-        <div className="bg-black">
-          <Wrapper className="bg-black">
-            <PreferencesChoices />
-          </Wrapper>
-        </div>
+        <Wrapper >
+          <PreferencesChoices />
+        </Wrapper>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 };
