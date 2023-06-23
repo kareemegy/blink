@@ -27,7 +27,7 @@ const Preferences = () => {
           </Wrapper>
         </div>
 
-        <Footer />
+        <Footer className="max-sm:!mt-0 max-sm:mb-1" />
       </div>
     </div>
   );
@@ -74,7 +74,7 @@ const PreferencesChoices = () => {
           return (
             <div
               key={choice}
-              className={`flex justify-between items-center mb-5 bg-Darker w-full md:w-[350px] transition-all h-[60px] border ${
+              className={`flex justify-between items-center mb-4 bg-Darker w-full md:w-[350px] transition-all h-[60px] border ${
                 isSelected ? "border-white" : "border-none"
               } cursor-pointer`}
               onClick={() => handlePreferenceClick(choice)}
@@ -91,7 +91,7 @@ const PreferencesChoices = () => {
           );
         })}
         <img
-          className="md:hidden w-full mt-10 mb-4"
+          className="md:hidden w-full mt-5 mb-4"
           src={Bar}
           alt="progress bar"
         />

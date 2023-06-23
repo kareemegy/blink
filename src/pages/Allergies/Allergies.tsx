@@ -62,13 +62,16 @@ const AllergiesChoices = () => {
     { text: "Other", icon: "" },
   ];
 
-  const selectAllergies = (allergy: Allergy) => {
-    if (allergy.text === "No Allergies") {
-      setSelectedAllergies([allergy]);
-    } else if (
-      allergy.text === "Other" ||
-      selectedAllergies.some((a) => a.text === "Other")
-    ) {
+  const selectNoAllergies = (allergy: Allergy) => {
+    setSelectedAllergies([allergy]);
+  };
+
+  const selectOtherAllergy = (allergy: Allergy) => {
+    setSelectedAllergies([allergy]);
+  };
+
+  const selectRegularAllergy = (allergy: Allergy) => {
+    if (selectedAllergies.some((a) => a.text === "No Allergies")) {
       setSelectedAllergies([allergy]);
     } else {
       const index = selectedAllergies.findIndex((a) => a.text === allergy.text);
@@ -82,12 +85,27 @@ const AllergiesChoices = () => {
     }
   };
 
+  const selectAllergies = (allergy: Allergy) => {
+    if (allergy.text === "No Allergies") {
+      selectNoAllergies(allergy);
+    } else if (
+      allergy.text === "Other" ||
+      selectedAllergies.some((a) => a.text === "Other")
+    ) {
+      selectOtherAllergy(allergy);
+    } else if (selectedAllergies.some((a) => a.text === "No Allergies")) {
+      selectRegularAllergy(allergy);
+    } else {
+      selectRegularAllergy(allergy);
+    }
+  };
   const goToNotes = () => {
     navigate("/notes");
   };
 
-  const isAllergySelected = (allergy: Allergy) =>
-    selectedAllergies.some((a) => a.text === allergy.text);
+  const isAllergySelected = (allergy: Allergy) => {
+    return selectedAllergies.some((a) => a.text === allergy.text);
+  };
   return (
     <div className="grid grid-cols-3 gap-3 mx-5  ">
       {allergies.map((allergy) => (
@@ -121,7 +139,7 @@ const AllergiesChoices = () => {
         </div>
       ))}
 
-      <Bar className="md:hidden w-full mt-10 mb-4 col-span-3" />
+      <Bar className="md:hidden w-full mt-5 mb-4 col-span-3" />
       <Button
         title="Next"
         handleClicked={goToNotes}
