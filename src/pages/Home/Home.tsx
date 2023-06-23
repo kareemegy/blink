@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
       <div
-        className={`flex justify-center items-center bg-cover bg-center  max-sm:h-[60vh] `}
+        className={`flex justify-center items-center bg-cover bg-center max-md:h-[67vh] `}
         style={{
           backgroundImage: `url(${
             window.innerWidth >= 768
@@ -46,7 +46,7 @@ const Home = () => {
           <div className="hidden md:block ">
             <EventMessage toggleModal={toggleModal} />
           </div>
-          <div className=" mt-2  md:hidden">
+          <div className="mt-2  md:hidden">
             <MobileMessage />
           </div>
           <Button
@@ -56,11 +56,11 @@ const Home = () => {
             handleClicked={nextPage}
             className="py-[18px] px-[138px] my-10"
           />
-        <CopyRight className="md:hidden mb-6" />
+          <CopyRight className="w-full self-start  md:hidden mb-6" />
         </div>
         <CopyRight className=" hidden md:block self-start  md:self-center mb-5 md:mt-auto md:mb-10" />
       </div>
-      <SecurityPolicyModal showModal={showModal} toggleModal={toggleModal}  />
+      <SecurityPolicyModal showModal={showModal} toggleModal={toggleModal} />
     </div>
   );
 };
