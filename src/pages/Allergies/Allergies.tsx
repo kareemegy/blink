@@ -18,7 +18,7 @@ import Footer from "../../components/Footer/Footer";
 const Allergies = () => {
   return (
     <div className="bg-black h-screen flex flex-col  ">
-      <div className="flex-grow">
+      <div className="flex-grow bg-black">
         <Header />
         <ProgressBar className="hidden md:block md:px-6" type="full" />
         <div className="container mx-auto">
@@ -28,13 +28,11 @@ const Allergies = () => {
             className=" md:!px-5"
           />
         </div>
-        <div className="bg-black">
-          <Wrapper className="bg-black">
-            <AllergiesChoices />
-          </Wrapper>
-        </div>
+        <Wrapper className="bg-black">
+          <AllergiesChoices />
+        </Wrapper>
+        <Footer />
       </div>
-      <Footer/>
     </div>
   );
 };
@@ -88,19 +86,18 @@ const AllergiesChoices = () => {
 
   const isAllergySelected = (allergy: Allergy) =>
     selectedAllergies.some((a) => a.text === allergy.text);
-
   return (
-    <div className="grid grid-cols-3 gap-3 mx-5">
+    <div className="grid grid-cols-3 gap-3 mx-5  ">
       {allergies.map((allergy) => (
         <div
           key={allergy.text}
-          className={`flex flex-col items-center justify-center h-[105px] w-[98px] md:w-[105px] bg-Darker shadow-lg border-2 max-sm:text-sm ${
+          className={`flex flex-col items-center justify-center h-[105px]  md:w-[105px] bg-Darker shadow-lg border-2 max-sm:text-sm ${
             isAllergySelected(allergy)
               ? "border-white text-white font-bold"
               : "border-Darker text-DarkestWhite"
           } ${
             allergy.text === "Other"
-              ? "block md:hidden h-[47px] !col-span-3"
+              ? "block md:hidden h-[47px]  w-full  col-span-3"
               : ""
           }`}
           onClick={() => selectAllergies(allergy)}
