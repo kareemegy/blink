@@ -17,7 +17,7 @@ import { ReactComponent as Bar } from "../../assets/images/progressBar2.svg";
 import Footer from "../../components/Footer/Footer";
 const Allergies = () => {
   return (
-    <div className="bg-black h-screen flex flex-col  ">
+    <div className=" h-screen flex flex-col  ">
       <div className="flex-grow bg-black">
         <Header />
         <ProgressBar className="hidden md:block md:px-6" type="full" />
@@ -28,9 +28,11 @@ const Allergies = () => {
             className=" md:!px-5"
           />
         </div>
-        <Wrapper>
-          <AllergiesChoices />
-        </Wrapper>
+        <div className="bg-black">
+          <Wrapper>
+            <AllergiesChoices />
+          </Wrapper>
+        </div>
         <Footer />
       </div>
     </div>
