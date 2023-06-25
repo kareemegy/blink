@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
       <div
-        className={`flex justify-center items-center bg-cover bg-center max-md:h-[67vh] `}
+        className={`flex justify-center items-center bg-cover bg-center max-md:h-[67vh]`}
         style={{
           backgroundImage: `url(${
             window.innerWidth >= 768
@@ -37,7 +37,7 @@ const Home = () => {
           </h1>
         </div>
       </div>
-      <div className="flex flex-col items-center  bg-black  text-white  w-full">
+      <div className="flex flex-col items-center bg-black  text-white w-full">
         <div className="flex flex-col justify-start md:justify-center mx-5  md:px-0  h-full  md:w-[350px]">
           <h1 className=" hidden  min-[452px]:block font-bold text-2xl md:text-4xl leading-10 mb-3">
             Hey [Mr. Bond],
