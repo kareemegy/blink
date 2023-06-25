@@ -44,6 +44,7 @@ const InfoCheck = () => {
                 title="Back to edit"
                 style="outline"
                 className="w-full"
+                isHover
               />
               <Button
                 title="Submit"
@@ -51,6 +52,7 @@ const InfoCheck = () => {
                 icon={<ChevronRight className="stroke-black" />}
                 className="w-full"
                 handleClicked={nextPage}
+                isHover
               />
             </div>
           </BoxWrapper>

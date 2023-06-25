@@ -77,6 +77,7 @@ const Info = () => {
             style="white"
             className="w-full text-lg mt-10 mb-5"
             icon={<ChervronRight className="stroke-black" />}
+            isHover
           />
           <p className="text-Gray300">
             *Due to high demand, requested arrival & departure dates are subject

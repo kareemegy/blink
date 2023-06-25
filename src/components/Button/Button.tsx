@@ -16,7 +16,7 @@ const Button = ({ ...props }: ButtonProps) => {
   const [isHovering, setIsHovering] = useState(false);
   const whiteStyleClasses = {
     "bg-white text-Gray1000": !isHover,
-    " bg-white text-Gray1000 hover:bg-black hover:text-white": isHover,
+    "bg-white text-Gray1000 hover:bg-black hover:text-white": isHover,
   };
 
   const outlineStyleClasses = {
@@ -40,8 +40,8 @@ const Button = ({ ...props }: ButtonProps) => {
         className,
         styleClasses
       )}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
+      onMouseEnter={() => isHover && setIsHovering(true)}
+      onMouseLeave={() => isHover && setIsHovering(false)}
     >
       {title}
       {icon && (
@@ -51,6 +51,7 @@ const Button = ({ ...props }: ButtonProps) => {
           })}
         </span>
       )}
+      {/* {icon && icon} */}
     </button>
   );
 };
