@@ -19,7 +19,7 @@ const SmallSelect = ({ ...props }: SelectProps) => {
           id={id}
           name={title ? title : ""}
           className={cn(
-            "appearance-none bg-gray400 border border-bdwhite  text-gray500 w-[80px] outline-none   h-[50px]  mt-2 p-3",
+            "appearance-none bg-transparent border border-bdwhite  text-gray500 w-[80px] outline-none   h-[50px]  mt-2 p-3",
             className
           )}
         >

@@ -12,7 +12,7 @@ const Input = ({ ...props }: InputProps) => {
     <input
       id={id}
       className={cn(
-        "bg-gray400 border border-bdwhite  text-gray-500 placeholder:text-gray500 w-full outline-none lg:max-w-[380px]  h-[50px]  mt-2 p-3",
+        "bg-transparent border border-bdwhite  text-gray-500 placeholder:text-gray500 w-full outline-none lg:max-w-[380px]  h-[50px]  mt-2 p-3",
         className
       )}
       type={type}

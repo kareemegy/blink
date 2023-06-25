@@ -18,7 +18,7 @@ const SelectOptions = ({ ...props }: SelectProps) => {
           id={id}
           name={title ? title : ""}
           className={cn(
-            "appearance-none bg-gray400 border border-bdwhite  text-gray500 w-full outline-none lg:max-w-[380px]  h-[50px]  mt-2 p-3"
+            "appearance-none bg-transparent border border-bdwhite  text-gray500 w-full outline-none lg:max-w-[380px]  h-[50px]  mt-2 p-3"
           )}
         >
           <option className="text-gray-500" disabled selected hidden>
