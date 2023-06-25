@@ -51,19 +51,21 @@ const EventPage = () => {
               className="w-full lg:w-1/2 my-3 text-base md:mr-10  py-5 px-5 rounded whitespace-nowrap"
               style="outline"
               handleClicked={toggleModal}
+              isHover
             />
             <Button
               className="w-full lg:w-1/2 my-3 text-base   py-5 px-5 rounded  whitespace-nowrap"
               title="Confirm trip and continue"
               style="white"
-              icon={<ChevronRight className="stroke-black" />}
+              icon={<ChevronRight  className="stroke-black" />}
               handleClicked={nextPage}
+              isHover
             />
           </div>
           <ConfirmationMessage />
         </div>
       </Wrapper>
-        <Footer />
+      <Footer />
       <RejectModal showModal={showModal} toggleModal={toggleModal} />
     </div>
   );

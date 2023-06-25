@@ -25,15 +25,15 @@ const Header = ({ className, bg }: HeaderProps) => {
         <div className=" ml-6">
           <img
             onClick={handleGoHome}
-            className="w-[100px] md:w-[150px] cursor-pointer "
+            className="w-[100px] md:w-[150px] cursor-pointer"
             src={Logo}
             alt="BLink Logo"
           />
         </div>
-        <div className="flex justify-end  ">
+        <div className="flex justify-end">
           <div className=" flex justify-center  items-center border-2 border-white w-[40px] h-[40px] mr-3 md:hidden">
             <img
-              className=" w-[20px] h-[20px]   "
+              className=" w-[20px] h-[20px]"
               src={BillSm}
               alt="Bill Notification"
               onClick={handleGoNotification}
