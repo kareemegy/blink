@@ -25,7 +25,7 @@ const Notes = () => {
             subtitle="Let us know if there are any other notes you’d like us to know."
           />
           <Wrapper className="mt-20">
-            <div>
+            <div className="mx-6">
               <SelectLabel title="Other notes" className="text-Gray200" />
               <Input
                 type="text"
@@ -33,17 +33,24 @@ const Notes = () => {
                 placeholder="Type here..."
                 className="bg-inputBg"
               />
-              <Button
-                title="Next"
-                style="white"
-                className="w-full mt-10"
-                handleClicked={nextPage}
-              />
+              <div className="mt-14 md:mt-0">
+                <img
+                  className="md:hidden w-full"
+                  src={Bar}
+                  alt="progress bar"
+                />
+                <Button
+                  title="Next"
+                  style="white"
+                  className="w-full mt-3 md:mt-10"
+                  handleClicked={nextPage}
+                />
+              </div>
             </div>
           </Wrapper>
         </div>
       </div>
-      <img className="md:hidden w-full  px-10" src={Bar} alt="progress bar" />
+
       <Footer className="flex-none" />
     </div>
   );

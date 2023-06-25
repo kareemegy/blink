@@ -16,6 +16,8 @@ import PageHeader from "../../components/PageHeader";
 import Modal from "../../components/Modal";
 import Button from "../../components/Button";
 import Wrapper from "../../components/Wrapper/Wrapper";
+import cn from "classnames";
+import CloseBTN from "../../assets/images/Home Page/closeBTN.svg";
 
 const EventPage = () => {
   const navigate = useNavigate();
@@ -57,7 +59,7 @@ const EventPage = () => {
               className="w-full lg:w-1/2 my-3 text-base   py-5 px-5 rounded  whitespace-nowrap"
               title="Confirm trip and continue"
               style="white"
-              icon={<ChevronRight  className="stroke-black" />}
+              icon={<ChevronRight className="stroke-black" />}
               handleClicked={nextPage}
               isHover
             />
@@ -212,32 +214,41 @@ const RejectModal = ({ showModal, toggleModal }: RejectModalProps) => {
   };
 
   return (
-    <Modal
-      showModal={showModal}
-      toggleModal={toggleModal}
-      headerText="We’re sorry to hear that!"
-      className="!w-[430px]  md:!h-[650px] md:!py-10"
-      titleStyle="w-[150px] md:w-[200px]"
-    >
-      <h3 className=" mb-4  text-DarkestWhite">
-        Let us how we can make it work for you. Share your availability and you
-        feedback with the organizers.
-      </h3>
-      <textarea
-        ref={textAreaRef}
-        className="bg-blinkDashboard border-2 border-DarkestWhite outline-none w-full p-4 resize-none placeholder:text-DarkestWhite"
-        placeholder="Type details"
-        name="reject-details"
-        cols={30}
-        rows={10}
-      />
-      <Button
-        title=" Send Your Feedback "
-        style="white"
-        className="w-full mt-[30px] mb-[40px] text-xl font-bold text-blinkDashboard whitespace-nowrap "
-        handleClicked={handleSendFeedback}
-      />
-    </Modal>
+    <div className="relative">
+      <Modal
+        showModal={showModal}
+        toggleModal={toggleModal}
+        headerText="We’re sorry to hear that!"
+        className="!w-[430px]  md:!h-[650px] max-sm:!py-10 max-sm:!px-10 md:!py-10"
+        titleStyle="w-[190px] md:w-[200px]"
+      >
+        <h3 className=" mb-4  text-DarkestWhite">
+          Let us how we can make it work for you. Share your availability and
+          you feedback with the organizers.
+        </h3>
+        <textarea
+          ref={textAreaRef}
+          className="bg-blinkDashboard h-[150px] md:h-[300px]  border-2 border-DarkestWhite outline-none w-full p-4 resize-none placeholder:text-DarkestWhite"
+          placeholder="Type details"
+          name="reject-details"
+        />
+        <Button
+          title=" Send Your Feedback "
+          style="white"
+          className="w-full mt-[30px] mb-[40px] text-xl font-bold text-blinkDashboard whitespace-nowrap "
+          handleClicked={handleSendFeedback}
+        />
+
+        <span
+          className={cn(
+            "  md:hidden absolute top-[15px] right-[15px] cursor-pointer z-10 "
+          )}
+          onClick={toggleModal}
+        >
+          <img src={CloseBTN} alt="close button" />
+        </span>
+      </Modal>
+    </div>
   );
 };
 
