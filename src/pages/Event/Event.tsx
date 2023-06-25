@@ -61,7 +61,6 @@ const EventPage = () => {
               style="white"
               icon={<ChevronRight className="stroke-black" />}
               handleClicked={nextPage}
-              isHover
             />
           </div>
           <ConfirmationMessage />

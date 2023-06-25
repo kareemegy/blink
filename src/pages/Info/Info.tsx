@@ -27,7 +27,6 @@ const Info = () => {
     <div className="bg-black">
       <Header />
       <div className="container mx-auto grid grid-cols-1 justify-items-center gap-y-5 xl:max-w-[1280px] ">
-        {/* <PageHeader title={title} subtitle={title} /> */}
         <div
           className={`flex flex-col mt-7 mx-6 md:mx-0  items-baseline md:items-start w-full px-5  md:w-[70%]  md:mr-[60px] `}
         >
@@ -66,9 +65,12 @@ const Info = () => {
           </div>
           <PortraitSection />
           <PassportPhotoSection />
+          <Divider />
           <div className="mt-10 mb-5">
             <IdentificationInfoSection />
+            <Divider />
             <PersonalInfoSection />
+            <Divider />
             <ContactInfoSection />
           </div>
           <Button
@@ -109,6 +111,7 @@ const PortraitSection = () => {
           title="Browse photos"
           icon={<Upload className="ml-3" />}
           style="outline"
+          isHover
         />
       </div>
     </div>
@@ -132,6 +135,7 @@ const PassportPhotoSection = () => {
           icon={<Upload className="ml-3" />}
           style="outline"
           className="flex justify-center items-center w-full h-[50px] md:w-[40%]  lg:max-w-[30%]  text-white  font-bold border-2 px-[10px] py-[5px] md:text-sm "
+          isHover
         />
       </div>
     </div>
@@ -298,5 +302,17 @@ const ContactInfoSection = () => {
         </div>
       </div>
     </>
+  );
+};
+
+interface dividerProps {
+  className?: string;
+}
+
+const Divider = ({ className }: dividerProps) => {
+  return (
+    <hr
+      className={`md:hidden my-7 md:my-7 border-b-1 max-w-3xl border-Gray50 md:border-Primary700 ${className}`}
+    />
   );
 };

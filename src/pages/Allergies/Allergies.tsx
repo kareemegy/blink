@@ -25,7 +25,7 @@ const Allergies = () => {
           <PageHeader
             title="Allergies"
             subtitle="Please choose the foods against which [you’re] allergic "
-            className=" md:!px-5"
+            className="md:!px-5"
           />
         </div>
         <div className="bg-black">

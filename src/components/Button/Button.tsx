@@ -26,7 +26,7 @@ const Button = ({ ...props }: ButtonProps) => {
   };
   const iconClasses = {
     "stroke-white": style === "white" && isHovering,
-    "stroke-black": style === "outline" && isHovering,
+    "stroke-black fill-black": style === "outline" && isHovering,
   };
   const styleClasses =
     style === "white" ? whiteStyleClasses : outlineStyleClasses;
