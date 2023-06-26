@@ -1,4 +1,4 @@
-import Bill from "../../assets/images/bill.svg";
+import { ReactComponent as Bill } from "../../assets/images/bill.svg";
 import BillSm from "../../assets/images/BillSM.svg";
 import SignOutIcon from "../../assets/images/signOut-icon.svg";
 import { useNavigate } from "react-router-dom";
@@ -39,16 +39,18 @@ const Header = ({ className, bg }: HeaderProps) => {
               onClick={handleGoNotification}
             />
           </div>
-          <img
-            className="mr-3  hidden  md:block w-[50px] h-[50px]  cursor-pointer "
+          <Bill className="mr-3 stroke-white  hidden  md:block w-[50px] h-[50px]  cursor-pointer transition-all ease-in hover:bg-white hover:stroke-black " />
+          {/* <img
+            className="mr-3  hidden  md:block w-[50px] h-[50px]  cursor-pointer hover:bg-white "
             src={Bill}
             alt="Bill Notification"
             onClick={handleGoNotification}
-          />
+          /> */}
           <Button
             title=" Sign Out"
             style="outline"
             className="hidden md:mr-6  md:block text-white border-2 px-[30px] py-[5px]"
+            isHover
           />
           <button className="md:hidden mr-3">
             <img

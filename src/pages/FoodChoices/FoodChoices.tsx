@@ -36,6 +36,7 @@ const FoodChoices = () => {
               style="outline"
               handleClicked={goToAllDone}
               className="py-[18px] px-[138px] my-5"
+              isHover
             />
             <Button
               title="Continue"

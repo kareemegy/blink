@@ -10,7 +10,7 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Footer from "../../components/Footer/Footer";
 const Preferences = () => {
   return (
-    <div className="  h-screen flex flex-col">
+    <div className="  h-screen flex flex-col  bg-black">
       <div className="flex-grow bg-black">
         <Header />
         <ProgressBar className="hidden md:block md:px-6" />
@@ -26,9 +26,8 @@ const Preferences = () => {
             <PreferencesChoices />
           </Wrapper>
         </div>
-
-        <Footer className="max-sm:!mt-0 max-sm:mb-1" />
       </div>
+      <Footer className="max-sm:!mt-0 max-sm:mb-1"/>
     </div>
   );
 };

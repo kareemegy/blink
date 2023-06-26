@@ -2,7 +2,7 @@ import cn from "classnames";
 import React from "react";
 import { useState } from "react";
 interface ButtonProps {
-  title: string;
+  title?: string;
   icon?: any;
   style: "white" | "outline";
   className?: string;

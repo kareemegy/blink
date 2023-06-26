@@ -17,11 +17,11 @@ import { ReactComponent as Bar } from "../../assets/images/progressBar2.svg";
 import Footer from "../../components/Footer/Footer";
 const Allergies = () => {
   return (
-    <div className=" h-screen flex flex-col  ">
+    <div className=" h-screen flex flex-col bg-black  ">
       <div className="flex-grow bg-black">
         <Header />
         <ProgressBar className="hidden md:block md:px-6" type="full" />
-        <div className="container mx-auto">
+        <div className="container mx-auto ">
           <PageHeader
             title="Allergies"
             subtitle="Please choose the foods against which [you’re] allergic "
@@ -33,8 +33,8 @@ const Allergies = () => {
             <AllergiesChoices />
           </Wrapper>
         </div>
-        <Footer />
       </div>
+      <Footer className="max-sm:!mt-0 max-sm:mb-1" />
     </div>
   );
 };

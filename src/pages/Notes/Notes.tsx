@@ -52,7 +52,7 @@ const Notes = () => {
         </div>
       </div>
 
-      <Footer className="flex-none" />
+      <Footer className="max-sm:!mt-0 max-sm:mb-1 " />
     </div>
   );
 };

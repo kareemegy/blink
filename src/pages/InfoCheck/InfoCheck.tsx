@@ -52,7 +52,6 @@ const InfoCheck = () => {
                 icon={<ChevronRight className="stroke-black" />}
                 className="w-full"
                 handleClicked={nextPage}
-                isHover
               />
             </div>
           </BoxWrapper>
