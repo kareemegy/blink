@@ -13,12 +13,10 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import { useEffect, useRef, useState } from "react";
 import PageHeader from "../../components/PageHeader";
-import Modal from "../../components/Modal";
-import Button from "../../components/Button";
 import Wrapper from "../../components/Wrapper/Wrapper";
-import cn from "classnames";
-import CloseBTN from "../../assets/images/Home Page/closeBTN.svg";
-
+import Button from "../../components/Button";
+import RejectPopUp from "../../components/RejectModal";
+// import RejectModal from "../../components/RejectModal";
 const EventPage = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
@@ -36,17 +34,17 @@ const EventPage = () => {
   return (
     <div className="bg-black">
       <Header />
-      <Wrapper showModal={showModal}>
+      <Wrapper>
         <PageHeader title={title} subtitle={subtitle} />
         <div className="flex flex-col  w-full px-5 md:px-14 py-10  bg-Gray900 md:bg-EventBg md:max-w-[838px]">
           <TripDetails />
-          <CustomHr />
+          <Divider />
           <TripDates />
-          <CustomHr />
+          <Divider />
           <Companions />
-          <CustomHr />
+          <Divider />
           <Benefits />
-          <CustomHr />
+          <Divider />
           <div className="flex flex-col lg:flex-row ">
             <Button
               title="Reject. I'm not available at this time"
@@ -213,49 +211,37 @@ const RejectModal = ({ showModal, toggleModal }: RejectModalProps) => {
   };
 
   return (
-    <div className="relative">
-      <Modal
-        showModal={showModal}
-        toggleModal={toggleModal}
-        headerText="We’re sorry to hear that!"
-        className="!w-[430px]  md:!h-[650px] max-sm:!py-10 max-sm:!px-10 md:!py-10"
-        titleStyle="w-[190px] md:w-[200px]"
-      >
-        <h3 className=" mb-4  text-DarkestWhite">
-          Let us how we can make it work for you. Share your availability and
-          you feedback with the organizers.
-        </h3>
-        <textarea
-          ref={textAreaRef}
-          className="bg-blinkDashboard h-[150px] md:h-[300px]  border-2 border-DarkestWhite outline-none w-full p-4 resize-none placeholder:text-DarkestWhite"
-          placeholder="Type details"
-          name="reject-details"
-        />
-        <Button
-          title=" Send Your Feedback "
-          style="white"
-          className="w-full mt-[30px] mb-[40px] text-xl font-bold text-blinkDashboard whitespace-nowrap "
-          handleClicked={handleSendFeedback}
-        />
-
-        <span
-          className={cn(
-            "  md:hidden absolute top-[15px] right-[15px] cursor-pointer z-10 "
-          )}
-          onClick={toggleModal}
-        >
-          <img src={CloseBTN} alt="close button" />
-        </span>
-      </Modal>
-    </div>
+    <RejectPopUp
+      showModal={showModal}
+      toggleModal={toggleModal}
+      headerText="We’re sorry to hear that!"
+      className="!transition-opacity !duration-500 !ease-in  "
+    >
+      <h3 className=" mb-4  text-DarkestWhite">
+        Let us how we can make it work for you. Share your availability and you
+        feedback with the organizers.
+      </h3>
+      <textarea
+        ref={textAreaRef}
+        className="bg-blinkDashboard h-[140px] rounded  border-2 border-DarkestWhite outline-none w-full p-4 resize-none placeholder:text-DarkestWhite"
+        placeholder="Type details"
+        name="reject-details"
+      />
+      <Button
+        title="Send Your Feedback "
+        style="white"
+        className="w-full mt-[10px]  text-xl font-bold text-blinkDashboard whitespace-nowrap"
+        handleClicked={handleSendFeedback}
+      />
+    </RejectPopUp>
   );
 };
 
-interface CustomHrProps {
+interface DividerProps {
   className?: string;
 }
 
-const CustomHr = ({ className }: CustomHrProps) => {
+const Divider = ({ className }: DividerProps) => {
   return (
     <hr
       className={`my-7 md:my-10 border-b-1 max-w-3xl border-Gray50 md:border-Primary700 ${className}`}
