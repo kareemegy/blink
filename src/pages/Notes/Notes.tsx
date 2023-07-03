@@ -15,9 +15,9 @@ const Notes = () => {
     navigate("/alldone");
   };
   return (
-    <div className="h-screen bg-black flex flex-col">
+    <div className=" h-screen bg-black flex flex-col">
       <Header />
-      <div className="flex-grow overflow-y-auto">
+      <div className="flex-grow bg-black">
         <div className="container mx-auto">
         <ProgressBar className="hidden md:block md:px-6" type="full" />
           <PageHeader
@@ -51,8 +51,7 @@ const Notes = () => {
           </Wrapper>
         </div>
       </div>
-
-      <Footer className="max-sm:!mt-0 max-sm:mb-1 " />
+      <Footer className="max-sm:!mt-0 max-sm:mb-1" />
     </div>
   );
 };
