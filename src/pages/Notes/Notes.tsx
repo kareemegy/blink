@@ -16,10 +16,10 @@ const Notes = () => {
   };
   return (
     <div className=" h-screen bg-black flex flex-col">
-      <Header />
       <div className="flex-grow bg-black">
+        <Header />
         <div className="container mx-auto">
-        <ProgressBar className="hidden md:block md:px-6" type="full" />
+          <ProgressBar className="hidden md:block md:px-6" type="full" />
           <PageHeader
             title="Notes"
             subtitle="Let us know if there are any other notes you’d like us to know."

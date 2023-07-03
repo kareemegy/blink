@@ -38,7 +38,7 @@ const InfoCheck = () => {
               Please make sure that your information is correct before you
               submit
             </p>
-            <div className="flex flex-col md:flex-row gap-10">
+            <div className="flex flex-col md:flex-row gap-5">
               <Button
                 handleClicked={backToInfo}
                 title="Back to edit"

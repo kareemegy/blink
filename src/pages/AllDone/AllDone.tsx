@@ -17,12 +17,12 @@ const AllDone = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 h-screen md:auto-rows-[1fr] auto-rows-[2fr]">
         <div
-          className="flex justify-center items-center bg-cover bg-center "
-          style={{ backgroundImage: `url("${Alldone}")` }}
+          className=" flex justify-center items-center bg-cover bg-center max-sm:h-[450px] "
+          style={{ backgroundImage: `url("${Alldone}")`}}
         ></div>
-        <div className="flex flex-col items-center  bg-black text-white md:bg-none w-full md:mx-auto">
+        <div className="flex flex-col items-center  bg-black text-white md:bg-none w-full md:mx-auto  ">
           <div className="flex flex-col justify-center mx-5 px-6 md:px-0 pb-3 h-[90%] w-full md:w-[350px] max-sm:text-center">
-            <h1 className=" flex max-sm:justify-center mt-7  items-center font-bold text-2xl md:text-4xl   leading-10 mb-3">
+            <h1 className=" flex max-sm:justify-center mt-7 items-center font-bold text-2xl md:text-4xl leading-10 mb-3">
               <span> All Done!</span>
               <img
                 className="ml-4 h-[30px] w-[30px]"
