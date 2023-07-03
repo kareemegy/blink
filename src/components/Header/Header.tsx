@@ -18,7 +18,6 @@ const Header = ({ className, bg }: HeaderProps) => {
   };
   return (
     <div className={`bg-black ${bg}`}>
-      {/* max-[768px]:px-5  */}
       <header
         className={`${className} container mx-auto grid grid-cols-2  pt-5 `}
       >
@@ -39,13 +38,11 @@ const Header = ({ className, bg }: HeaderProps) => {
               onClick={handleGoNotification}
             />
           </div>
-          <Bill className="mr-3 stroke-white  hidden  md:block w-[50px] h-[50px]  cursor-pointer transition-all ease-in hover:bg-white hover:stroke-black " />
-          {/* <img
-            className="mr-3  hidden  md:block w-[50px] h-[50px]  cursor-pointer hover:bg-white "
-            src={Bill}
-            alt="Bill Notification"
+          <Bill
             onClick={handleGoNotification}
-          /> */}
+            className="mr-3 stroke-white  hidden  md:block w-[50px] h-[50px] border-white border-2  cursor-pointer transition-all ease-in hover:bg-white hover:stroke-black"
+          />
+
           <Button
             title=" Sign Out"
             style="outline"

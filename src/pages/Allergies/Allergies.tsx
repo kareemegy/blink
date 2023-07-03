@@ -34,7 +34,7 @@ const Allergies = () => {
           </Wrapper>
         </div>
       </div>
-      <Footer className="max-sm:!mt-0 max-sm:mb-1" />
+      <Footer className="max-sm:!mt-0 max-sm:mb-1 py-[20px] md:py-0" />
     </div>
   );
 };

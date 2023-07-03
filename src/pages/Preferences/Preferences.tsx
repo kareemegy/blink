@@ -10,7 +10,7 @@ import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Footer from "../../components/Footer/Footer";
 const Preferences = () => {
   return (
-    <div className="  h-screen flex flex-col  bg-black">
+    <div className="h-screen flex flex-col  bg-black">
       <div className="flex-grow bg-black">
         <Header />
         <ProgressBar className="hidden md:block md:px-6" />

@@ -3,13 +3,14 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import { ReactComponent as RightArrow } from "../../assets/images/Home Page/Chevron right.svg";
 import { ReactComponent as Document } from "../../assets/images/document.svg";
+
 const Notification = () => {
   return (
     <>
       <div className=" md:hidden">
         <Header />
       </div>
-      <div className="bg-black ">
+      <div className="bg-black">
         <div className="container mx-auto">
           <div>
             <PageHeader title="Notifications" className="pt-7 !mt-0" />
@@ -67,7 +68,6 @@ const Notification = () => {
     </>
   );
 };
-
 export default Notification;
 interface INotificationDate {
   month: string;
@@ -102,8 +102,8 @@ const NotificationTitle = ({ document, title, msg }: INotificationTitle) => {
         <h1 className="text-sm md:text-base mb-4 max-sm:w-[200px]">{msg}</h1>
       </div>
       {document && (
-        <div className="">
-          <Document className=" w-8 " />
+        <div className="pl-3 pt-3 md:p-0">
+          <Document className="  w-6  md:w-8" />
         </div>
       )}
     </div>
@@ -123,7 +123,7 @@ const NotificationMsg = () => {
 
       <p className=" text-sm md:text-base whitespace-nowrap  text-DarkestWhite flex mx-3">
         tap to view
-        <RightArrow />
+        <RightArrow className="w-5 md:w-8" />
       </p>
       <span
         className="w-full border-b border-Lightest pb-2 "
